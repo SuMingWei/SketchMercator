@@ -1,0 +1,5 @@
+@pa_atomic("ingress", "ig_md.var1")
+@pa_atomic("ingress", "ig_md.var2")
+@pa_atomic("ingress", "ig_md.var3")
+@pa_atomic("ingress", "ig_md.var4")
+@pa_atomic("ingress", "ig_md.var5")

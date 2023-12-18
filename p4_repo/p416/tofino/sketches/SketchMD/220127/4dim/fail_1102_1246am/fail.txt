@@ -1,0 +1,158 @@
+=========================================================================
+         File: make.log
+      Created: Tue Nov  2 13:44:01 KST 2021
+ Command Line: p416_4dim_test3.p4 -- P4FLAGS=--no-dead-code-elimination P4PPFLAGS=-I /data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API -I /data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/common_p4
+          SDE: /home/hnamkung/barefoot/bf-sde-9.5.1 (bf-sde-9.5.1)
+ Build System: Linux gpusystem 4.15.0-147-generic #151-Ubuntu SMP Fri Jun 18 19:21:19 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+ Distribution: Ubuntu 18.04.2 LTS
+   Build Arch: x86_64
+       CPU(s): 104
+          RAM: 263GB
+       Job(s): -j104
+  p4_build.sh: Designed for SDE-9.0.0 (without p4c-tofno)
+
+  Disk Space: for $SDE
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2       1.9T  506G  1.3T  29% /
+=========================================================================
+ Current Dir: /home/hnamkung/barefoot/bf-sde-9.5.1/build/p4-build/p416_4dim_test3
+   Executing: make -j104
+=========================================================================
+make  all-recursive
+make[1]: Entering directory '/home/hnamkung/barefoot/bf-sde-9.5.1/build/p4-build/p416_4dim_test3'
+Making all in tofino
+make[2]: Entering directory '/home/hnamkung/barefoot/bf-sde-9.5.1/build/p4-build/p416_4dim_test3/tofino'
+/home/hnamkung/barefoot/bf-sde-9.5.1/install/bin/bf-p4c --std p4-16 --target tofino --arch tna -o ./p416_4dim_test3 -g --verbose 1 --bf-rt-schema ./p416_4dim_test3/bf-rt.json  --no-dead-code-elimination -g --verbose 2 -I /data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API -I /data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/common_p4 /data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(97): [--Wwarn=unused] warning: d_1_ss_update_3: unused instance
+    lpm_optimization_16() d_1_lpm; UM_UPDATE() d_1_um_update_1; UM_UPDATE() d_1_um_update_2; UM_UPDATE() d_1_um_update_3; above_threshold() d_1_above_threshold; SS_UPDATE() d_1_ss_update_1; SS_UPDATE() d_1_ss_update_2; SS_UPDATE() d_1_ss_update_3;
+                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(98): [--Wwarn=unused] warning: d_2_ss_update_1: unused instance
+    lpm_optimization_16() d_2_lpm; UM_UPDATE() d_2_um_update_1; UM_UPDATE() d_2_um_update_2; UM_UPDATE() d_2_um_update_3; above_threshold() d_2_above_threshold; SS_UPDATE() d_2_ss_update_1; SS_UPDATE() d_2_ss_update_2; SS_UPDATE() d_2_ss_update_3;
+                                                                                                                                                                             ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(98): [--Wwarn=unused] warning: d_2_ss_update_2: unused instance
+    lpm_optimization_16() d_2_lpm; UM_UPDATE() d_2_um_update_1; UM_UPDATE() d_2_um_update_2; UM_UPDATE() d_2_um_update_3; above_threshold() d_2_above_threshold; SS_UPDATE() d_2_ss_update_1; SS_UPDATE() d_2_ss_update_2; SS_UPDATE() d_2_ss_update_3;
+                                                                                                                                                                                                          ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(98): [--Wwarn=unused] warning: d_2_ss_update_3: unused instance
+    lpm_optimization_16() d_2_lpm; UM_UPDATE() d_2_um_update_1; UM_UPDATE() d_2_um_update_2; UM_UPDATE() d_2_um_update_3; above_threshold() d_2_above_threshold; SS_UPDATE() d_2_ss_update_1; SS_UPDATE() d_2_ss_update_2; SS_UPDATE() d_2_ss_update_3;
+                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(99): [--Wwarn=unused] warning: d_3_ss_update_1: unused instance
+    lpm_optimization_16() d_3_lpm; UM_UPDATE() d_3_um_update_1; UM_UPDATE() d_3_um_update_2; UM_UPDATE() d_3_um_update_3; above_threshold() d_3_above_threshold; SS_UPDATE() d_3_ss_update_1; SS_UPDATE() d_3_ss_update_2; SS_UPDATE() d_3_ss_update_3;
+                                                                                                                                                                             ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(99): [--Wwarn=unused] warning: d_3_ss_update_2: unused instance
+    lpm_optimization_16() d_3_lpm; UM_UPDATE() d_3_um_update_1; UM_UPDATE() d_3_um_update_2; UM_UPDATE() d_3_um_update_3; above_threshold() d_3_above_threshold; SS_UPDATE() d_3_ss_update_1; SS_UPDATE() d_3_ss_update_2; SS_UPDATE() d_3_ss_update_3;
+                                                                                                                                                                                                          ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(99): [--Wwarn=unused] warning: d_3_ss_update_3: unused instance
+    lpm_optimization_16() d_3_lpm; UM_UPDATE() d_3_um_update_1; UM_UPDATE() d_3_um_update_2; UM_UPDATE() d_3_um_update_3; above_threshold() d_3_above_threshold; SS_UPDATE() d_3_ss_update_1; SS_UPDATE() d_3_ss_update_2; SS_UPDATE() d_3_ss_update_3;
+                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(100): [--Wwarn=unused] warning: d_4_ss_update_1: unused instance
+    lpm_optimization_16() d_4_lpm; UM_UPDATE() d_4_um_update_1; UM_UPDATE() d_4_um_update_2; UM_UPDATE() d_4_um_update_3; above_threshold() d_4_above_threshold; SS_UPDATE() d_4_ss_update_1; SS_UPDATE() d_4_ss_update_2; SS_UPDATE() d_4_ss_update_3;
+                                                                                                                                                                             ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(100): [--Wwarn=unused] warning: d_4_ss_update_2: unused instance
+    lpm_optimization_16() d_4_lpm; UM_UPDATE() d_4_um_update_1; UM_UPDATE() d_4_um_update_2; UM_UPDATE() d_4_um_update_3; above_threshold() d_4_above_threshold; SS_UPDATE() d_4_ss_update_1; SS_UPDATE() d_4_ss_update_2; SS_UPDATE() d_4_ss_update_3;
+                                                                                                                                                                                                          ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/p416_4dim_test3.p4(100): [--Wwarn=unused] warning: d_4_ss_update_3: unused instance
+    lpm_optimization_16() d_4_lpm; UM_UPDATE() d_4_um_update_1; UM_UPDATE() d_4_um_update_2; UM_UPDATE() d_4_um_update_3; above_threshold() d_4_above_threshold; SS_UPDATE() d_4_ss_update_1; SS_UPDATE() d_4_ss_update_2; SS_UPDATE() d_4_ss_update_3;
+                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/common_p4/parser.p4(4): [--Wwarn=uninitialized_out_param] warning: out parameter 'ig_md' may be uninitialized when 'SwitchIngressParser' terminates
+        out metadata_t ig_md,
+                       ^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/common_p4/parser.p4(1)
+parser SwitchIngressParser(
+       ^^^^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(3): [--Wwarn=uninitialized_out_param] warning: out parameter 'ret_level' may be uninitialized when 'lpm_optimization_16' terminates
+    out bit<32> ret_level,
+                ^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(1)
+control lpm_optimization_16(
+        ^^^^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(4): [--Wwarn=uninitialized_out_param] warning: out parameter 'ret_base' may be uninitialized when 'lpm_optimization_16' terminates
+    out bit<16> ret_base,
+                ^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(1)
+control lpm_optimization_16(
+        ^^^^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(5): [--Wwarn=uninitialized_out_param] warning: out parameter 'ret_ss_base' may be uninitialized when 'lpm_optimization_16' terminates
+    out bit<16> ret_ss_base,
+                ^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(1)
+control lpm_optimization_16(
+        ^^^^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(6): [--Wwarn=uninitialized_out_param] warning: out parameter 'ret_um_threshold' may be uninitialized when 'lpm_optimization_16' terminates
+    out bit<32> ret_um_threshold)
+                ^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S2_tcam.p4(1)
+control lpm_optimization_16(
+        ^^^^^^^^^^^^^^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S3_salu.p4(53): [--Wwarn=uninitialized_out_param] warning: out parameter 'result' may be uninitialized when 'apply' terminates
+        void apply(inout bit<1> register_data, out bit<32> result) {
+                                                           ^^^^^^
+/data1/hun/sketch_home/p4_repo/p416/tofino/sketches/SketchMD/4dim/API/API_S3_salu.p4(53)
+        void apply(inout bit<1> register_data, out bit<32> result) {
+             ^^^^^
+[--Wwarn=invalid] warning: "ig_md.d_1_ss_hash_1": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_1_ss_hash_2": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_1_ss_hash_3": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_1_ss_xy_hash": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_2_ss_hash_1": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_2_ss_hash_2": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_2_ss_hash_3": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_2_ss_xy_hash": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_3_ss_hash_1": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_3_ss_hash_2": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_3_ss_hash_3": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_3_ss_xy_hash": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_4_ss_hash_1": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_4_ss_hash_2": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_4_ss_hash_3": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+[--Wwarn=invalid] warning: "ig_md.d_4_ss_xy_hash": No matching PHV field in the pipe `pipe'. Ignoring pragma.
+error: This program violates action constraints imposed by Tofino.
+
+  PHV allocation requires the following field slices to be packed together, because of the structure of header ingress::d_1_ss_update_1_index_shift_mask
+	ingress::d_1_ss_update_1_index_shift_mask[9:0]
+	ingress::d_1_ss_update_1_index_shift_mask[10:10]
+	ingress::d_1_ss_update_1_index_shift_mask[15:11]
+
+  Action SwitchIngress.d_1_ss_update_1.step1 must be rewritten, because it requires too many sources.
+	Source 1 is action data/constant, which write(s) the following field slices:
+	  ingress::d_1_ss_update_1_index_shift_mask[9:0], written by constant 0x3ff
+	  ingress::d_1_ss_update_1_index_shift_mask[10:10], written by constant 0x3ff
+	  ingress::d_1_ss_update_1_index_shift_mask[15:11], written by constant 0x3ff
+	Source 2 contains the following fields:
+	  ingress::ig_md.d_1_hash_1[9:0] @ bits 0-9
+	Source 3 contains the following fields:
+	  ingress::ig_md.d_1_hash_1[10:10] @ bits 10-10
+	Source 4 contains the following fields:
+	  ingress::ig_md.d_1_hash_1[15:11] @ bits 11-15
+  However, Tofino supports only one PHV source, when action data/constant is present.
+  Rewrite action SwitchIngress.d_1_ss_update_1.step1 to use at most 2 PHV sources (and no action data/constant source) or 1 PHV source (if action data/constant is necessary).
+
+  PHV allocation requires the following field slices to be packed together, because of the structure of header ingress::d_1_ss_update_2_index_shift_mask
+	ingress::d_1_ss_update_2_index_shift_mask[9:0]
+	ingress::d_1_ss_update_2_index_shift_mask[10:10]
+	ingress::d_1_ss_update_2_index_shift_mask[15:11]
+
+  Action SwitchIngress.d_1_ss_update_2.step1 must be rewritten, because it requires too many sources.
+	Source 1 is action data/constant, which write(s) the following field slices:
+	  ingress::d_1_ss_update_2_index_shift_mask[9:0], written by constant 0x3ff
+	  ingress::d_1_ss_update_2_index_shift_mask[10:10], written by constant 0x3ff
+	  ingress::d_1_ss_update_2_index_shift_mask[15:11], written by constant 0x3ff
+	Source 2 contains the following fields:
+	  ingress::ig_md.d_1_hash_2[9:0] @ bits 0-9
+	Source 3 contains the following fields:
+	  ingress::ig_md.d_1_hash_2[10:10] @ bits 10-10
+	Source 4 contains the following fields:
+	  ingress::ig_md.d_1_hash_2[15:11] @ bits 11-15
+  However, Tofino supports only one PHV source, when action data/constant is present.
+  Rewrite action SwitchIngress.d_1_ss_update_2.step1 to use at most 2 PHV sources (and no action data/constant source) or 1 PHV source (if action data/constant is necessary).
+
+
+Number of errors exceeded set maximum of 1
+
+Makefile:1373: recipe for target 'p4c.ts' failed
+make[2]: *** [p4c.ts] Error 3
+make[2]: Leaving directory '/home/hnamkung/barefoot/bf-sde-9.5.1/build/p4-build/p416_4dim_test3/tofino'
+Makefile:452: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory '/home/hnamkung/barefoot/bf-sde-9.5.1/build/p4-build/p416_4dim_test3'
+Makefile:378: recipe for target 'all' failed
+make: *** [all] Error 2

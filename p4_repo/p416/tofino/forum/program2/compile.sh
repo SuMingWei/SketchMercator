@@ -1,0 +1,1 @@
+$script_home/p4_build.sh program2.p4

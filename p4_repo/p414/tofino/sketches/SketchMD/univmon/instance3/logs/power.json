@@ -1,0 +1,2120 @@
+{
+    "build_date": "Wed Jun 23 06:55:07 2021",
+    "compiler_version": "9.1.0",
+    "program_name": "p414_univmon_instance3.p4",
+    "run_id": "bac9444b72361406",
+    "schema_version": "1.0.0",
+    "stage_characteristics": [
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 0
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 1
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 2
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 3
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 4
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 5
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 6
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 7
+        },
+        {
+            "clock_cycles": 26,
+            "cycles_contribute_to_latency": 26,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": true
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 13,
+            "stage_number": 8
+        },
+        {
+            "clock_cycles": 24,
+            "cycles_contribute_to_latency": 24,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 9
+        },
+        {
+            "clock_cycles": 24,
+            "cycles_contribute_to_latency": 2,
+            "dependency_to_previous": "action",
+            "features": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 10
+        },
+        {
+            "clock_cycles": 24,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": true,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": true,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "ingress",
+            "predication_cycle": 11,
+            "stage_number": 11
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 0
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 1
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 2
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 3
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 4
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 5
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 6
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 20,
+            "dependency_to_previous": "match",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 7
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 8
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 9
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 10
+        },
+        {
+            "clock_cycles": 20,
+            "cycles_contribute_to_latency": 1,
+            "dependency_to_previous": "concurrent",
+            "features": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "features_to_balance_latency": {
+                "exact": false,
+                "lpf_wred": false,
+                "selectors": false,
+                "stateful": false,
+                "statistics": false,
+                "ternary": false
+            },
+            "gress": "egress",
+            "predication_cycle": 11,
+            "stage_number": 11
+        }
+    ],
+    "tables": [
+        {
+            "gress": "ingress",
+            "name": "cond-11",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 9,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cond-7",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 8,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cond-9",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 10,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_1_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_1_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_1_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_2_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_2_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_2_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_3_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_3_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_3_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_4_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_4_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_4_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_5_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_5_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_index_5_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_1_compute_all_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_1_split_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_2_compute_all_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_2_split_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_3_compute_all_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_res_group_3_split_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_1_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_1_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_2_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_2_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_3_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_1_3_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 5,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_1_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_1_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_2_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_2_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_3_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_2_3_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 5,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_1_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_1_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_2_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_2_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_3_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_3_3_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 5,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_1_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_1_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_2_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_2_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_3_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_4_3_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_1_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_1_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_2_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 3,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_2_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 5,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_3_add_base_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 2,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "cs_row_5_3_update_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 9
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 4,
+                    "weight": 30.95149863760218
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "logarithmic_1_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "search",
+                            "memory_type": "tcam",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 12.886756316002272
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "logarithmic_2_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "search",
+                            "memory_type": "tcam",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 12.886756316002272
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "logarithmic_3_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "search",
+                            "memory_type": "tcam",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 1,
+                    "weight": 12.886756316002272
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "sampling_1_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "sampling_2_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "sampling_3_compute_hash_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [],
+                    "on_critical_path": true,
+                    "stage_number": 0,
+                    "weight": 0.0
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_1_match_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 4
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 8,
+                    "weight": 25.307901907356947
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_1_sum_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 2
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 4
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 7,
+                    "weight": 30.872479564032696
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_2_match_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 4
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 10,
+                    "weight": 25.307901907356947
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_2_sum_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 2
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 4
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 9,
+                    "weight": 30.872479564032696
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_3_match_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 4
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 9,
+                    "weight": 25.307901907356947
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_sum_3_sum_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 2
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        },
+                        {
+                            "access_type": "read",
+                            "memory_type": "map_ram",
+                            "num_memories": 4
+                        },
+                        {
+                            "access_type": "write",
+                            "memory_type": "map_ram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 8,
+                    "weight": 30.872479564032696
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_1_shift_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_1_subtract_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 5,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_2_shift_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 8,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_2_subtract_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 7,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_3_shift_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 7,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        },
+        {
+            "gress": "ingress",
+            "name": "univmon_th_3_subtract_table_0",
+            "stages": [
+                {
+                    "always_runs": false,
+                    "memories": [
+                        {
+                            "access_type": "read",
+                            "memory_type": "sram",
+                            "num_memories": 1
+                        }
+                    ],
+                    "on_critical_path": true,
+                    "stage_number": 6,
+                    "weight": 6.3269754768392369
+                }
+            ]
+        }
+    ],
+    "total_latency": [
+        {
+            "gress": "ingress",
+            "latency": 144,
+            "pipe_number": 0
+        },
+        {
+            "gress": "egress",
+            "latency": 168,
+            "pipe_number": 0
+        }
+    ],
+    "total_power": [
+        {
+            "gress": "ingress",
+            "pipe_number": 0,
+            "power": 12.535449505847998
+        },
+        {
+            "gress": "egress",
+            "pipe_number": 0,
+            "power": 0.0
+        }
+    ]
+}

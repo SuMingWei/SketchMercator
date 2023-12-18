@@ -1,0 +1,6 @@
+*.log
+zlog-cfg-cur
+*.swp
+pcap_output/
+bf_drivers.log.0
+bf_drivers.log.1
