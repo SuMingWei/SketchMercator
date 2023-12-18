@@ -1,0 +1,21 @@
+git clone https://github.com/sketch-home/cpp_lib.git
+git clone https://github.com/sketch-home/data_helper.git
+# git clone https://github.com/sketch-home/env_setting.git
+git clone https://github.com/sketch-home/p4_repo.git
+git clone https://github.com/sketch-home/parallel_run_script.git
+git clone https://github.com/sketch-home/pcap_editor.git
+git clone https://github.com/sketch-home/pcap_sender.git
+git clone https://github.com/sketch-home/pcap_storage.git
+git clone https://github.com/sketch-home/python_lib.git
+git clone https://github.com/sketch-home/result_cp.git
+git clone https://github.com/sketch-home/result_gt.git
+git clone https://github.com/sketch-home/result_plots.git
+git clone https://github.com/sketch-home/result_sw_dp.git
+git clone https://github.com/sketch-home/result_tofino_dp.git
+git clone https://github.com/sketch-home/sketch_control_plane.git
+git clone https://github.com/sketch-home/sw_dp_simulator.git
+git clone https://github.com/sketch-home/tofino_control_plane.git
+git clone https://github.com/sketch-home/switch_compiler.git
+git clone https://github.com/sketch-home/result_resource.git
+git clone git@github.com:sketch-home/query_to_sketch.git
+git clone git@github.com:sketch-home/sketchmd_strategy.git

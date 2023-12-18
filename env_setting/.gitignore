@@ -1,0 +1,3 @@
+*.pyc
+__pycache__
+home_env_setup.sh
