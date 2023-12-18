@@ -1,0 +1,14 @@
+
+<class 'strawmen.RandomStrawman'>
+Traceback (most recent call last):
+  File "/home/milind/Desktop/cmu/research/sketch-home/code/query_to_sketch/global_opt/main.py", line 129, in <module>
+    main(args)
+  File "/home/milind/Desktop/cmu/research/sketch-home/code/query_to_sketch/global_opt/main.py", line 91, in main
+    solution, error_bounds = solver.get_solution()
+  File "/home/milind/Desktop/cmu/research/sketch-home/code/query_to_sketch/global_opt/strawmen.py", line 32, in get_solution
+    error_bounds = self.get_error_bounds(solution)
+  File "/home/milind/Desktop/cmu/research/sketch-home/code/query_to_sketch/global_opt/classes.py", line 85, in get_error_bounds
+    result.append(float(self.error_bound_config[sketch][metric]))
+  File "/usr/lib/python3.8/configparser.py", line 960, in __getitem__
+    raise KeyError(key)
+KeyError: 'll'

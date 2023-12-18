@@ -1,0 +1,8 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 1, 'width': 16384}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 1, 'width': 16384}
+Errors [0.18, 0.17]
+Value of optimization function on errors 0.175
+Time taken 0.0005495548248291016

@@ -1,0 +1,10 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 131072}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 131072}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 131072}
+Errors [0.0, 0.1, 0.0, 0.02]
+Value of optimization function on errors 0.030000000000000002
+Time taken 2.3651061058044434

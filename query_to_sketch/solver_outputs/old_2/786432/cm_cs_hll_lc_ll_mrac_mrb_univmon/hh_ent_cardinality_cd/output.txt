@@ -1,0 +1,30 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 131072}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 4096}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 131072}
+Errors [0.0, 0.01, 0.0, 0.02]
+Value of optimization function on errors 0.0075
+Time taken 60.59338140487671
+
+<class 'strawmen.RandomStrawman'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 32768}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 2048}
+('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 8192}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 5, 'width': 32768}
+Error bounds [10.0, 40.0, 10.0, 10.0]
+Value of optimization function on error bounds 17.5
+Time taken 0.00015974044799804688
+
+<class 'strawmen.GeneralityStrawman'>
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 2048}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 32768}
+Error bounds [40.0, 40.0, 40.0, 10.0]
+Value of optimization function on error bounds 32.5
+Time taken 6.0558319091796875e-05

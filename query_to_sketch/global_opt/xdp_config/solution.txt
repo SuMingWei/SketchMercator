@@ -1,0 +1,67 @@
+
+<class 'optimizers.BruteForce'> None None
+{('cs', '5tuple'): {'level': 1, 'row': 1, 'width': 131072}}
+('hh', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('cs', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 131072}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 131072}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 131072}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 131072}
+Error [0.03, 0.15, 0.32, 0.8]
+Value of optimization function on errors 0.325
+Time taken 0.09687614440917969
+
+<class 'strawmen.RandomStrawman'> equal 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('cs', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.0002079010009765625
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('cs', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.00010371208190917969
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}}
+('ent', '5tuple') ('cs', '5tuple')
+('hh', '5tuple') ('cs', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 9.799003601074219e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}}
+('ent', '5tuple') ('cs', '5tuple')
+('hh', '5tuple') ('cs', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 9.608268737792969e-05

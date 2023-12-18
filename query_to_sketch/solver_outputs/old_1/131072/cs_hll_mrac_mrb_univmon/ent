@@ -1,0 +1,7 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 16384}
+Errors [0.1]
+Value of optimization function on errors 0.1
+Time taken 0.001203775405883789

@@ -1,0 +1,30 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 65536}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 65536}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 65536}
+Errors [0.01, 0.06, 0.0, 0.03]
+Value of optimization function on errors 0.024999999999999998
+Time taken 13.931319952011108
+
+<class 'strawmen.RandomStrawman'>
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 5, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 32768}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 5, 'width': 32768}
+Error bounds [10.0, 10.0, 10.0, 10.0]
+Value of optimization function on error bounds 10.0
+Time taken 0.00015306472778320312
+
+<class 'strawmen.GeneralityStrawman'>
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 5, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 32768}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 5, 'width': 32768}
+Error bounds [10.0, 10.0, 10.0, 10.0]
+Value of optimization function on error bounds 10.0
+Time taken 8.20159912109375e-05

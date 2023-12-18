@@ -1,0 +1,318 @@
+profiles_path /home/kevin/sketch_home/query_to_sketch/profiler/actual_profiles_diff_pcaps/pcap_5
+
+<class 'optimizers.BruteForce'> None None
+{('cs', '5tuple'): {'level': 1, 'row': 3, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 8192}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 16384}}
+('hh', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 16384}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 3, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
+Error bounds [0.06, 0.29, 0.17, 0.02, 0.35]
+Value of optimization function on errors 0.178
+Time taken 787.7294154167175
+
+<class 'strawmen.RandomStrawman'> equal 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 32768}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00029850006103515625
+
+<class 'strawmen.RandomStrawman'> equal 1
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 65536}}
+('hh', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('cs', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 65536}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.00016832351684570312
+
+<class 'strawmen.RandomStrawman'> equal 2
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 32768}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+Time taken 0.00016188621520996094
+
+<class 'strawmen.RandomStrawman'> equal 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('mrb', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}}
+('hh', '5tuple') ('univmon', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('mrb', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 4096}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00016045570373535156
+
+<class 'strawmen.RandomStrawman'> equal 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('lc', '5tuple'): {'level': 1, 'row': 1, 'width': 32768}}
+('hh', '5tuple') ('univmon', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('lc', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00017070770263671875
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 16384}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00017118453979492188
+
+<class 'strawmen.RandomStrawman'> query_proportional 1
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 32768}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 16384}}
+('hh', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('cs', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.00016546249389648438
+
+<class 'strawmen.RandomStrawman'> query_proportional 2
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('hll', '5tuple'): {'level': 1, 'row': 1, 'width': 16384}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('hll', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+Time taken 0.0001621246337890625
+
+<class 'strawmen.RandomStrawman'> query_proportional 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 512}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}, ('mrb', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}}
+('hh', '5tuple') ('univmon', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('mrb', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 512}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 2048}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00016427040100097656
+
+<class 'strawmen.RandomStrawman'> query_proportional 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 512}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}, ('lc', '5tuple'): {'level': 1, 'row': 1, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+('ent', '5tuple') ('mrac', '5tuple')
+('cardinality', '5tuple') ('lc', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 512}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00018286705017089844
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0001308917999267578
+
+<class 'strawmen.GeneralityStrawman'> equal 1
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0001246929168701172
+
+<class 'strawmen.GeneralityStrawman'> equal 2
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 4096}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00012183189392089844
+
+<class 'strawmen.GeneralityStrawman'> equal 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00012254714965820312
+
+<class 'strawmen.GeneralityStrawman'> equal 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 1024}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 16384}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00011992454528808594
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 2048}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00012564659118652344
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 1
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 2048}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00012612342834472656
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 2
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 2048}, ('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 2048}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('mrac', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00012421607971191406
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 2048}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00012421607971191406
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 2048}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.0001342296600341797

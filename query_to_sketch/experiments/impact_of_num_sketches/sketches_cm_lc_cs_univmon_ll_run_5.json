@@ -1,0 +1,1322 @@
+[
+    {
+        "name": "optimizers.BruteForce:None:None:0",
+        "solutions": [
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 65536
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 65536
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:1",
+        "solutions": [
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 32768
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 65536
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:2",
+        "solutions": [
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:3",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:4",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "ll",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 32768
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 512
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:1",
+        "solutions": [
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 32768
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:2",
+        "solutions": [
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 512
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:3",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "lc",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:4",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": "ll",
+                "query": [
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:1",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:2",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:3",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:4",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:1",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:2",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": "cs",
+                "query": [
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:3",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:4",
+        "solutions": [
+            {
+                "algo": "univmon",
+                "query": [
+                    [
+                        "hh",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "ent",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "cardinality",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": "cm",
+                "query": [
+                    [
+                        "cd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ],
+                    [
+                        "fsd",
+                        [
+                            "dstip",
+                            "dstport"
+                        ]
+                    ]
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    }
+]

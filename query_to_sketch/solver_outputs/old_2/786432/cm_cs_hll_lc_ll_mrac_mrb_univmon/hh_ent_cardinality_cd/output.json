@@ -1,0 +1,101 @@
+[
+    {
+        "name": "optimizers.BruteForce",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0,
+                    4
+                ],
+                "level": 1,
+                "row": 3,
+                "width": 131072
+            },
+            {
+                "algo": 7,
+                "metric": [
+                    2
+                ],
+                "level": 16,
+                "row": 5,
+                "width": 4096
+            },
+            {
+                "algo": 3,
+                "metric": [
+                    3
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 65536
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 5,
+                "width": 32768
+            },
+            {
+                "algo": 7,
+                "metric": [
+                    2
+                ],
+                "level": 16,
+                "row": 5,
+                "width": 2048
+            },
+            {
+                "algo": 4,
+                "metric": [
+                    3
+                ],
+                "level": 8,
+                "row": 1,
+                "width": 8192
+            },
+            {
+                "algo": 0,
+                "metric": [
+                    4
+                ],
+                "level": 1,
+                "row": 5,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0,
+                    2,
+                    3
+                ],
+                "level": 16,
+                "row": 5,
+                "width": 2048
+            },
+            {
+                "algo": 1,
+                "metric": [
+                    4
+                ],
+                "level": 1,
+                "row": 5,
+                "width": 32768
+            }
+        ]
+    }
+]

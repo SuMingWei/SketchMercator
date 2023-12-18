@@ -1,0 +1,22 @@
+
+<class 'strawmen.RandomStrawman'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 16384}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 16384}
+('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 8192}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 16384}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 16384}
+Error bounds [10.0, 10.0, 10.0, 10.0, 20.0]
+Value of optimization function on error bounds 12.0
+Time taken 0.0001857280731201172
+
+<class 'strawmen.GeneralityStrawman'>
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 1024}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 1024}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 1024}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 5, 'width': 16384}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 16384}
+Error bounds [40.0, 40.0, 40.0, 10.0, 20.0]
+Value of optimization function on error bounds 30.0
+Time taken 8.535385131835938e-05

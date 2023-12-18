@@ -1,0 +1,191 @@
+
+<class 'optimizers.BruteForce'> None None
+Solution
+('hh', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 3, 'width': 16384}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 3, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
+Error [0.02, 0.07, 0.05, 0.02, 0.33]
+Value of optimization function on errors 0.098
+Time taken 4256.566961288452
+
+<class 'strawmen.RandomStrawman'> equal 0
+Solution
+('hh', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0006918907165527344
+
+<class 'strawmen.RandomStrawman'> equal 1
+Solution
+('hh', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 65536}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.0002701282501220703
+
+<class 'strawmen.RandomStrawman'> equal 2
+Solution
+('hh', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+Time taken 0.0002524852752685547
+
+<class 'strawmen.RandomStrawman'> equal 3
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0002598762512207031
+
+<class 'strawmen.RandomStrawman'> equal 4
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', ('dstip', 'dstport')) 	 ll 	 {'level': 1, 'row': 1, 'width': 32768}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00025081634521484375
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+Solution
+('hh', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0002849102020263672
+
+<class 'strawmen.RandomStrawman'> query_proportional 1
+Solution
+('hh', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('ent', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.0002582073211669922
+
+<class 'strawmen.RandomStrawman'> query_proportional 2
+Solution
+('hh', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', ('dstip', 'dstport')) 	 hll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+Time taken 0.00025534629821777344
+
+<class 'strawmen.RandomStrawman'> query_proportional 3
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0002562999725341797
+
+<class 'strawmen.RandomStrawman'> query_proportional 4
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 512}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('ent', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 ll 	 {'level': 1, 'row': 1, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00025963783264160156
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00020623207092285156
+
+<class 'strawmen.GeneralityStrawman'> equal 1
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00019502639770507812
+
+<class 'strawmen.GeneralityStrawman'> equal 2
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.00018835067749023438
+
+<class 'strawmen.GeneralityStrawman'> equal 3
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 32768}
+Time taken 0.00018787384033203125
+
+<class 'strawmen.GeneralityStrawman'> equal 4
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 1024}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+Time taken 0.00019216537475585938
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00019788742065429688
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 1
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.00021839141845703125
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 2
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('fsd', ('dstip', 'dstport')) 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+Time taken 0.0002014636993408203
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 3
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+('fsd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 16384}
+Time taken 0.0001976490020751953
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 4
+Solution
+('hh', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('ent', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cardinality', ('dstip', 'dstport')) 	 univmon 	 {'level': 16, 'row': 2, 'width': 2048}
+('cd', ('dstip', 'dstport')) 	 cs 	 {'level': 1, 'row': 2, 'width': 8192}
+('fsd', ('dstip', 'dstport')) 	 mrac 	 {'level': 8, 'row': 1, 'width': 2048}
+Time taken 0.00020766258239746094

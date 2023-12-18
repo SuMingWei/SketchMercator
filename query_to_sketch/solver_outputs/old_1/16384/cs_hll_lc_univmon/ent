@@ -1,0 +1,7 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 16384}
+Errors [0.2]
+Value of optimization function on errors 0.2
+Time taken 0.0007562637329101562

@@ -1,0 +1,7 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('cardinality', '5tuple') 	 ll 	 {'level': 1, 'row': 1, 'width': 524288}
+Errors [0.33]
+Value of optimization function on errors 0.33
+Time taken 0.0003147125244140625

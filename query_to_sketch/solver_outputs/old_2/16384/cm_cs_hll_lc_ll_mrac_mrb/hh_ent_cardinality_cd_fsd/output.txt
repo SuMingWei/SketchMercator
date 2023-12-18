@@ -1,0 +1,17 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
+('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 512}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
+Errors [0.18, 0.58, 0.01, 0.21, 0.87]
+Value of optimization function on errors 0.37
+Time taken 24.85435652732849
+
+<class 'strawmen.RandomStrawman'>
+Sketches don't cover metrics!
+
+<class 'strawmen.GeneralityStrawman'>
+Sketches don't cover metrics!

@@ -1,0 +1,9 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
+('cardinality', '5tuple') 	 ll 	 {'level': 1, 'row': 1, 'width': 16384}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 8192}
+Errors [0.17, 0.61, 0.16]
+Value of optimization function on errors 0.31333333333333335
+Time taken 0.0277407169342041

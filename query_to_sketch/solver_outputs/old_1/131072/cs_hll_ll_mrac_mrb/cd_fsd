@@ -1,0 +1,8 @@
+
+<class 'optimizers.BruteForce'>
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 65536}
+('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
+Errors [0.05, 0.56]
+Value of optimization function on errors 0.30500000000000005
+Time taken 0.004685401916503906

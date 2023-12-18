@@ -1,0 +1,188 @@
+[
+    {
+        "name": "optimizers.BruteForce:None:None:0",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0,
+                    4
+                ],
+                "level": 1,
+                "row": 3,
+                "width": 16384
+            },
+            {
+                "algo": 2,
+                "metric": [
+                    2,
+                    1
+                ],
+                "level": 8,
+                "row": 1,
+                "width": 8192
+            },
+            {
+                "algo": 5,
+                "metric": [
+                    3
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": 1,
+                "metric": [
+                    4,
+                    1
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": 2,
+                "metric": [
+                    2
+                ],
+                "level": 8,
+                "row": 1,
+                "width": 4096
+            },
+            {
+                "algo": 5,
+                "metric": [
+                    3
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 32768
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": 1,
+                "metric": [
+                    4,
+                    1
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": 2,
+                "metric": [
+                    2
+                ],
+                "level": 8,
+                "row": 1,
+                "width": 2048
+            },
+            {
+                "algo": 5,
+                "metric": [
+                    3
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0,
+                    2,
+                    3
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            },
+            {
+                "algo": 0,
+                "metric": [
+                    1
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            },
+            {
+                "algo": 1,
+                "metric": [
+                    4
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0,
+                    2,
+                    3
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 2048
+            },
+            {
+                "algo": 0,
+                "metric": [
+                    1
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            },
+            {
+                "algo": 1,
+                "metric": [
+                    4
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 8192
+            }
+        ]
+    }
+]

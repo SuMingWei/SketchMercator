@@ -1,0 +1,28 @@
+[
+    {
+        "name": "optimizers.BruteForce",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0,
+                    2,
+                    4,
+                    1
+                ],
+                "level": 1,
+                "row": 1,
+                "width": 8192
+            },
+            {
+                "algo": 4,
+                "metric": [
+                    3
+                ],
+                "level": 8,
+                "row": 1,
+                "width": 512
+            }
+        ]
+    }
+]
