@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "strawman1",
+        "solutions" : [
+            {"algo": "1",
+            "metric": ["1", "2"],
+            "row": "4",
+            "width": "1024",
+            "level": "1"},
+            {"algo": "2",
+            "metric": ["3"],
+            "row": "3",
+            "width": "2048",
+            "level": "1"}
+        ]
+    }
+]

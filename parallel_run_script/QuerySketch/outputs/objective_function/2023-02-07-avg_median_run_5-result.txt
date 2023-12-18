@@ -1,0 +1,844 @@
+
+# ========== avg_median_run_5.json ==========
+
+#############################
+ret_us = {} 
+
+measure_list = ['hh', 'change_det', ]
+algos = ['cs']
+widths = [4096]
+rows = [3]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_us = {**ret_us, **tmp}
+
+measure_list = ['entropy', 'fsd', ]
+algos = ['mrac']
+widths = [2048]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_us = {**ret_us, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [16384]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_us = {**ret_us, **tmp}
+
+ret_us_ll.append(ret_us)
+
+#############################
+ret_sol1 = {} 
+
+measure_list = ['hh', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cs']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [32768]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+ret_sol1_ll.append(ret_sol1)
+
+#############################
+ret_sol1 = {} 
+
+measure_list = ['hh', 'change_det', 'entropy', 'fsd', ]
+algos = ['cs']
+widths = [8192]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [65536]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+ret_sol1_ll.append(ret_sol1)
+
+#############################
+ret_sol1 = {} 
+
+measure_list = ['hh', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cs']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['entropy', 'fsd', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [32768]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+ret_sol1_ll.append(ret_sol1)
+
+#############################
+ret_sol1 = {} 
+
+measure_list = ['hh', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['card', ]
+algos = ['mrb']
+widths = [32768]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+ret_sol1_ll.append(ret_sol1)
+
+#############################
+ret_sol1 = {} 
+
+measure_list = ['hh', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+measure_list = ['card', ]
+algos = ['lc']
+widths = [262144]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol1 = {**ret_sol1, **tmp}
+
+ret_sol1_ll.append(ret_sol1)
+
+#############################
+ret_sol2 = {} 
+
+measure_list = ['hh', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cs']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [512]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [16384]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+ret_sol2_ll.append(ret_sol2)
+
+#############################
+ret_sol2 = {} 
+
+measure_list = ['hh', 'change_det', 'entropy', 'fsd', ]
+algos = ['cs']
+widths = [8192]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [16384]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+ret_sol2_ll.append(ret_sol2)
+
+#############################
+ret_sol2 = {} 
+
+measure_list = ['hh', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cs']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['entropy', 'fsd', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['card', ]
+algos = ['hll']
+widths = [16384]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+ret_sol2_ll.append(ret_sol2)
+
+#############################
+ret_sol2 = {} 
+
+measure_list = ['hh', ]
+algos = ['univmon']
+widths = [128]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [512]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['card', ]
+algos = ['mrb']
+widths = [16384]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+ret_sol2_ll.append(ret_sol2)
+
+#############################
+ret_sol2 = {} 
+
+measure_list = ['hh', ]
+algos = ['univmon']
+widths = [128]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['entropy', ]
+algos = ['mrac']
+widths = [512]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+measure_list = ['card', ]
+algos = ['lc']
+widths = [131072]
+rows = [1]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol2 = {**ret_sol2, **tmp}
+
+ret_sol2_ll.append(ret_sol2)
+
+#############################
+ret_sol3 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+ret_sol3_ll.append(ret_sol3)
+
+#############################
+ret_sol3 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cs']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+ret_sol3_ll.append(ret_sol3)
+
+#############################
+ret_sol3 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['mrac']
+widths = [1024]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+ret_sol3_ll.append(ret_sol3)
+
+#############################
+ret_sol3 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [8192]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+ret_sol3_ll.append(ret_sol3)
+
+#############################
+ret_sol3 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [256]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['cs']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol3 = {**ret_sol3, **tmp}
+
+ret_sol3_ll.append(ret_sol3)
+
+#############################
+ret_sol4 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['mrac']
+widths = [512]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+ret_sol4_ll.append(ret_sol4)
+
+#############################
+ret_sol4 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cs']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+ret_sol4_ll.append(ret_sol4)
+
+#############################
+ret_sol4 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['mrac']
+widths = [512]
+rows = [1]
+level = 8
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+ret_sol4_ll.append(ret_sol4)
+
+#############################
+ret_sol4 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['change_det', 'fsd', ]
+algos = ['cm']
+widths = [4096]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+ret_sol4_ll.append(ret_sol4)
+
+#############################
+ret_sol4 = {} 
+
+measure_list = ['hh', 'entropy', 'card', ]
+algos = ['univmon']
+widths = [512]
+rows = [2]
+level = 16
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['change_det', ]
+algos = ['cm']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+measure_list = ['fsd', ]
+algos = ['cs']
+widths = [2048]
+rows = [2]
+level = 1
+ret = get_result_from_pkl(algos, rows, widths, level, seeds, count, measure_list, flowkeys, epochs, datasets)
+for m in measure_list:
+	tmp = {}
+	tmp[m] = ret[m][rows[0]][widths[0]]
+	ret_sol4 = {**ret_sol4, **tmp}
+
+ret_sol4_ll.append(ret_sol4)
