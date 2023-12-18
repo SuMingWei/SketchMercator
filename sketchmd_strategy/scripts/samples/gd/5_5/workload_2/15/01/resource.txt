@@ -1,0 +1,32 @@
+          before  after  hash_reuse  hash_xor  salu_reuse  salu_merge  hfs_reuse
+hashcall   88.89  58.33       16.67         0        0.00        0.00      13.89
+salu       95.83  62.50        0.00         0        0.00       12.50      20.83
+sram       16.35  15.31        0.00         0        0.00       -0.42       1.46
+
+hashcall (total 72 = 6 x 12)
+before       64.00
+after        42.00
+hash_reuse   12.00
+hash_xor      0.00
+salu_reuse    0.00
+salu_merge    0.00
+hfs_reuse    10.00
+
+salu (total 48 = 4 x 12)
+before       46.00
+after        30.00
+hash_reuse    0.00
+hash_xor      0.00
+salu_reuse    0.00
+salu_merge    6.00
+hfs_reuse    10.00
+
+sram (total 960 = 80 x 12)
+before       157.00
+after        147.00
+hash_reuse     0.00
+hash_xor       0.00
+salu_reuse     0.00
+salu_merge    -4.00
+hfs_reuse     14.00
+

@@ -1,0 +1,177 @@
+#include <core.p4>
+#if __TARGET_TOFINO__ == 2
+#include <t2na.p4>
+#else
+#include <tna.p4>
+#endif
+#include "headers.p4"
+#include "util.p4"
+#include "metadata.p4"
+struct metadata_t {
+    bit<16> epoch_index;
+    bit<32> epoch_count;
+    bit<16> src_port;
+    bit<16> dst_port;
+    bit<32> hf_srcip;
+    bit<32> hf_dstip;
+    bit<16> hf_srcport;
+    bit<16> hf_dstport;
+    bit<8> hf_proto;
+    METADATA_DIM(1)
+    METADATA_DIM(2)
+    METADATA_DIM(3)
+    METADATA_DIM(4)
+    METADATA_DIM(5)
+    METADATA_DIM(6)
+}
+#include "parser.p4"
+#include "all_include.p4"
+#define SRCIP hdr.ipv4.src_addr
+#define DSTIP hdr.ipv4.dst_addr
+#define SRCPORT ig_md.src_port
+#define DSTPORT ig_md.dst_port
+#define PROTO hdr.ipv4.protocol
+#define SIZE hdr.ipv4.total_len
+
+control WORKLOAD1_THRESHOLD(
+    inout header_t hdr,
+    inout metadata_t ig_md)
+{
+    action tbl_get_threshold_act (bit<32> threshold_1, bit<32> threshold_2, bit<32> threshold_3, bit<32> threshold_4, bit<32> threshold_5, bit<32> threshold_6) {
+        ig_md.d_1_threshold = threshold_1;
+        ig_md.d_2_threshold = threshold_2;
+        ig_md.d_3_threshold = threshold_3;
+        ig_md.d_4_threshold = threshold_4;
+        ig_md.d_5_threshold = threshold_5;
+        ig_md.d_6_threshold = threshold_6;
+    }
+    table tbl_get_threshold {
+        key = {
+            hdr.ethernet.ether_type : exact;
+        }
+        actions = {
+            tbl_get_threshold_act;
+        }
+    }
+    apply {
+        tbl_get_threshold.apply();
+    }
+}
+
+control SwitchIngress(
+        inout header_t hdr,
+        inout metadata_t ig_md,
+        in ingress_intrinsic_metadata_t ig_intr_md,
+        in ingress_intrinsic_metadata_from_parser_t ig_prsr_md,
+        inout ingress_intrinsic_metadata_for_deparser_t ig_dprsr_md,
+        inout ingress_intrinsic_metadata_for_tm_t ig_tm_md) {
+
+    T2_INIT_HH_1_THRESHOLD( 1, 100, 16384, 32w0x30243f0b, 32w0x0f79f523)
+    T2_INIT_HH_5_THRESHOLD( 2, 100, 4096, 32w0x30243f0b, 32w0x0f79f523, 32w0x6b8cb0c5, 32w0x00390fc3, 32w0x298ac673, 32w0x60180d91)
+    T2_INIT_HH_2_THRESHOLD( 3, 200, 16384, 32w0x30243f0b, 32w0x0f79f523, 32w0x6b8cb0c5)
+    T2_INIT_HH_5_THRESHOLD( 4, 110, 8192, 32w0x30243f0b, 32w0x0f79f523, 32w0x6b8cb0c5, 32w0x00390fc3, 32w0x298ac673, 32w0x60180d91)
+    T2_INIT_HH_2_THRESHOLD( 5, 110, 4096, 32w0x30243f0b, 32w0x0f79f523, 32w0x6b8cb0c5)
+    T2_INIT_HH_5_THRESHOLD( 6, 221, 8192, 32w0x30243f0b, 32w0x0f79f523, 32w0x6b8cb0c5, 32w0x00390fc3, 32w0x298ac673, 32w0x60180d91)
+   
+
+    EPOCH_COUNT_1() epoch_count_1;
+    EPOCH_COUNT_2() epoch_count_2;
+    WORKLOAD1_THRESHOLD() threshold;
+    action init() {
+        ig_md.d_1_above_threshold = 0;
+        ig_md.d_2_above_threshold = 0;
+        ig_md.d_3_above_threshold = 0;
+        ig_md.d_4_above_threshold = 0;
+        ig_md.d_5_above_threshold = 0;
+        ig_md.d_6_above_threshold = 0;
+    }
+
+    apply {
+        if (hdr.tcp.isValid() || hdr.udp.isValid()) {
+            init();
+            threshold.apply(hdr, ig_md);
+            epoch_count_1.apply(ig_md.epoch_index);
+            epoch_count_2.apply(ig_md.epoch_index, ig_md.epoch_count);
+            if(ig_md.epoch_count == 1) {
+                ig_dprsr_md.digest_type = SKETCHMD_HEAVY_FLOWKEY_DIGEST_TYPE;
+            }
+            T2_RUN_HH_1_KEY_1( 1, SRCIP, 1)
+            T2_RUN_HH_5_KEY_1( 2, SRCIP, SIZE)
+            T2_RUN_HH_2_KEY_2( 3, SRCIP, DSTIP, SIZE)
+            T2_RUN_HH_5_KEY_2( 4, SRCIP, SRCPORT, SIZE)
+            T2_RUN_HH_2_KEY_2( 5, DSTIP, DSTPORT, SIZE)
+            T2_RUN_HH_5_KEY_5( 6, SRCIP, DSTIP, SRCPORT, DSTPORT, PROTO, 1)
+        }
+    }
+}
+
+struct heavy_flowkey_digest_t {
+    bit<32> src_addr;
+    bit<32> dst_addr;
+    bit<16> src_port;
+    bit<16> dst_port;
+    bit<8> proto;
+    bit<16> epoch_index;
+    bit<32> epoch_count;
+    bit<1> i01;
+    bit<1> i02;
+    bit<1> i03;
+    bit<1> i04;
+    bit<1> i05;
+    bit<1> i06;
+}
+
+control SwitchIngressDeparserDigest(packet_out pkt,
+                              inout header_t hdr,
+                              in metadata_t ig_md,
+                              in ingress_intrinsic_metadata_for_deparser_t ig_dprsr_md) {
+
+    Digest<heavy_flowkey_digest_t>() heavy_flowkey_digest;
+    apply {
+        if (ig_dprsr_md.digest_type == SKETCHMD_HEAVY_FLOWKEY_DIGEST_TYPE) {
+            heavy_flowkey_digest.pack({SRCIP, DSTIP, ig_md.src_port, ig_md.dst_port, PROTO, ig_md.epoch_index, ig_md.epoch_count, ig_md.d_1_above_threshold, ig_md.d_2_above_threshold, ig_md.d_3_above_threshold, ig_md.d_4_above_threshold, ig_md.d_5_above_threshold, ig_md.d_6_above_threshold});
+        }
+        pkt.emit(hdr);
+    }
+}
+
+
+struct my_egress_headers_t {}
+struct my_egress_metadata_t {}
+parser EgressParser(packet_in        pkt,
+    out my_egress_headers_t          hdr,
+    out my_egress_metadata_t         meta,
+    out egress_intrinsic_metadata_t  eg_intr_md)
+{
+    state start {
+        pkt.extract(eg_intr_md);
+        transition accept;
+    }
+}
+control EmptyEgress(
+        inout my_egress_headers_t hdr,
+        inout my_egress_metadata_t eg_md,
+        in egress_intrinsic_metadata_t eg_intr_md,
+        in egress_intrinsic_metadata_from_parser_t eg_intr_md_from_prsr,
+        inout egress_intrinsic_metadata_for_deparser_t ig_intr_dprs_md,
+        inout egress_intrinsic_metadata_for_output_port_t eg_intr_oport_md) {
+    apply {}
+}
+control EgressDeparser(packet_out pkt,
+    inout my_egress_headers_t                       hdr,
+    in    my_egress_metadata_t                      meta,
+    in    egress_intrinsic_metadata_for_deparser_t  eg_dprsr_md)
+{
+    apply {
+        pkt.emit(hdr);
+    }
+}
+Pipeline(
+    SwitchIngressParser(),
+    SwitchIngress(),
+    SwitchIngressDeparserDigest(),
+    EgressParser(),
+    EmptyEgress(),
+    EgressDeparser()
+) pipe;
+Switch(pipe) main;

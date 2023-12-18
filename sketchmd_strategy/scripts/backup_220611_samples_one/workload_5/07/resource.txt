@@ -1,0 +1,32 @@
+          before  after   O1   O2  O3  O4    O5
+hashcall   43.06  38.89 0.00 0.00   0   0  4.17
+salu       47.92  41.67 0.00 0.00   0   0  6.25
+sram        9.27   9.38 0.00 0.00   0   0 -0.10
+
+hashcall (total 72 = 6 x 12)
+before   31.00
+after    28.00
+O1        0.00
+O2        0.00
+O3        0.00
+O4        0.00
+O5        3.00
+
+salu (total 48 = 4 x 12)
+before   23.00
+after    20.00
+O1        0.00
+O2        0.00
+O3        0.00
+O4        0.00
+O5        3.00
+
+sram (total 960 = 80 x 12)
+before   89.00
+after    90.00
+O1        0.00
+O2        0.00
+O3        0.00
+O4        0.00
+O5       -1.00
+
