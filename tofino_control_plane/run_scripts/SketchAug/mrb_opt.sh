@@ -1,0 +1,1 @@
+python $sketch_home/tofino_control_plane/python/tofino_main.py --sketch_name mrb_opt --configure --ports --read

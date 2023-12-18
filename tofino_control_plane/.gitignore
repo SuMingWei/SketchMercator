@@ -1,0 +1,6 @@
+*.pyc
+bf_drivers.log*
+zlog-cfg-cur
+*.o
+cpp/SketchAug/sketch
+cpp/SketchMD/sketch
