@@ -1,0 +1,13 @@
+main
+*.o
+pcap
+tags*
+.tags*
+exp_result
+*.pcap
+*.gz
+*.swp
+*.pyc
+.idea/
+CMakeLists.txt
+cmake-build-debug/

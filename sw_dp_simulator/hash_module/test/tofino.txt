@@ -1,0 +1,10 @@
+(v) 0x1E8 "srcIP",
+(v) 0x77E "srcIP, dstIP",
+(v) 0x29F "srcIP, dstIP, proto",
+(v) 0x2DD "srcIP, dstIP, dstPort",
+(v) 0x7AC "srcIP, dstIP, dstPort, proto",
+(v) 0x669 "srcIP, srcPort",
+(v) 0x521 "srcIP, srcPort, dstIP",
+(v) 0x708 "srcIP, srcPort, dstIP, proto",
+(v) 0x7E0 "srcIP, srcPort, dstIP, dstPort, proto"
+
