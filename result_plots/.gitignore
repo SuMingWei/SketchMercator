@@ -1,0 +1,5 @@
+*.pyc
+*.eps
+# *.png
+*.ipynb_checkpoints
+# *.json
