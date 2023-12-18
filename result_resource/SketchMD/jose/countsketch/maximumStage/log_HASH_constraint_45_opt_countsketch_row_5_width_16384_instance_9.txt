@@ -1,0 +1,254 @@
+Namespace(compiler='RmtIlpCompiler-020', compiler_file='/data1/hun/sketch_home/switch_compiler/mapper/config/comp00.txt', compiler_mipstartFile=None, compiler_objectiveStr='maximumStage', compiler_outputFileName=None, compiler_relativeGap=0.02, egress_only=False, ingress_and_egress=False, log_directory='/data1/hun/sketch_home/parallel_run_script/jose/SketchMD/', log_level='DEBUG', objective='maximumStage', output='/data1/hun/sketch_home/result_resource/SketchMD/jose/countsketch/maximumStage/HASH_constraint_45_opt_countsketch_row_5_width_16384_instance_9.txt', picture_prefix=None, preprocessor='RmtPreprocess', preprocessor_file='/data1/hun/sketch_home/switch_compiler/mapper/config/prep00.txt', program='/data1/hun/sketch_home/p4_repo/p414/open/sketches/SketchMD/countsketch/opt_countsketch_row_5_width_16384_instance_9.p4', run=None, switch='HASH_constraint_45', switch_file='/data1/hun/sketch_home/switch_compiler/mapper/config/switch00.txt')
+logFile: /data1/hun/sketch_home/parallel_run_script/jose/SketchMD/RmtIlpCompiler-020_opt_countsketch_row_5_width_16384_instance_9.p4_HASH_constraint_45_compiler_objectiveStr=maximumStage_compiler_relativeGap=0.02.log
+Logging level is 10
+('import from hun p4_hlir', '/home/hnamkung/hun_p4-hlir/p4_hlir/__init__.pyc')
+parsing successful
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type md_t not byte-aligned, adding padding
+                     tablename   T    #M-E  M-W                 A-W
+           sketching_1_1_table   e       0   32                 [0]
+           sketching_1_2_table   e       0   32                 [0]
+           sketching_1_3_table   e       0   32                 [0]
+           sketching_1_4_table   e       0   32                 [0]
+           sketching_1_5_table   e       0   32                 [0]
+         cs_1_compute_all_hash   e       0   32                 [0]
+              cs_1_split_table   e       0   32                 [0]
+           th_1_subtract_table   e       0   32                 [0]
+              th_1_shift_table   e       0   32                 [0]
+               sum_1_sum_table   e      32    5              [0, 0]
+             sum_1_match_table   e      32   32              [0, 0]
+           sketching_2_1_table   e       0   32                 [0]
+           sketching_2_2_table   e       0   32                 [0]
+           sketching_2_3_table   e       0   32                 [0]
+           sketching_2_4_table   e       0   32                 [0]
+           sketching_2_5_table   e       0   32                 [0]
+         cs_2_compute_all_hash   e       0   32                 [0]
+              cs_2_split_table   e       0   32                 [0]
+           th_2_subtract_table   e       0   32                 [0]
+              th_2_shift_table   e       0   32                 [0]
+               sum_2_sum_table   e      32    5              [0, 0]
+             sum_2_match_table   e      32   32              [0, 0]
+           sketching_3_1_table   e       0   32                 [0]
+           sketching_3_2_table   e       0   32                 [0]
+           sketching_3_3_table   e       0   32                 [0]
+           sketching_3_4_table   e       0   32                 [0]
+           sketching_3_5_table   e       0   32                 [0]
+         cs_3_compute_all_hash   e       0   32                 [0]
+              cs_3_split_table   e       0   32                 [0]
+           th_3_subtract_table   e       0   32                 [0]
+              th_3_shift_table   e       0   32                 [0]
+               sum_3_sum_table   e      32    5              [0, 0]
+             sum_3_match_table   e      32   32              [0, 0]
+           sketching_4_1_table   e       0   32                 [0]
+           sketching_4_2_table   e       0   32                 [0]
+           sketching_4_3_table   e       0   32                 [0]
+           sketching_4_4_table   e       0   32                 [0]
+           sketching_4_5_table   e       0   32                 [0]
+         cs_4_compute_all_hash   e       0   32                 [0]
+              cs_4_split_table   e       0   32                 [0]
+           th_4_subtract_table   e       0   32                 [0]
+              th_4_shift_table   e       0   32                 [0]
+               sum_4_sum_table   e      32    5              [0, 0]
+             sum_4_match_table   e      32   32              [0, 0]
+           sketching_5_1_table   e       0   32                 [0]
+           sketching_5_2_table   e       0   32                 [0]
+           sketching_5_3_table   e       0   32                 [0]
+           sketching_5_4_table   e       0   32                 [0]
+           sketching_5_5_table   e       0   32                 [0]
+         cs_5_compute_all_hash   e       0   32                 [0]
+              cs_5_split_table   e       0   32                 [0]
+           th_5_subtract_table   e       0   32                 [0]
+              th_5_shift_table   e       0   32                 [0]
+               sum_5_sum_table   e      32    5              [0, 0]
+             sum_5_match_table   e      32   32              [0, 0]
+           sketching_6_1_table   e       0   32                 [0]
+           sketching_6_2_table   e       0   32                 [0]
+           sketching_6_3_table   e       0   32                 [0]
+           sketching_6_4_table   e       0   32                 [0]
+           sketching_6_5_table   e       0   32                 [0]
+         cs_6_compute_all_hash   e       0   32                 [0]
+              cs_6_split_table   e       0   32                 [0]
+           th_6_subtract_table   e       0   32                 [0]
+              th_6_shift_table   e       0   32                 [0]
+               sum_6_sum_table   e      32    5              [0, 0]
+             sum_6_match_table   e      32   32              [0, 0]
+           sketching_7_1_table   e       0   32                 [0]
+           sketching_7_2_table   e       0   32                 [0]
+           sketching_7_3_table   e       0   32                 [0]
+           sketching_7_4_table   e       0   32                 [0]
+           sketching_7_5_table   e       0   32                 [0]
+         cs_7_compute_all_hash   e       0   32                 [0]
+              cs_7_split_table   e       0   32                 [0]
+           th_7_subtract_table   e       0   32                 [0]
+              th_7_shift_table   e       0   32                 [0]
+               sum_7_sum_table   e      32    5              [0, 0]
+             sum_7_match_table   e      32   32              [0, 0]
+           sketching_8_1_table   e       0   32                 [0]
+           sketching_8_2_table   e       0   32                 [0]
+           sketching_8_3_table   e       0   32                 [0]
+           sketching_8_4_table   e       0   32                 [0]
+           sketching_8_5_table   e       0   32                 [0]
+         cs_8_compute_all_hash   e       0   32                 [0]
+              cs_8_split_table   e       0   32                 [0]
+           th_8_subtract_table   e       0   32                 [0]
+              th_8_shift_table   e       0   32                 [0]
+               sum_8_sum_table   e      32    5              [0, 0]
+             sum_8_match_table   e      32   32              [0, 0]
+           sketching_9_1_table   e       0   32                 [0]
+           sketching_9_2_table   e       0   32                 [0]
+           sketching_9_3_table   e       0   32                 [0]
+           sketching_9_4_table   e       0   32                 [0]
+           sketching_9_5_table   e       0   32                 [0]
+         cs_9_compute_all_hash   e       0   32                 [0]
+              cs_9_split_table   e       0   32                 [0]
+           th_9_subtract_table   e       0   32                 [0]
+              th_9_shift_table   e       0   32                 [0]
+               sum_9_sum_table   e      32    5              [0, 0]
+             sum_9_match_table   e      32   32              [0, 0]
+                  _condition_0   g       0    1                 [0]
+                  _condition_1   g       0    1                 [0]
+                  _condition_2   g       0    1                 [0]
+                  _condition_3   g       0    1                 [0]
+                  _condition_4   g       0    1                 [0]
+                  _condition_5   g       0    1                 [0]
+                  _condition_6   g       0    1                 [0]
+                  _condition_7   g       0    1                 [0]
+                  _condition_8   g       0    1                 [0]
+                  _condition_9   g       0    1                 [0]
+                 _condition_10   g       0    1                 [0]
+                 _condition_11   g       0    1                 [0]
+                 _condition_12   g       0    1                 [0]
+                 _condition_13   g       0    1                 [0]
+                 _condition_14   g       0    1                 [0]
+                 _condition_15   g       0    1                 [0]
+                 _condition_16   g       0    1                 [0]
+                 _condition_17   g       0    1                 [0]
+pipelineLatency constraint ignored since we are not optimizing for pipeline latency!!
+Tried aggregator 3 times.
+MIP Presolve eliminated 92805 rows and 73091 columns.
+MIP Presolve modified 691814 coefficients.
+Aggregator did 11381 substitutions.
+Reduced MIP has 129348 rows, 78924 columns, and 451451 nonzeros.
+Reduced MIP has 48405 binaries, 16488 generals, 0 SOSs, and 0 indicators.
+Presolve time = 13.69 sec. (2316.01 ticks)
+Probing fixed 3178 vars, tightened 1796 bounds.
+Probing changed sense of 17429 constraints.
+Probing time = 29.84 sec. (278.05 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 50763 rows and 26228 columns.
+MIP Presolve modified 11163 coefficients.
+Aggregator did 3159 substitutions.
+Reduced MIP has 75426 rows, 49537 columns, and 222164 nonzeros.
+Reduced MIP has 24062 binaries, 16208 generals, 0 SOSs, and 0 indicators.
+Presolve time = 3.90 sec. (426.82 ticks)
+Probing fixed 199 vars, tightened 245 bounds.
+Probing time = 24.40 sec. (69.92 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 656 rows and 444 columns.
+MIP Presolve modified 1834 coefficients.
+Reduced MIP has 74770 rows, 49093 columns, and 220207 nonzeros.
+Reduced MIP has 23863 binaries, 16059 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.84 sec. (125.03 ticks)
+Probing time = 7.08 sec. (30.51 ticks)
+Clique table members: 153491.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 4.47 sec. (514.62 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0        7.1828   245                      7.1828     2331         
+      0     0        7.2372   320                   Cuts: 269     6763         
+      0     0        7.2501   376                   Cuts: 285    10564         
+      0     0        7.2777   401                   Cuts: 284    12637         
+      0     0        7.3057   392                   Cuts: 197    16236         
+      0     0        7.3203   401                   Cuts: 268    22065         
+      0     0        7.3337   445                   Cuts: 274    26361         
+      0     0        7.3607   472                   Cuts: 245    30459         
+      0     0        7.9259   499                   Cuts: 256   261074         
+      0     0        7.3064   626                   Cuts: 699   388026         
+      0     0        7.6296   518                  Cuts: 1126   398565         
+      0     0        7.6296   653                   Cuts: 538   409462         
+      0     2        7.6296   653                      7.9259   409462         
+Elapsed time = 951.27 sec. (492966.45 ticks, tree = 0.00 MB, solutions = 0)
+      1     3        7.2411   752                      7.9259   538095         
+      2     4        7.7811   456                      7.9259   544920         
+      4     6       11.6889   550                      7.9259   555661         
+      6     6    infeasible                            7.9259   559922         
+     10    10        7.6329   536                      7.9259   573319         
+     14    12        7.2552   647                      7.9259   692103         
+     15    13        7.2555   451                      7.9259   824638         
+     16    14       40.0000   503                      7.9259   831233         
+     17    15        8.2111   594                      7.9259  1012256         
+     24    20       39.0000   320                      7.9259  1015093         
+Elapsed time = 1628.88 sec. (1031473.71 ticks, tree = 0.00 MB, solutions = 0)
+     37    29       42.0000   512                      8.2111  1018061         
+     64    46       10.0000   310                      8.5222  1025620         
+    406   231       10.0000   224                      8.5222  1043777         
+    806   416       10.0000   172                      8.5222  1057103         
+   1201   582       42.0000   309                      8.5222  1067808         
+   1206   583        8.5222   596                      8.5222  1067937         
+   3316  1657       11.0000   364                      8.5222  1240632         
+*  4614  2083      integral     0       44.0000        8.5222  1259550   80.63%
+* 17223  3888      integral     0       41.0000        8.5222  1397301   79.21%
+* 38343  5419      integral     0       23.0000        8.5222  1530828   62.95%
+  40750    17        7.3199   467       23.0000        8.5222  1586432   62.95%
+  40901    61        7.3259   410       23.0000        8.5222  1616868   62.95%
+  40947    65       12.0262   237       23.0000        8.5222  1639457   62.95%
+Elapsed time = 1902.51 sec. (1218899.24 ticks, tree = 0.00 MB, solutions = 5)
+  40949    67       12.0691   252       23.0000        8.5222  1642470   62.95%
+  40950    68       13.0000   170       23.0000        8.5222  1659922   62.95%
+  41000   110       13.0000   290       23.0000        8.5222  1703224   62.95%
+  42299   633        7.3282   364       23.0000        8.5222  1861133   62.95%
+  42365   649       11.0189   235       23.0000        8.5222  1910767   62.95%
+  42451   695        7.3211   471       23.0000        8.5222  1967921   62.95%
+  44456  1535       12.1365   262       23.0000        8.5222  2263874   62.95%
+  45140  1706        7.3293   488       23.0000        8.5222  2362633   62.95%
+  45172  1706        7.3342   434       23.0000        8.5222  2395322   62.95%
+  45205  1703       12.0000   242       23.0000        8.5222  2439339   62.95%
+Elapsed time = 1991.10 sec. (1275290.78 ticks, tree = 0.00 MB, solutions = 5)
+  45287  1697       11.0000   186       23.0000        8.5222  2503934   62.95%
+* 48157  3279      integral     0       21.0000        8.5222  2759650   59.42%
+  48377  2809        7.4777   335       21.0000        8.5222  2775530   59.42%
+  48378  2810        7.3570   421       21.0000        8.5222  2799944   59.42%
+  48533  2911        7.3698   468       21.0000        8.5222  2824926   59.42%
+  50022  4050       11.0818   310       21.0000        8.5222  2996007   59.42%
+* 50106  4061      integral     0       18.0000        8.5222  3000949   52.65%
+* 50236  4102      integral     0       18.0000        8.5222  3006129   52.65%
+  53066  4387       10.0000   159       18.0000       10.0000  3150056   44.44%
+  53075  4389       14.0000    81       18.0000       10.0000  3150848   44.44%
+  53090  4390       10.0000   143       18.0000       10.0000  3152475   44.44%
+  53168  4419       16.0000    86       18.0000       10.0000  3158568   44.44%
+* 53283  2982      integral     0       16.0000       10.0000  3166370   37.50%
+  53728  1670       14.0000    74       16.0000       10.0000  3181896   37.50%
+Elapsed time = 2124.92 sec. (1325666.46 ticks, tree = 644.32 MB, solutions = 16)
+* 53878  1249      integral     0       15.0000       10.0000  3190954   33.33%
+* 54154  1081      integral     0       14.0000       10.0000  3196205   28.57%
+* 54597   344      integral     0       13.0000       10.0000  3210313   23.08%
+  54649   105       12.0000    62       13.0000       10.0000  3213786   23.08%
+  56130   878       12.0000    50       13.0000       10.0000  3272961   23.08%
+  56483   743       11.0000   132       13.0000       10.0000  3306194   23.08%
+  57193   552        cutoff             13.0000       10.0000  3380531   23.08%
+  58614   617        cutoff             13.0000       12.0000  3466910    7.69%
+  59027   435       12.0000    82       13.0000       12.0000  3512102    7.69%
+
+GUB cover cuts applied:  408
+Clique cuts applied:  74
+Cover cuts applied:  865
+Flow cuts applied:  35
+Mixed integer rounding cuts applied:  13
+Zero-half cuts applied:  63
+Gomory fractional cuts applied:  18
+
+Root node processing (before b&c):
+  Real time             =  950.12 sec. (492221.60 ticks)
+Parallel b&c, 32 threads:
+  Real time             = 1184.51 sec. (840306.07 ticks)
+  Sync time (average)   =  941.21 sec.
+  Wait time (average)   = 1009.25 sec.
+                          ------------
+Total (root+branch&cut) = 2134.63 sec. (1332527.66 ticks)
+Error! Exiting! Check log file

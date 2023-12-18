@@ -1,0 +1,1548 @@
+maximum_stage 9
+hash_dist_unit 20
+salu 16
+map_ram 40
+sram 7
+tcam 0
+                            [hashDistUnitVar]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                  [hashDistUnitVar] TOTAL SUM  4  0  4  4  4  1  0  3  0
+------------------------------------------------------------------------
+
+                                    [saluVar]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                          [saluVar] TOTAL SUM  0  0  4  4  4  1  0  3  0
+------------------------------------------------------------------------
+
+                              [word [action]]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                          sketching_1_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0       0       0
+                        cs_1_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_1_split_table       0       0       0       0       0       0       0       0       0
+                          th_1_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_1_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_1_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_1_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0       0       0
+                        cs_2_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_2_split_table       0       0       0       0       0       0       0       0       0
+                          th_2_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_2_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_2_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_2_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0       0       0
+                        cs_3_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_3_split_table       0       0       0       0       0       0       0       0       0
+                          th_3_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_3_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_3_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_3_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0       0       0
+                        cs_4_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_4_split_table       0       0       0       0       0       0       0       0       0
+                          th_4_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_4_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_4_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_4_match_table       0       0       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0       0       0
+                                 _condition_6       0       0       0       0       0       0       0       0       0
+                                 _condition_7       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+                    [word [action]] TOTAL SUM       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+
+                             [block [action]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                   [block [action]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+                          [blockBin [action]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                [blockBin [action]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+hun log
+
+thing action max stage 9 
+
+pfmax 1                            [layout [action]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_1_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_1_3_table  1  1  1  1  1  1  1  1  1
+                        cs_1_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_1_split_table  1  1  1  1  1  1  1  1  1
+                          th_1_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_1_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_1_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_1_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_3_table  1  1  1  1  1  1  1  1  1
+                        cs_2_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_2_split_table  1  1  1  1  1  1  1  1  1
+                          th_2_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_2_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_2_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_2_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_3_table  1  1  1  1  1  1  1  1  1
+                        cs_3_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_3_split_table  1  1  1  1  1  1  1  1  1
+                          th_3_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_3_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_3_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_3_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_3_table  1  1  1  1  1  1  1  1  1
+                        cs_4_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_4_split_table  1  1  1  1  1  1  1  1  1
+                          th_4_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_4_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_4_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_4_match_table  1  1  1  1  1  1  1  1  1
+                                 _condition_0  1  1  1  1  1  1  1  1  1
+                                 _condition_1  1  1  1  1  1  1  1  1  1
+                                 _condition_2  1  1  1  1  1  1  1  1  1
+                                 _condition_3  1  1  1  1  1  1  1  1  1
+                                 _condition_4  1  1  1  1  1  1  1  1  1
+                                 _condition_5  1  1  1  1  1  1  1  1  1
+                                 _condition_6  1  1  1  1  1  1  1  1  1
+                                 _condition_7  1  1  1  1  1  1  1  1  1
+------------------------------------------------------------------------
+                  [layout [action]] TOTAL SUM 44 44 44 44 44 44 44 44 44
+------------------------------------------------------------------------
+
+                         [layoutBin [action]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_1_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_1_3_table  1  1  1  1  1  1  1  1  1
+                        cs_1_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_1_split_table  1  1  1  1  1  1  1  1  1
+                          th_1_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_1_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_1_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_1_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_2_3_table  1  1  1  1  1  1  1  1  1
+                        cs_2_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_2_split_table  1  1  1  1  1  1  1  1  1
+                          th_2_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_2_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_2_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_2_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_3_3_table  1  1  1  1  1  1  1  1  1
+                        cs_3_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_3_split_table  1  1  1  1  1  1  1  1  1
+                          th_3_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_3_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_3_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_3_match_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_1_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_2_table  1  1  1  1  1  1  1  1  1
+                          sketching_4_3_table  1  1  1  1  1  1  1  1  1
+                        cs_4_compute_all_hash  1  1  1  1  1  1  1  1  1
+                             cs_4_split_table  1  1  1  1  1  1  1  1  1
+                          th_4_subtract_table  1  1  1  1  1  1  1  1  1
+                             th_4_shift_table  1  1  1  1  1  1  1  1  1
+                              sum_4_sum_table  1  1  1  1  1  1  1  1  1
+                            sum_4_match_table  1  1  1  1  1  1  1  1  1
+                                 _condition_0  1  1  1  1  1  1  1  1  1
+                                 _condition_1  1  1  1  1  1  1  1  1  1
+                                 _condition_2  1  1  1  1  1  1  1  1  1
+                                 _condition_3  1  1  1  1  1  1  1  1  1
+                                 _condition_4  1  1  1  1  1  1  1  1  1
+                                 _condition_5  1  1  1  1  1  1  1  1  1
+                                 _condition_6  1  1  1  1  1  1  1  1  1
+                                 _condition_7  1  1  1  1  1  1  1  1  1
+------------------------------------------------------------------------
+               [layoutBin [action]] TOTAL SUM 44 44 44 44 44 44 44 44 44
+------------------------------------------------------------------------
+
+                                [word [sram]]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                          sketching_1_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0       0       0
+                        cs_1_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_1_split_table       0       0       0       0       0       0       0       0       0
+                          th_1_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_1_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_1_sum_table       0       0       0       0       0       0   25600       0       0
+                            sum_1_match_table       0       0       0       0       0       0       0       0    1024
+                          sketching_2_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0       0       0
+                        cs_2_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_2_split_table       0       0       0       0       0       0       0       0       0
+                          th_2_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_2_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_2_sum_table       0       0       0       0       0   25600       0       0       0
+                            sum_2_match_table       0       0       0       0       0       0       0       0    4096
+                          sketching_3_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0       0       0
+                        cs_3_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_3_split_table       0       0       0       0       0       0       0       0       0
+                          th_3_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_3_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_3_sum_table       0       0       0       0       0    1024       0       0       0
+                            sum_3_match_table       0       0       0       0       0       0       0    1024       0
+                          sketching_4_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0       0       0
+                        cs_4_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_4_split_table       0       0       0       0       0       0       0       0       0
+                          th_4_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_4_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_4_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_4_match_table       0       0       0       0       0       0       0       0    1024
+                                 _condition_0       0       0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0       0       0
+                                 _condition_6       0       0       0       0       0       0       0       0       0
+                                 _condition_7       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+                      [word [sram]] TOTAL SUM       0       0       0       0       0   26624   25600    1024    6144
+---------------------------------------------------------------------------------------------------------------------
+
+                               [block [sram]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  1  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  1  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                     [block [sram]] TOTAL SUM  0  0  0  0  0  2  1  1  3
+------------------------------------------------------------------------
+
+                            [blockBin [sram]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                  [blockBin [sram]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+hun log
+
+thing sram max stage 9 
+
+pfmax 4                              [layout [sram]]  1  1  1  1  2  2  2  2  3  3  3  3  4  4  4  4  5  5  5  5  6  6  6  6  7  7  7  7  8  8  8  8  9  9  9  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  1  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  1  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                    [layout [sram]] TOTAL SUM  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  0  0  0  1  0  0  1  0  0  0  2  1  0  0
+------------------------------------------------------------------------
+
+                           [layoutBin [sram]]  1  1  1  1  2  2  2  2  3  3  3  3  4  4  4  4  5  5  5  5  6  6  6  6  7  7  7  7  8  8  8  8  9  9  9  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  1  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  1  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                 [layoutBin [sram]] TOTAL SUM  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1  0  0  0  0  0  0  1  0  0  0  2  1  0  0
+------------------------------------------------------------------------
+
+                                [word [tcam]]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                          sketching_1_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0       0       0
+                        cs_1_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_1_split_table       0       0       0       0       0       0       0       0       0
+                          th_1_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_1_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_1_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_1_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0       0       0
+                        cs_2_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_2_split_table       0       0       0       0       0       0       0       0       0
+                          th_2_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_2_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_2_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_2_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0       0       0
+                        cs_3_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_3_split_table       0       0       0       0       0       0       0       0       0
+                          th_3_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_3_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_3_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_3_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0       0       0
+                        cs_4_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_4_split_table       0       0       0       0       0       0       0       0       0
+                          th_4_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_4_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_4_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_4_match_table       0       0       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0       0       0
+                                 _condition_6       0       0       0       0       0       0       0       0       0
+                                 _condition_7       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+                      [word [tcam]] TOTAL SUM       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+
+                               [block [tcam]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                     [block [tcam]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+                            [blockBin [tcam]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                  [blockBin [tcam]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+hun log
+
+thing tcam max stage 9 
+
+pfmax 1                              [layout [tcam]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                    [layout [tcam]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+                           [layoutBin [tcam]]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0  0  0
+                        cs_1_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  0  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0  0  0
+                        cs_2_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  0  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0  0  0
+                        cs_3_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  0  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0  0  0
+                        cs_4_compute_all_hash  0  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  0  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  0  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  0  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  0  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0  0  0
+                                 _condition_6  0  0  0  0  0  0  0  0  0
+                                 _condition_7  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+                 [layoutBin [tcam]] TOTAL SUM  0  0  0  0  0  0  0  0  0
+------------------------------------------------------------------------
+
+                                [startAllMem]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+                      [startAllMem] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+
+                                  [endAllMem]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+                        [endAllMem] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+
+                             [blockAllMemBin]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+                   [blockAllMemBin] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+
+             [startAllMemTimesBlockAllMemBin]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+   [startAllMemTimesBlockAllMemBin] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+
+               [endAllMemTimesBlockAllMemBin]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+     [endAllMemTimesBlockAllMemBin] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+
+                        [totalBlocksForStBin]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                                        total  1  1  1  1  1  1  1  1  1
+
+     [isMaximumStageTimesTotalBlocksForStBin]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                                        total  0  0  0  0  0  0  0  0  1
+
+                             [isMaximumStage]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                                        total  0  0  0  0  0  0  0  0  1
+
+                           [startTimeOfStage]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                                        total       0       0       0       0       0       0       0       0       0
+
+           [startAllMemTimesStartTimeOfStage]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                          sketching_1_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0       0       0
+                        cs_1_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_1_split_table       0       0       0       0       0       0       0       0       0
+                          th_1_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_1_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_1_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_1_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0       0       0
+                        cs_2_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_2_split_table       0       0       0       0       0       0       0       0       0
+                          th_2_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_2_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_2_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_2_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0       0       0
+                        cs_3_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_3_split_table       0       0       0       0       0       0       0       0       0
+                          th_3_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_3_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_3_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_3_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0       0       0
+                        cs_4_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_4_split_table       0       0       0       0       0       0       0       0       0
+                          th_4_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_4_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_4_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_4_match_table       0       0       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0       0       0
+                                 _condition_6       0       0       0       0       0       0       0       0       0
+                                 _condition_7       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+ [startAllMemTimesStartTimeOfStage] TOTAL SUM       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+
+             [endAllMemTimesStartTimeOfStage]       1       2       3       4       5       6       7       8       9
+---------------------------------------------------------------------------------------------------------------------
+                          sketching_1_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0       0       0
+                        cs_1_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_1_split_table       0       0       0       0       0       0       0       0       0
+                          th_1_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_1_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_1_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_1_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0       0       0
+                        cs_2_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_2_split_table       0       0       0       0       0       0       0       0       0
+                          th_2_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_2_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_2_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_2_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0       0       0
+                        cs_3_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_3_split_table       0       0       0       0       0       0       0       0       0
+                          th_3_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_3_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_3_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_3_match_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0       0       0
+                        cs_4_compute_all_hash       0       0       0       0       0       0       0       0       0
+                             cs_4_split_table       0       0       0       0       0       0       0       0       0
+                          th_4_subtract_table       0       0       0       0       0       0       0       0       0
+                             th_4_shift_table       0       0       0       0       0       0       0       0       0
+                              sum_4_sum_table       0       0       0       0       0       0       0       0       0
+                            sum_4_match_table       0       0       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0       0       0
+                                 _condition_6       0       0       0       0       0       0       0       0       0
+                                 _condition_7       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+   [endAllMemTimesStartTimeOfStage] TOTAL SUM       0       0       0       0       0       0       0       0       0
+---------------------------------------------------------------------------------------------------------------------
+
+                            [logicalTableIDs]  1  2  3  4  5  6  7  8  9
+------------------------------------------------------------------------
+                          sketching_1_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  1  0  0  0  0
+                        cs_1_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_1_split_table  0  1  0  0  0  0  0  0  0
+                          th_1_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_1_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_1_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_1_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_2_1_table  0  0  0  1  0  0  0  0  0
+                          sketching_2_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  1  0  0  0  0  0
+                        cs_2_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_2_split_table  0  1  0  0  0  0  0  0  0
+                          th_2_subtract_table  0  0  0  0  1  0  0  0  0
+                             th_2_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_2_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_2_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_3_1_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  1  0  0  0  0
+                          sketching_3_3_table  0  0  0  1  0  0  0  0  0
+                        cs_3_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_3_split_table  0  1  0  0  0  0  0  0  0
+                          th_3_subtract_table  0  0  0  0  0  1  0  0  0
+                             th_3_shift_table  0  0  0  0  0  0  1  0  0
+                              sum_3_sum_table  0  0  0  0  0  0  0  1  0
+                            sum_3_match_table  0  0  0  0  0  0  0  0  1
+                          sketching_4_1_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  1  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  1  0  0  0  0  0  0
+                        cs_4_compute_all_hash  1  0  0  0  0  0  0  0  0
+                             cs_4_split_table  0  1  0  0  0  0  0  0  0
+                          th_4_subtract_table  0  0  0  1  0  0  0  0  0
+                             th_4_shift_table  0  0  0  0  1  0  0  0  0
+                              sum_4_sum_table  0  0  0  0  0  1  0  0  0
+                            sum_4_match_table  0  0  0  0  0  0  0  0  1
+                                 _condition_0  0  0  0  0  0  0  0  0  1
+                                 _condition_1  0  0  0  0  0  0  0  0  1
+                                 _condition_2  0  0  0  0  0  0  0  0  1
+                                 _condition_3  0  0  0  0  0  0  0  0  1
+                                 _condition_4  0  0  0  0  0  0  0  0  1
+                                 _condition_5  0  0  0  0  0  0  0  0  1
+                                 _condition_6  0  0  0  0  0  0  1  0  0
+                                 _condition_7  0  0  0  0  0  0  0  1  0
+------------------------------------------------------------------------
+                  [logicalTableIDs] TOTAL SUM  4  4  4  5  6  3  4  4 10
+------------------------------------------------------------------------
+

@@ -1,0 +1,112 @@
+Namespace(compiler='RmtIlpCompiler-020', compiler_file='/data1/hun/sketch_home/switch_compiler/mapper/config/comp00.txt', compiler_mipstartFile=None, compiler_objectiveStr='maximumStage', compiler_outputFileName=None, compiler_relativeGap=0.2, egress_only=False, ingress_and_egress=False, log_directory='/data1/hun/sketch_home/parallel_run_script/jose/SketchMD/', log_level='DEBUG', objective='maximumStage', output='/data1/hun/sketch_home/result_resource/SketchMD/jose/countsketch/maximumStage/SALU_constraint_45_opt_countsketch_row_3_width_8192_instance_4.txt', picture_prefix=None, preprocessor='RmtPreprocess', preprocessor_file='/data1/hun/sketch_home/switch_compiler/mapper/config/prep00.txt', program='/data1/hun/sketch_home/p4_repo/p414/open/sketches/SketchMD/countsketch/opt_countsketch_row_3_width_8192_instance_4.p4', run=None, switch='SALU_constraint_45', switch_file='/data1/hun/sketch_home/switch_compiler/mapper/config/switch00.txt')
+logFile: /data1/hun/sketch_home/parallel_run_script/jose/SketchMD/RmtIlpCompiler-020_opt_countsketch_row_3_width_8192_instance_4.p4_SALU_constraint_45_compiler_objectiveStr=maximumStage_compiler_relativeGap=0.2.log
+Logging level is 10
+('import from hun p4_hlir', '/home/hnamkung/hun_p4-hlir/p4_hlir/__init__.pyc')
+parsing successful
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type md_t not byte-aligned, adding padding
+                     tablename   T    #M-E  M-W                 A-W
+           sketching_1_1_table   e       0   32                 [0]
+           sketching_1_2_table   e       0   32                 [0]
+           sketching_1_3_table   e       0   32                 [0]
+         cs_1_compute_all_hash   e       0   32                 [0]
+              cs_1_split_table   e       0   32                 [0]
+           th_1_subtract_table   e       0   32                 [0]
+              th_1_shift_table   e       0   32                 [0]
+               sum_1_sum_table   e      32    5              [0, 0]
+             sum_1_match_table   e      32   32              [0, 0]
+           sketching_2_1_table   e       0   32                 [0]
+           sketching_2_2_table   e       0   32                 [0]
+           sketching_2_3_table   e       0   32                 [0]
+         cs_2_compute_all_hash   e       0   32                 [0]
+              cs_2_split_table   e       0   32                 [0]
+           th_2_subtract_table   e       0   32                 [0]
+              th_2_shift_table   e       0   32                 [0]
+               sum_2_sum_table   e      32    5              [0, 0]
+             sum_2_match_table   e      32   32              [0, 0]
+           sketching_3_1_table   e       0   32                 [0]
+           sketching_3_2_table   e       0   32                 [0]
+           sketching_3_3_table   e       0   32                 [0]
+         cs_3_compute_all_hash   e       0   32                 [0]
+              cs_3_split_table   e       0   32                 [0]
+           th_3_subtract_table   e       0   32                 [0]
+              th_3_shift_table   e       0   32                 [0]
+               sum_3_sum_table   e      32    5              [0, 0]
+             sum_3_match_table   e      32   32              [0, 0]
+           sketching_4_1_table   e       0   32                 [0]
+           sketching_4_2_table   e       0   32                 [0]
+           sketching_4_3_table   e       0   32                 [0]
+         cs_4_compute_all_hash   e       0   32                 [0]
+              cs_4_split_table   e       0   32                 [0]
+           th_4_subtract_table   e       0   32                 [0]
+              th_4_shift_table   e       0   32                 [0]
+               sum_4_sum_table   e      32    5              [0, 0]
+             sum_4_match_table   e      32   32              [0, 0]
+                  _condition_0   g       0    1                 [0]
+                  _condition_1   g       0    1                 [0]
+                  _condition_2   g       0    1                 [0]
+                  _condition_3   g       0    1                 [0]
+                  _condition_4   g       0    1                 [0]
+                  _condition_5   g       0    1                 [0]
+                  _condition_6   g       0    1                 [0]
+                  _condition_7   g       0    1                 [0]
+pipelineLatency constraint ignored since we are not optimizing for pipeline latency!!
+Tried aggregator 3 times.
+MIP Presolve eliminated 37783 rows and 27870 columns.
+MIP Presolve modified 262738 coefficients.
+Aggregator did 5628 substitutions.
+Reduced MIP has 44830 rows, 28063 columns, and 160766 nonzeros.
+Reduced MIP has 16770 binaries, 6016 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.65 sec. (860.89 ticks)
+Probing fixed 1179 vars, tightened 669 bounds.
+Probing changed sense of 4343 constraints.
+Probing time = 0.69 sec. (85.55 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 15697 rows and 8605 columns.
+MIP Presolve modified 3752 coefficients.
+Aggregator did 1092 substitutions.
+Reduced MIP has 28041 rows, 18366 columns, and 82142 nonzeros.
+Reduced MIP has 8882 binaries, 5969 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (132.44 ticks)
+Probing time = 0.09 sec. (14.90 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 28041 rows, 18366 columns, and 82142 nonzeros.
+Reduced MIP has 8882 binaries, 5969 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (38.37 ticks)
+Probing time = 0.07 sec. (13.59 ticks)
+Clique table members: 57255.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 0.16 sec. (143.15 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0        3.5061   129                      3.5061     1213         
+      0     0        3.5657   163                   Cuts: 128     2089         
+      0     0        3.6108   208                   Cuts: 193     2850         
+      0     0        7.0000    32                    Cuts: 35     5819         
+      0     0        7.0016   123                    Cuts: 20     6667         
+      0     0        7.0021   176                    Cuts: 64     6880         
+      0     0        7.0205   158                    Cuts: 49     7707         
+      0     0        cutoff                                       7962         
+Elapsed time = 4.55 sec. (3499.08 ticks, tree = 0.00 MB, solutions = 0)
+
+GUB cover cuts applied:  54
+Clique cuts applied:  20
+Cover cuts applied:  11
+Implied bound cuts applied:  43
+Flow cuts applied:  10
+Mixed integer rounding cuts applied:  29
+Zero-half cuts applied:  16
+
+Root node processing (before b&c):
+  Real time             =    4.55 sec. (3499.20 ticks)
+Parallel b&c, 32 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    4.55 sec. (3499.20 ticks)

@@ -1,0 +1,523 @@
+Namespace(compiler='RmtIlpCompiler-020', compiler_file='/data1/hun/sketch_home/switch_compiler/mapper/config/comp00.txt', compiler_mipstartFile=None, compiler_objectiveStr='maximumStage', compiler_outputFileName=None, compiler_relativeGap=0.08, egress_only=False, ingress_and_egress=False, log_directory='/data1/hun/sketch_home/parallel_run_script/jose/SketchLib/', log_level='DEBUG', objective='maximumStage', output='/data1/hun/sketch_home/result_resource/SketchLib/jose/01_CS/maximumStage/p414_original_cs_simple_row_04.txt', picture_prefix=None, preprocessor='RmtPreprocess', preprocessor_file='/data1/hun/sketch_home/switch_compiler/mapper/config/prep00.txt', program='/data1/hun/sketch_home/p4_repo/p414/open/sketches/SketchLib/01_CS/p414_original_cs_simple_row_04/p414_original_cs_simple_row_04.p4', run=None, switch='RmtTofino12', switch_file='/data1/hun/sketch_home/switch_compiler/mapper/config/switch00.txt')
+logFile: /data1/hun/sketch_home/parallel_run_script/jose/SketchLib/RmtIlpCompiler-020_p414_original_cs_simple_row_04.p4_RmtTofino12_compiler_objectiveStr=maximumStage_compiler_relativeGap=0.08.log
+Logging level is 10
+('import from hun p4_hlir', '/home/hnamkung/hun_p4-hlir/p4_hlir/__init__.pyc')
+parsing successful
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type md_t not byte-aligned, adding padding
+                     tablename   T    #M-E  M-W                 A-W
+                 res_1_1_table   e       0   32                 [0]
+                 res_1_2_table   e       0   32                 [0]
+                 res_1_3_table   e       0   32                 [0]
+                 res_1_4_table   e       0   32                 [0]
+           sketching_1_1_table   e       0   32                 [0]
+           sketching_1_2_table   e       0   32                 [0]
+           sketching_1_3_table   e       0   32                 [0]
+           sketching_1_4_table   e       0   32                 [0]
+pipelineLatency constraint ignored since we are not optimizing for pipeline latency!!
+Tried aggregator 2 times.
+MIP Presolve eliminated 1965 rows and 1230 columns.
+MIP Presolve modified 4513 coefficients.
+Aggregator did 281 substitutions.
+Reduced MIP has 1672 rows, 938 columns, and 4870 nonzeros.
+Reduced MIP has 742 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (16.57 ticks)
+Found incumbent of value 5.000000 after 0.05 sec. (26.11 ticks)
+Probing fixed 41 vars, tightened 8 bounds.
+Probing changed sense of 428 constraints.
+Probing time = 0.04 sec. (15.37 ticks)
+Cover probing fixed 0 vars, tightened 446 bounds.
+Tried aggregator 2 times.
+MIP Presolve eliminated 1519 rows and 841 columns.
+MIP Presolve modified 37 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 152 rows, 96 columns, and 469 nonzeros.
+Reduced MIP has 50 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.79 ticks)
+Probing time = 0.00 sec. (0.13 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 152 rows, 96 columns, and 469 nonzeros.
+Reduced MIP has 50 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.28 ticks)
+Probing time = 0.00 sec. (0.14 ticks)
+Clique table members: 200.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 0.00 sec. (0.23 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            5.0000        0.0000           100.00%
+*     0     0      integral     0        1.0000        1.0000        2    0.00%
+Elapsed time = 0.29 sec. (46.44 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.29 sec. (46.53 ticks)
+Parallel b&c, 32 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.29 sec. (46.53 ticks)
+print out consts!
+/data1/hun/sketch_home/result_resource/SketchLib/jose/01_CS/maximumStage/p414_original_cs_simple_row_04.txt
+('maximum_stage', 2)
+('hash_dist_unit', 8)
+('salu', 4)
+('map_ram', 8)
+('sram', 0)
+('tcam', 0)
+ 
+ 
+                            [hashDistUnitVar]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                  [hashDistUnitVar] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+                                    [saluVar]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                          [saluVar] TOTAL SUM  0  4
+---------------------------------------------------
+
+
+
+****************************** [thing = action] ******************************
+
+
+ 
+ 
+                              [word [action]]       1       2
+-------------------------------------------------------------
+                                res_1_1_table       0       0
+                                res_1_2_table       0       0
+                                res_1_3_table       0       0
+                                res_1_4_table       0       0
+                          sketching_1_1_table       0       0
+                          sketching_1_2_table       0       0
+                          sketching_1_3_table       0       0
+                          sketching_1_4_table       0       0
+-------------------------------------------------------------
+                    [word [action]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+ 
+ 
+                             [block [action]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                   [block [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+ 
+                          [blockBin [action]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                [blockBin [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                            [layout [action]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                  [layout [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                         [layoutBin [action]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+               [layoutBin [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+
+
+****************************** [thing = sram] ******************************
+
+
+ 
+ 
+                                [word [sram]]       1       2
+-------------------------------------------------------------
+                                res_1_1_table       0       0
+                                res_1_2_table       0       0
+                                res_1_3_table       0       0
+                                res_1_4_table       0       0
+                          sketching_1_1_table       0       0
+                          sketching_1_2_table       0       0
+                          sketching_1_3_table       0       0
+                          sketching_1_4_table       0       0
+-------------------------------------------------------------
+                      [word [sram]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+ 
+ 
+                               [block [sram]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                     [block [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+ 
+                            [blockBin [sram]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                  [blockBin [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                              [layout [sram]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                    [layout [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                           [layoutBin [sram]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                 [layoutBin [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+
+
+****************************** [thing = tcam] ******************************
+
+
+ 
+ 
+                                [word [tcam]]       1       2
+-------------------------------------------------------------
+                                res_1_1_table       0       0
+                                res_1_2_table       0       0
+                                res_1_3_table       0       0
+                                res_1_4_table       0       0
+                          sketching_1_1_table       0       0
+                          sketching_1_2_table       0       0
+                          sketching_1_3_table       0       0
+                          sketching_1_4_table       0       0
+-------------------------------------------------------------
+                      [word [tcam]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+ 
+ 
+                               [block [tcam]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                     [block [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+ 
+                            [blockBin [tcam]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                  [blockBin [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                              [layout [tcam]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                    [layout [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                           [layoutBin [tcam]]  1  2
+---------------------------------------------------
+                                res_1_1_table  0  0
+                                res_1_2_table  0  0
+                                res_1_3_table  0  0
+                                res_1_4_table  0  0
+                          sketching_1_1_table  0  0
+                          sketching_1_2_table  0  0
+                          sketching_1_3_table  0  0
+                          sketching_1_4_table  0  0
+---------------------------------------------------
+                 [layoutBin [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+ 
+ 
+                                [startAllMem]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                      [startAllMem] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+                                  [endAllMem]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                        [endAllMem] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+                             [blockAllMemBin]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                   [blockAllMemBin] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+             [startAllMemTimesBlockAllMemBin]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+   [startAllMemTimesBlockAllMemBin] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+               [endAllMemTimesBlockAllMemBin]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+     [endAllMemTimesBlockAllMemBin] TOTAL SUM  4  4
+---------------------------------------------------
+
+ 
+ 
+                        [totalBlocksForStBin]  1  2
+---------------------------------------------------
+                                        total  1  1
+
+ 
+ 
+     [isMaximumStageTimesTotalBlocksForStBin]  1  2
+---------------------------------------------------
+                                        total  0  1
+
+ 
+ 
+                             [isMaximumStage]  1  2
+---------------------------------------------------
+                                        total  0  1
+
+ 
+ 
+                           [startTimeOfStage]       1       2
+-------------------------------------------------------------
+                                        total       0       0
+
+ 
+ 
+           [startAllMemTimesStartTimeOfStage]       1       2
+-------------------------------------------------------------
+                                res_1_1_table       0       0
+                                res_1_2_table       0       0
+                                res_1_3_table       0       0
+                                res_1_4_table       0       0
+                          sketching_1_1_table       0       0
+                          sketching_1_2_table       0       0
+                          sketching_1_3_table       0       0
+                          sketching_1_4_table       0       0
+-------------------------------------------------------------
+ [startAllMemTimesStartTimeOfStage] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+ 
+ 
+             [endAllMemTimesStartTimeOfStage]       1       2
+-------------------------------------------------------------
+                                res_1_1_table       0       0
+                                res_1_2_table       0       0
+                                res_1_3_table       0       0
+                                res_1_4_table       0       0
+                          sketching_1_1_table       0       0
+                          sketching_1_2_table       0       0
+                          sketching_1_3_table       0       0
+                          sketching_1_4_table       0       0
+-------------------------------------------------------------
+   [endAllMemTimesStartTimeOfStage] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+ 
+ 
+                            [logicalTableIDs]  1  2
+---------------------------------------------------
+                                res_1_1_table  1  0
+                                res_1_2_table  1  0
+                                res_1_3_table  1  0
+                                res_1_4_table  1  0
+                          sketching_1_1_table  0  1
+                          sketching_1_2_table  0  1
+                          sketching_1_3_table  0  1
+                          sketching_1_4_table  0  1
+---------------------------------------------------
+                  [logicalTableIDs] TOTAL SUM  4  4
+---------------------------------------------------
+

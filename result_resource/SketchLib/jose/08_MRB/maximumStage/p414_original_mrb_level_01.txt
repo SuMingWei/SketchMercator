@@ -1,0 +1,272 @@
+maximum_stage 2
+hash_dist_unit 2
+salu 1
+map_ram 2
+sram 0
+tcam 0
+                            [hashDistUnitVar]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  0
+---------------------------------------------------
+                  [hashDistUnitVar] TOTAL SUM  1  1
+---------------------------------------------------
+
+                                    [saluVar]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  0
+---------------------------------------------------
+                          [saluVar] TOTAL SUM  0  1
+---------------------------------------------------
+
+                              [word [action]]       1       2
+-------------------------------------------------------------
+                           alpha_compute_hash       0       0
+                          set_level_1_1_table       0       0
+                          sketching_1_1_table       0       0
+                                 _condition_0       0       0
+-------------------------------------------------------------
+                    [word [action]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+                             [block [action]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                   [block [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                          [blockBin [action]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                [blockBin [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                            [layout [action]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                  [layout [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                         [layoutBin [action]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+               [layoutBin [action]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                                [word [sram]]       1       2
+-------------------------------------------------------------
+                           alpha_compute_hash       0       0
+                          set_level_1_1_table       0       0
+                          sketching_1_1_table       0       0
+                                 _condition_0       0       0
+-------------------------------------------------------------
+                      [word [sram]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+                               [block [sram]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                     [block [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                            [blockBin [sram]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                  [blockBin [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                              [layout [sram]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                    [layout [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                           [layoutBin [sram]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                 [layoutBin [sram]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                                [word [tcam]]       1       2
+-------------------------------------------------------------
+                           alpha_compute_hash       0       0
+                          set_level_1_1_table       0       0
+                          sketching_1_1_table       0       0
+                                 _condition_0       0       0
+-------------------------------------------------------------
+                      [word [tcam]] TOTAL SUM       0       0
+-------------------------------------------------------------
+
+                               [block [tcam]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                     [block [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                            [blockBin [tcam]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                  [blockBin [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                              [layout [tcam]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                    [layout [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                           [layoutBin [tcam]]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  0  0
+                          set_level_1_1_table  0  0
+                          sketching_1_1_table  0  0
+                                 _condition_0  0  0
+---------------------------------------------------
+                 [layoutBin [tcam]] TOTAL SUM  0  0
+---------------------------------------------------
+
+                                [startAllMem]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+                      [startAllMem] TOTAL SUM  2  2
+---------------------------------------------------
+
+                                  [endAllMem]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+                        [endAllMem] TOTAL SUM  2  2
+---------------------------------------------------
+
+                             [blockAllMemBin]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+                   [blockAllMemBin] TOTAL SUM  2  2
+---------------------------------------------------
+
+             [startAllMemTimesBlockAllMemBin]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+   [startAllMemTimesBlockAllMemBin] TOTAL SUM  2  2
+---------------------------------------------------
+
+               [endAllMemTimesBlockAllMemBin]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+     [endAllMemTimesBlockAllMemBin] TOTAL SUM  2  2
+---------------------------------------------------
+
+                        [totalBlocksForStBin]  1  2
+---------------------------------------------------
+                                        total  1  1
+
+     [isMaximumStageTimesTotalBlocksForStBin]  1  2
+---------------------------------------------------
+                                        total  0  1
+
+                             [isMaximumStage]  1  2
+---------------------------------------------------
+                                        total  0  1
+
+                           [startTimeOfStage]       1       2
+-------------------------------------------------------------
+                                        total     144     144
+
+           [startAllMemTimesStartTimeOfStage]       1       2
+-------------------------------------------------------------
+                           alpha_compute_hash     144       0
+                          set_level_1_1_table     144       0
+                          sketching_1_1_table       0     144
+                                 _condition_0       0     144
+-------------------------------------------------------------
+ [startAllMemTimesStartTimeOfStage] TOTAL SUM     288     288
+-------------------------------------------------------------
+
+             [endAllMemTimesStartTimeOfStage]       1       2
+-------------------------------------------------------------
+                           alpha_compute_hash     144       0
+                          set_level_1_1_table     144       0
+                          sketching_1_1_table       0     144
+                                 _condition_0       0     144
+-------------------------------------------------------------
+   [endAllMemTimesStartTimeOfStage] TOTAL SUM     288     288
+-------------------------------------------------------------
+
+                            [logicalTableIDs]  1  2
+---------------------------------------------------
+                           alpha_compute_hash  1  0
+                          set_level_1_1_table  1  0
+                          sketching_1_1_table  0  1
+                                 _condition_0  0  1
+---------------------------------------------------
+                  [logicalTableIDs] TOTAL SUM  2  2
+---------------------------------------------------
+

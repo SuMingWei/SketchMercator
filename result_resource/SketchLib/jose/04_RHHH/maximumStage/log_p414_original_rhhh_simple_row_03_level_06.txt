@@ -1,0 +1,1476 @@
+Namespace(compiler='RmtIlpCompiler-020', compiler_file='/data1/hun/sketch_home/switch_compiler/mapper/config/comp00.txt', compiler_mipstartFile=None, compiler_objectiveStr='maximumStage', compiler_outputFileName=None, compiler_relativeGap=0.08, egress_only=False, ingress_and_egress=False, log_directory='/data1/hun/sketch_home/parallel_run_script/jose/SketchLib/', log_level='DEBUG', objective='maximumStage', output='/data1/hun/sketch_home/result_resource/SketchLib/jose/04_RHHH/maximumStage/p414_original_rhhh_simple_row_03_level_06.txt', picture_prefix=None, preprocessor='RmtPreprocess', preprocessor_file='/data1/hun/sketch_home/switch_compiler/mapper/config/prep00.txt', program='/data1/hun/sketch_home/p4_repo/p414/open/sketches/SketchLib/04_RHHH/p414_original_rhhh_simple_row_03_level_06/p414_original_rhhh_simple_row_03_level_06.p4', run=None, switch='RmtTofino12', switch_file='/data1/hun/sketch_home/switch_compiler/mapper/config/switch00.txt')
+logFile: /data1/hun/sketch_home/parallel_run_script/jose/SketchLib/RmtIlpCompiler-020_p414_original_rhhh_simple_row_03_level_06.p4_RmtTofino12_compiler_objectiveStr=maximumStage_compiler_relativeGap=0.08.log
+Logging level is 10
+('import from hun p4_hlir', '/home/hnamkung/hun_p4-hlir/p4_hlir/__init__.pyc')
+parsing successful
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type md_t not byte-aligned, adding padding
+                     tablename   T    #M-E  M-W                 A-W
+                 res_1_1_table   e       0   32                 [0]
+                 res_1_2_table   e       0   32                 [0]
+                 res_1_3_table   e       0   32                 [0]
+           sketching_1_1_table   e       0   32                 [0]
+           sketching_1_2_table   e       0   32                 [0]
+           sketching_1_3_table   e       0   32                 [0]
+                 res_2_1_table   e       0   32                 [0]
+                 res_2_2_table   e       0   32                 [0]
+                 res_2_3_table   e       0   32                 [0]
+           sketching_2_1_table   e       0   32                 [0]
+           sketching_2_2_table   e       0   32                 [0]
+           sketching_2_3_table   e       0   32                 [0]
+                 res_3_1_table   e       0   32                 [0]
+                 res_3_2_table   e       0   32                 [0]
+                 res_3_3_table   e       0   32                 [0]
+           sketching_3_1_table   e       0   32                 [0]
+           sketching_3_2_table   e       0   32                 [0]
+           sketching_3_3_table   e       0   32                 [0]
+                 res_4_1_table   e       0   32                 [0]
+                 res_4_2_table   e       0   32                 [0]
+                 res_4_3_table   e       0   32                 [0]
+           sketching_4_1_table   e       0   32                 [0]
+           sketching_4_2_table   e       0   32                 [0]
+           sketching_4_3_table   e       0   32                 [0]
+                 res_5_1_table   e       0   32                 [0]
+                 res_5_2_table   e       0   32                 [0]
+                 res_5_3_table   e       0   32                 [0]
+           sketching_5_1_table   e       0   32                 [0]
+           sketching_5_2_table   e       0   32                 [0]
+           sketching_5_3_table   e       0   32                 [0]
+                 res_6_1_table   e       0   32                 [0]
+                 res_6_2_table   e       0   32                 [0]
+                 res_6_3_table   e       0   32                 [0]
+           sketching_6_1_table   e       0   32                 [0]
+           sketching_6_2_table   e       0   32                 [0]
+           sketching_6_3_table   e       0   32                 [0]
+           compute_level_table   e       0   32                 [0]
+                  _condition_0   g       0    1                 [0]
+                  _condition_1   g       0    1                 [0]
+                  _condition_2   g       0    1                 [0]
+                  _condition_3   g       0    1                 [0]
+                  _condition_4   g       0    1                 [0]
+                  _condition_5   g       0    1                 [0]
+pipelineLatency constraint ignored since we are not optimizing for pipeline latency!!
+Tried aggregator 2 times.
+MIP Presolve eliminated 10123 rows and 6700 columns.
+MIP Presolve modified 23457 coefficients.
+Aggregator did 1511 substitutions.
+Reduced MIP has 8609 rows, 4738 columns, and 26857 nonzeros.
+Reduced MIP has 3732 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.17 sec. (90.59 ticks)
+Found incumbent of value 11.000000 after 0.41 sec. (148.57 ticks)
+Probing fixed 231 vars, tightened 48 bounds.
+Probing changed sense of 2124 constraints.
+Probing time = 0.41 sec. (28.26 ticks)
+Cover probing fixed 0 vars, tightened 2 bounds.
+Tried aggregator 1 time.
+MIP Presolve eliminated 7041 rows and 3759 columns.
+MIP Presolve modified 692 coefficients.
+Reduced MIP has 1568 rows, 979 columns, and 6250 nonzeros.
+Reduced MIP has 494 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.09 sec. (13.95 ticks)
+Probing time = 0.01 sec. (2.64 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1568 rows, 979 columns, and 6250 nonzeros.
+Reduced MIP has 494 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (3.32 ticks)
+Probing fixed 1 vars, tightened 1 bounds.
+Probing time = 0.01 sec. (4.13 ticks)
+Clique table members: 3960.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 0.28 sec. (6.68 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                           11.0000        0.0000           100.00%
+      0     0        2.4186    41       11.0000        2.4186      140   78.01%
+*     0+    0                            8.0000        2.4186            69.77%
+      0     0        5.0000    54        8.0000      Cuts: 60      376   37.50%
+      0     0        5.0000    40        8.0000      Cuts: 99      646   37.50%
+*     0+    0                            6.0000        5.0000            16.67%
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 809 rows and 533 columns.
+MIP Presolve modified 1 coefficients.
+Aggregator did 1 substitutions.
+Reduced MIP has 758 rows, 445 columns, and 2767 nonzeros.
+Reduced MIP has 224 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (3.68 ticks)
+Probing fixed 1 vars, tightened 1 bounds.
+Probing time = 0.02 sec. (1.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3 rows and 2 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 755 rows, 443 columns, and 2751 nonzeros.
+Reduced MIP has 223 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.63 ticks)
+Represolve time = 0.06 sec. (9.28 ticks)
+Probing time = 0.04 sec. (0.95 ticks)
+Clique table members: 1124.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 0.00 sec. (1.98 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                            6.0000        5.0000            16.67%
+      0     0    infeasible              6.0000                    760    0.00%
+
+GUB cover cuts applied:  3
+Clique cuts applied:  13
+Cover cuts applied:  1
+Implied bound cuts applied:  4
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  2
+Zero-half cuts applied:  1
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  5
+
+Root node processing (before b&c):
+  Real time             =    1.97 sec. (299.42 ticks)
+Parallel b&c, 32 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.97 sec. (299.42 ticks)
+print out consts!
+/data1/hun/sketch_home/result_resource/SketchLib/jose/04_RHHH/maximumStage/p414_original_rhhh_simple_row_03_level_06.txt
+('maximum_stage', 7)
+('hash_dist_unit', 36)
+('salu', 18)
+('map_ram', 36)
+('sram', 0)
+('tcam', 0)
+ 
+ 
+                            [hashDistUnitVar]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                  [hashDistUnitVar] TOTAL SUM  6  6  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+                                    [saluVar]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                          [saluVar] TOTAL SUM  0  3  2  2  3  4  4
+------------------------------------------------------------------
+
+
+
+****************************** [thing = action] ******************************
+
+
+ 
+ 
+                              [word [action]]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                res_1_1_table       0       0       0       0       0       0       0
+                                res_1_2_table       0       0       0       0       0       0       0
+                                res_1_3_table       0       0       0       0       0       0       0
+                          sketching_1_1_table       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0
+                                res_2_1_table       0       0       0       0       0       0       0
+                                res_2_2_table       0       0       0       0       0       0       0
+                                res_2_3_table       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0
+                                res_3_1_table       0       0       0       0       0       0       0
+                                res_3_2_table       0       0       0       0       0       0       0
+                                res_3_3_table       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0
+                                res_4_1_table       0       0       0       0       0       0       0
+                                res_4_2_table       0       0       0       0       0       0       0
+                                res_4_3_table       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0
+                                res_5_1_table       0       0       0       0       0       0       0
+                                res_5_2_table       0       0       0       0       0       0       0
+                                res_5_3_table       0       0       0       0       0       0       0
+                          sketching_5_1_table       0       0       0       0       0       0       0
+                          sketching_5_2_table       0       0       0       0       0       0       0
+                          sketching_5_3_table       0       0       0       0       0       0       0
+                                res_6_1_table       0       0       0       0       0       0       0
+                                res_6_2_table       0       0       0       0       0       0       0
+                                res_6_3_table       0       0       0       0       0       0       0
+                          sketching_6_1_table       0       0       0       0       0       0       0
+                          sketching_6_2_table       0       0       0       0       0       0       0
+                          sketching_6_3_table       0       0       0       0       0       0       0
+                          compute_level_table       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+                    [word [action]] TOTAL SUM       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+
+ 
+ 
+                             [block [action]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                   [block [action]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+ 
+                          [blockBin [action]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                [blockBin [action]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                            [layout [action]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                  [layout [action]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                         [layoutBin [action]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+               [layoutBin [action]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+
+
+****************************** [thing = sram] ******************************
+
+
+ 
+ 
+                                [word [sram]]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                res_1_1_table       0       0       0       0       0       0       0
+                                res_1_2_table       0       0       0       0       0       0       0
+                                res_1_3_table       0       0       0       0       0       0       0
+                          sketching_1_1_table       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0
+                                res_2_1_table       0       0       0       0       0       0       0
+                                res_2_2_table       0       0       0       0       0       0       0
+                                res_2_3_table       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0
+                                res_3_1_table       0       0       0       0       0       0       0
+                                res_3_2_table       0       0       0       0       0       0       0
+                                res_3_3_table       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0
+                                res_4_1_table       0       0       0       0       0       0       0
+                                res_4_2_table       0       0       0       0       0       0       0
+                                res_4_3_table       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0
+                                res_5_1_table       0       0       0       0       0       0       0
+                                res_5_2_table       0       0       0       0       0       0       0
+                                res_5_3_table       0       0       0       0       0       0       0
+                          sketching_5_1_table       0       0       0       0       0       0       0
+                          sketching_5_2_table       0       0       0       0       0       0       0
+                          sketching_5_3_table       0       0       0       0       0       0       0
+                                res_6_1_table       0       0       0       0       0       0       0
+                                res_6_2_table       0       0       0       0       0       0       0
+                                res_6_3_table       0       0       0       0       0       0       0
+                          sketching_6_1_table       0       0       0       0       0       0       0
+                          sketching_6_2_table       0       0       0       0       0       0       0
+                          sketching_6_3_table       0       0       0       0       0       0       0
+                          compute_level_table       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+                      [word [sram]] TOTAL SUM       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+
+ 
+ 
+                               [block [sram]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                     [block [sram]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+ 
+                            [blockBin [sram]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                  [blockBin [sram]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                              [layout [sram]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                    [layout [sram]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                           [layoutBin [sram]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                 [layoutBin [sram]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+
+
+****************************** [thing = tcam] ******************************
+
+
+ 
+ 
+                                [word [tcam]]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                res_1_1_table       0       0       0       0       0       0       0
+                                res_1_2_table       0       0       0       0       0       0       0
+                                res_1_3_table       0       0       0       0       0       0       0
+                          sketching_1_1_table       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0
+                                res_2_1_table       0       0       0       0       0       0       0
+                                res_2_2_table       0       0       0       0       0       0       0
+                                res_2_3_table       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0
+                                res_3_1_table       0       0       0       0       0       0       0
+                                res_3_2_table       0       0       0       0       0       0       0
+                                res_3_3_table       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0
+                                res_4_1_table       0       0       0       0       0       0       0
+                                res_4_2_table       0       0       0       0       0       0       0
+                                res_4_3_table       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0
+                                res_5_1_table       0       0       0       0       0       0       0
+                                res_5_2_table       0       0       0       0       0       0       0
+                                res_5_3_table       0       0       0       0       0       0       0
+                          sketching_5_1_table       0       0       0       0       0       0       0
+                          sketching_5_2_table       0       0       0       0       0       0       0
+                          sketching_5_3_table       0       0       0       0       0       0       0
+                                res_6_1_table       0       0       0       0       0       0       0
+                                res_6_2_table       0       0       0       0       0       0       0
+                                res_6_3_table       0       0       0       0       0       0       0
+                          sketching_6_1_table       0       0       0       0       0       0       0
+                          sketching_6_2_table       0       0       0       0       0       0       0
+                          sketching_6_3_table       0       0       0       0       0       0       0
+                          compute_level_table       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+                      [word [tcam]] TOTAL SUM       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+
+ 
+ 
+                               [block [tcam]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                     [block [tcam]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+ 
+                            [blockBin [tcam]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                  [blockBin [tcam]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                              [layout [tcam]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                    [layout [tcam]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+('pf max : ', 1)
+ 
+('pf max : ', 1)
+                           [layoutBin [tcam]]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  0  0  0  0  0  0  0
+                                res_1_2_table  0  0  0  0  0  0  0
+                                res_1_3_table  0  0  0  0  0  0  0
+                          sketching_1_1_table  0  0  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  0  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  0  0
+                                res_2_1_table  0  0  0  0  0  0  0
+                                res_2_2_table  0  0  0  0  0  0  0
+                                res_2_3_table  0  0  0  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  0  0  0
+                          sketching_2_2_table  0  0  0  0  0  0  0
+                          sketching_2_3_table  0  0  0  0  0  0  0
+                                res_3_1_table  0  0  0  0  0  0  0
+                                res_3_2_table  0  0  0  0  0  0  0
+                                res_3_3_table  0  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  0
+                          sketching_3_2_table  0  0  0  0  0  0  0
+                          sketching_3_3_table  0  0  0  0  0  0  0
+                                res_4_1_table  0  0  0  0  0  0  0
+                                res_4_2_table  0  0  0  0  0  0  0
+                                res_4_3_table  0  0  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  0  0
+                          sketching_4_2_table  0  0  0  0  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  0
+                                res_5_1_table  0  0  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  0  0
+                                res_5_3_table  0  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  0
+                          sketching_5_2_table  0  0  0  0  0  0  0
+                          sketching_5_3_table  0  0  0  0  0  0  0
+                                res_6_1_table  0  0  0  0  0  0  0
+                                res_6_2_table  0  0  0  0  0  0  0
+                                res_6_3_table  0  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  0  0  0  0  0
+                          sketching_6_2_table  0  0  0  0  0  0  0
+                          sketching_6_3_table  0  0  0  0  0  0  0
+                          compute_level_table  0  0  0  0  0  0  0
+                                 _condition_0  0  0  0  0  0  0  0
+                                 _condition_1  0  0  0  0  0  0  0
+                                 _condition_2  0  0  0  0  0  0  0
+                                 _condition_3  0  0  0  0  0  0  0
+                                 _condition_4  0  0  0  0  0  0  0
+                                 _condition_5  0  0  0  0  0  0  0
+------------------------------------------------------------------
+                 [layoutBin [tcam]] TOTAL SUM  0  0  0  0  0  0  0
+------------------------------------------------------------------
+
+ 
+ 
+                                [startAllMem]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+                      [startAllMem] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+                                  [endAllMem]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+                        [endAllMem] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+                             [blockAllMemBin]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+                   [blockAllMemBin] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+             [startAllMemTimesBlockAllMemBin]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+   [startAllMemTimesBlockAllMemBin] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+               [endAllMemTimesBlockAllMemBin]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+     [endAllMemTimesBlockAllMemBin] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
+ 
+ 
+                        [totalBlocksForStBin]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                        total  1  1  1  1  1  1  1
+
+ 
+ 
+     [isMaximumStageTimesTotalBlocksForStBin]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                        total  0  0  0  0  0  0  1
+
+ 
+ 
+                             [isMaximumStage]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                        total  0  0  0  0  0  0  1
+
+ 
+ 
+                           [startTimeOfStage]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                        total       0       0       0       0       0       0       0
+
+ 
+ 
+           [startAllMemTimesStartTimeOfStage]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                res_1_1_table       0       0       0       0       0       0       0
+                                res_1_2_table       0       0       0       0       0       0       0
+                                res_1_3_table       0       0       0       0       0       0       0
+                          sketching_1_1_table       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0
+                                res_2_1_table       0       0       0       0       0       0       0
+                                res_2_2_table       0       0       0       0       0       0       0
+                                res_2_3_table       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0
+                                res_3_1_table       0       0       0       0       0       0       0
+                                res_3_2_table       0       0       0       0       0       0       0
+                                res_3_3_table       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0
+                                res_4_1_table       0       0       0       0       0       0       0
+                                res_4_2_table       0       0       0       0       0       0       0
+                                res_4_3_table       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0
+                                res_5_1_table       0       0       0       0       0       0       0
+                                res_5_2_table       0       0       0       0       0       0       0
+                                res_5_3_table       0       0       0       0       0       0       0
+                          sketching_5_1_table       0       0       0       0       0       0       0
+                          sketching_5_2_table       0       0       0       0       0       0       0
+                          sketching_5_3_table       0       0       0       0       0       0       0
+                                res_6_1_table       0       0       0       0       0       0       0
+                                res_6_2_table       0       0       0       0       0       0       0
+                                res_6_3_table       0       0       0       0       0       0       0
+                          sketching_6_1_table       0       0       0       0       0       0       0
+                          sketching_6_2_table       0       0       0       0       0       0       0
+                          sketching_6_3_table       0       0       0       0       0       0       0
+                          compute_level_table       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+ [startAllMemTimesStartTimeOfStage] TOTAL SUM       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+
+ 
+ 
+             [endAllMemTimesStartTimeOfStage]       1       2       3       4       5       6       7
+-----------------------------------------------------------------------------------------------------
+                                res_1_1_table       0       0       0       0       0       0       0
+                                res_1_2_table       0       0       0       0       0       0       0
+                                res_1_3_table       0       0       0       0       0       0       0
+                          sketching_1_1_table       0       0       0       0       0       0       0
+                          sketching_1_2_table       0       0       0       0       0       0       0
+                          sketching_1_3_table       0       0       0       0       0       0       0
+                                res_2_1_table       0       0       0       0       0       0       0
+                                res_2_2_table       0       0       0       0       0       0       0
+                                res_2_3_table       0       0       0       0       0       0       0
+                          sketching_2_1_table       0       0       0       0       0       0       0
+                          sketching_2_2_table       0       0       0       0       0       0       0
+                          sketching_2_3_table       0       0       0       0       0       0       0
+                                res_3_1_table       0       0       0       0       0       0       0
+                                res_3_2_table       0       0       0       0       0       0       0
+                                res_3_3_table       0       0       0       0       0       0       0
+                          sketching_3_1_table       0       0       0       0       0       0       0
+                          sketching_3_2_table       0       0       0       0       0       0       0
+                          sketching_3_3_table       0       0       0       0       0       0       0
+                                res_4_1_table       0       0       0       0       0       0       0
+                                res_4_2_table       0       0       0       0       0       0       0
+                                res_4_3_table       0       0       0       0       0       0       0
+                          sketching_4_1_table       0       0       0       0       0       0       0
+                          sketching_4_2_table       0       0       0       0       0       0       0
+                          sketching_4_3_table       0       0       0       0       0       0       0
+                                res_5_1_table       0       0       0       0       0       0       0
+                                res_5_2_table       0       0       0       0       0       0       0
+                                res_5_3_table       0       0       0       0       0       0       0
+                          sketching_5_1_table       0       0       0       0       0       0       0
+                          sketching_5_2_table       0       0       0       0       0       0       0
+                          sketching_5_3_table       0       0       0       0       0       0       0
+                                res_6_1_table       0       0       0       0       0       0       0
+                                res_6_2_table       0       0       0       0       0       0       0
+                                res_6_3_table       0       0       0       0       0       0       0
+                          sketching_6_1_table       0       0       0       0       0       0       0
+                          sketching_6_2_table       0       0       0       0       0       0       0
+                          sketching_6_3_table       0       0       0       0       0       0       0
+                          compute_level_table       0       0       0       0       0       0       0
+                                 _condition_0       0       0       0       0       0       0       0
+                                 _condition_1       0       0       0       0       0       0       0
+                                 _condition_2       0       0       0       0       0       0       0
+                                 _condition_3       0       0       0       0       0       0       0
+                                 _condition_4       0       0       0       0       0       0       0
+                                 _condition_5       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+   [endAllMemTimesStartTimeOfStage] TOTAL SUM       0       0       0       0       0       0       0
+-----------------------------------------------------------------------------------------------------
+
+ 
+ 
+                            [logicalTableIDs]  1  2  3  4  5  6  7
+------------------------------------------------------------------
+                                res_1_1_table  1  0  0  0  0  0  0
+                                res_1_2_table  0  0  1  0  0  0  0
+                                res_1_3_table  0  0  1  0  0  0  0
+                          sketching_1_1_table  0  1  0  0  0  0  0
+                          sketching_1_2_table  0  0  0  1  0  0  0
+                          sketching_1_3_table  0  0  0  0  0  1  0
+                                res_2_1_table  0  0  0  1  0  0  0
+                                res_2_2_table  0  0  1  0  0  0  0
+                                res_2_3_table  0  0  1  0  0  0  0
+                          sketching_2_1_table  0  0  0  0  1  0  0
+                          sketching_2_2_table  0  0  0  0  1  0  0
+                          sketching_2_3_table  0  0  0  0  1  0  0
+                                res_3_1_table  0  0  0  0  1  0  0
+                                res_3_2_table  0  0  0  1  0  0  0
+                                res_3_3_table  1  0  0  0  0  0  0
+                          sketching_3_1_table  0  0  0  0  0  0  1
+                          sketching_3_2_table  0  0  0  0  0  1  0
+                          sketching_3_3_table  0  1  0  0  0  0  0
+                                res_4_1_table  0  0  0  1  0  0  0
+                                res_4_2_table  0  1  0  0  0  0  0
+                                res_4_3_table  0  1  0  0  0  0  0
+                          sketching_4_1_table  0  0  0  0  0  1  0
+                          sketching_4_2_table  0  0  0  1  0  0  0
+                          sketching_4_3_table  0  0  0  0  0  0  1
+                                res_5_1_table  0  1  0  0  0  0  0
+                                res_5_2_table  0  0  0  0  0  1  0
+                                res_5_3_table  1  0  0  0  0  0  0
+                          sketching_5_1_table  0  0  0  0  0  0  1
+                          sketching_5_2_table  0  0  0  0  0  0  1
+                          sketching_5_3_table  0  0  0  0  0  1  0
+                                res_6_1_table  1  0  0  0  0  0  0
+                                res_6_2_table  1  0  0  0  0  0  0
+                                res_6_3_table  1  0  0  0  0  0  0
+                          sketching_6_1_table  0  0  1  0  0  0  0
+                          sketching_6_2_table  0  0  1  0  0  0  0
+                          sketching_6_3_table  0  1  0  0  0  0  0
+                          compute_level_table  1  0  0  0  0  0  0
+                                 _condition_0  0  1  0  0  0  0  0
+                                 _condition_1  0  1  0  0  0  0  0
+                                 _condition_2  0  1  0  0  0  0  0
+                                 _condition_3  0  1  0  0  0  0  0
+                                 _condition_4  0  1  0  0  0  0  0
+                                 _condition_5  0  1  0  0  0  0  0
+------------------------------------------------------------------
+                  [logicalTableIDs] TOTAL SUM  7 12  6  5  4  5  4
+------------------------------------------------------------------
+
