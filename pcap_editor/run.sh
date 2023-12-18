@@ -1,0 +1,1 @@
+./bin/filter ${sketch_home}/pcap_editor/pcaps ${sketch_home}/pcap_editor small.pcap ${sketch_home}/pcap_editor/dummy.pcap
