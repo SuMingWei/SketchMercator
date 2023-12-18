@@ -1,0 +1,977 @@
+---- [print params] ----
+[switch ip]    16777343
+[sketch_name]    cs
+[test_name]    void
+[str_args_1]    baseline
+------------------------
+
+[CPP] [CS] init
+p416_cs
+[CPP] [Connection] init
+p416_cs
+p416_cs
+/root/bf-sde-9.1.1/install/share/p4/targets/tofino/p416_cs.conf
+Install dir: /root/bf-sde-9.1.1/install (0x7ffcd33ac770)
+bf_switchd: system services initialized
+bf_switchd: loading conf_file /root/bf-sde-9.1.1/install/share/p4/targets/tofino/p416_cs.conf...
+bf_switchd: processing device configuration...
+Configuration for dev_id 0
+  Family        : tofino
+  pci_sysfs_str : /sys/devices/pci0000:00/0000:00:03.0/0000:05:00.0
+  pci_domain    : 0
+  pci_bus       : 5
+  pci_fn        : 0
+  pci_dev       : 0
+  pci_int_mode  : 1
+  sbus_master_fw: /root/bf-sde-9.1.1/install/
+  pcie_fw       : /root/bf-sde-9.1.1/install/
+  serdes_fw     : /root/bf-sde-9.1.1/install/
+  sds_fw_path   : /root/bf-sde-9.1.1/install/
+  microp_fw_path: 
+bf_switchd: processing P4 configuration...
+P4 profile for dev_id 0
+num P4 programs 1
+  p4_name: p416_cs
+  p4_pipeline_name: pipe
+    libpd: 
+    libpdthrift: 
+    context: /root/bf-sde-9.1.1/install/share/tofinopd/p416_cs/pipe/context.json
+    config: /root/bf-sde-9.1.1/install/share/tofinopd/p416_cs/pipe/tofino.bin
+  Pipes in scope [0 1 2 3 ]
+  diag: 
+  accton diag: 
+  Agent[0]: /root/bf-sde-9.1.1/install/lib/libpltfm_mgr.so
+  non_default_port_ppgs: 0
+  SAI default initialize: 1 
+bf_switchd: library /root/bf-sde-9.1.1/install/lib/libpltfm_mgr.so loaded
+bf_switchd: agent[0] initialized
+Tcl server started..
+Tcl server: listen socket created
+Tcl server: bind done on port 8008, listening...
+Tcl server: waiting for incoming connections...
+Health monitor started 
+Operational mode set to ASIC
+Initialized the device types using platforms infra API
+ASIC detected at PCI /sys/class/bf/bf0/device
+ASIC pci device id is 16
+bf_switchd: drivers initialized
+detecting.. IOMMU not enabled on the platform
+Setting core_pll_ctrl0=cd44cbfe
+/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/
+bf_switchd: dev_id 0 initialized
+
+bf_switchd: initialized 1 devices
+bf_switchd: Credo python server thread initialized..credo_python_intf: listen socket created
+credo_python_intf: bind done on port 9001, listening...
+credo_python_intf: listening for incoming connections...
+bf_switchd: thrift initialized for agent : 0
+bf_switchd: spawning cli server thread
+bf_switchd: spawning driver shell
+bf_switchd: server started - listening on port 9999
+Initialized bf_switchd, status = 0
+bf_switchd_lib_init done
+Bfrt setup done! status = 0 
+[CPP] [TCP] Listening
+
+        ********************************************
+        *      WARNING: Authorised Access Only     *
+        ********************************************
+    
+bfshell> [turn_on_switch] timer - [1/15]
+[turn_on_switch] timer - [2/15]
+[turn_on_switch] timer - [3/15]
+[turn_on_switch] timer - [4/15]
+[turn_on_switch] timer - [5/15]
+[turn_on_switch] timer - [6/15]
+[turn_on_switch] timer - [7/15]
+[turn_on_switch] timer - [8/15]
+[turn_on_switch] timer - [9/15]
+[turn_on_switch] timer - [10/15]
+[turn_on_switch] timer - [11/15]
+[turn_on_switch] timer - [12/15]
+[turn_on_switch] timer - [13/15]
+[turn_on_switch] timer - [14/15]
+[turn_on_switch] timer - [15/15]
+[turn_on_python] timer - [1/10]
+[turn_on_python] timer - [2/10]
+[turn_on_python] timer - [3/10]
+[turn_on_python] timer - [4/10]
+[turn_on_python] timer - [5/10]
+[turn_on_python] timer - [6/10]
+[turn_on_python] timer - [7/10]
+[turn_on_python] timer - [8/10]
+[turn_on_python] timer - [9/10]
+[turn_on_python] timer - [10/10]
+[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+/data/sketch_home/pcap_storage/caida/20160121/60s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap
+sketch_name(cs) mode(baseline) epoch(1) array_size(16384) pcap(equinix-chicago.dirA.20160121-130000.UTC.anon.pcap)
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[CPP] [TCP] Listening
+[CPP] [New Thread] read_start 
+baseline/read/1/16384/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap
+baseline
+read
+1
+16384
+equinix-chicago.dirA.20160121-130000.UTC.anon.pcap
+[CPP] wait for 1 sec
+[CPP] [CS] table init
+[CPP] [Connection] table_init
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/00/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/01/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/02/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/03/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/04/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/05/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/06/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/07/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/08/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/09/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/10/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/11/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/12/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/13/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/14/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/15/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/16/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/17/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/18/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/19/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/20/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/21/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/22/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/23/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/24/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/25/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/26/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/27/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/28/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/29/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/30/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/31/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/32/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/33/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/34/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/35/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/36/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/37/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/38/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/39/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/40/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/41/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/42/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/43/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/44/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/45/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/46/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/47/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/48/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/49/result.txt
+[CPP] [file path] /home/hnamkung/sketch_hoActual: 31259166 packets (1904749630 bytes) sent in 60.23 seconds
+Rated: 31620399.5 Bps, 252.96 Mbps, 518927.68 pps
+Flows: 1139846 flows, 18922.21 fps, 30265208 flow packets, 993958 non-flow
+Statistics for network device: eth5
+	Successful packets:        31259166
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+sudo tcpreplay -i eth5 /data/sketch_home/pcap_storage/caida/20160121/60s/ether/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap
+[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+/data/sketch_home/pcap_storage/caida/20160121/60s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap
+sketch_name(cs) mode(baseline) epoch(1) array_size(16384) pcap(equinix-chicago.dirA.20160121-130100.UTC.anon.pcap)
+me/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/50/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/51/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/52/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/53/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/54/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/55/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/56/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/57/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/58/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/59/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/60/result.txt
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[CPP] [TCP] Listening
+[CPP] [New Thread] read_start 
+baseline/read/1/16384/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap
+baseline
+read
+1
+16384
+equinix-chicago.dirA.20160121-130100.UTC.anon.pcap
+[CPP] wait for 1 sec
+[CPP] [CS] table init
+[CPP] [Connection] table_init
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/00/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/01/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/02/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/03/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/04/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/05/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/06/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/07/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/08/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/09/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/10/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/11/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/12/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/13/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/14/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/15/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/16/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/17/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/18/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/19/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/20/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/21/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/22/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/23/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/24/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/25/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/26/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/27/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/28/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/29/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/30/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/31/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/32/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/33/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/34/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/35/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/36/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/37/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/38/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/39/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/40/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/41/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/42/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/43/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/44/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/45/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/46/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/47/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/48/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/49/result.txt
+[CPP] [file path] /home/hnamkung/sketch_hoActual: 30077771 packets (1829367228 bytes) sent in 69.26 seconds
+Rated: 26409609.3 Bps, 211.27 Mbps, 434216.90 pps
+Flows: 1095077 flows, 15808.86 fps, 29172463 flow packets, 905308 non-flow
+Statistics for network device: eth5
+	Successful packets:        30077771
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+sudo tcpreplay -i eth5 /data/sketch_home/pcap_storage/caida/20160121/60s/ether/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap
+p416_cs
+[PYTHON] [Connection] ports is_simulator=0
+[PYTHON] [CS] table_setup
+[PYTHON] [Register Table Init] [index_register(1024)] [SwitchIngress.epoch_count_1.cs_table]
+[PYTHON] [Register Table Init] [count_register(1024)] [SwitchIngress.epoch_count_2.cs_table]
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/temp/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/temp/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.update_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+(1, 182060)
+(2, 498931)
+(3, 498613)
+(4, 503075)
+(5, 492210)
+(6, 503417)
+(7, 502159)
+(8, 492319)
+(9, 507140)
+(10, 493536)
+(11, 508830)
+(12, 511755)
+(13, 499454)
+(14, 509784)
+(15, 508493)
+(16, 498595)
+(17, 507221)
+(18, 500886)
+(19, 511660)
+(20, 517133)
+(21, 519709)
+(22, 509346)
+(23, 509217)
+(24, 503880)
+(25, 495860)
+(26, 506422)
+(27, 503313)
+(28, 514367)
+(29, 527885)
+(30, 496868)
+(31, 508134)
+(32, 506413)
+(33, 510635)
+(34, 507793)
+(35, 499116)
+(36, 500550)
+(37, 499286)
+(38, 506336)
+(39, 504843)
+(40, 513896)
+(41, 512714)
+(42, 513342)
+(43, 509434)
+(44, 503414)
+(45, 477474)
+(46, 508727)
+(47, 497654)
+(48, 504836)
+(49, 505847)
+(50, 501912)
+(51, 483333)
+(52, 496645)
+(53, 501574)
+(54, 492174)
+(55, 496360)
+(56, 436667)
+(57, 514605)
+(58, 517040)
+(59, 512179)
+(60, 465607)
+(61, 422530)
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130000.UTC.anon.pcap/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.update_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+(1, 158667)
+(2, 424897)
+(3, 541663)
+(4, 582264)
+(5, 563703)
+(6, 424902)
+(7, 454733)
+(8, 507704)
+(9, 483638)
+(10, 493989)
+(11, 501880)
+(12, 493681)
+(13, 497324)
+(14, 500696)
+(15, 488267)
+(16, 483796)
+(17, 493305)
+(18, 479935)
+(19, 483889)
+(20, 474694)
+(21, 337728)
+(22, 465514)
+(23, 477712)
+(24, 462671)
+(25, 476485)
+(26, 457387)
+(27, 476266)
+(28, 472383)
+(29, 1158)
+(32, 95304)
+(33, 458822)
+(34, 459632)
+(35, 456622)
+(36, 455621)
+(37, 446231)
+(38, 351879)
+(39, 350613)
+(40, 462445)
+(41, 462639)
+(42, 449058)
+(43, 459149)
+(44, 458923)
+(45, 437252)
+(46, 449342)
+(47, 454826)
+(48, 428272)
+(49, 435504)
+(50, 433384)
+(51, 424215)
+(52, 420806)
+(53, 319381)
+(54, 415834)
+(55, 421811)
+(56, 428840)
+(57, 427602)
+(58, 430245)
+(59, 351453)
+(60, 327834)
+(61, 421333)
+(62, 3616660)
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.upd[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+/data/sketch_home/pcap_storage/caida/20160121/60s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap
+sketch_name(cs) mode(baseline) epoch(1) array_size(16384) pcap(equinix-chicago.dirA.20160121-130200.UTC.anon.pcap)
+me/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/50/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/51/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/52/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/53/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/54/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/55/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/56/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/57/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/58/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/59/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130100.UTC.anon.pcap/60/result.txt
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[CPP] [TCP] Listening
+[CPP] [New Thread] read_start 
+baseline/read/1/16384/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap
+baseline
+read
+1
+16384
+equinix-chicago.dirA.20160121-130200.UTC.anon.pcap
+[CPP] wait for 1 sec
+[CPP] [CS] table init
+[CPP] [Connection] table_init
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/00/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/01/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/02/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/03/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/04/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/05/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/06/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/07/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/08/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/09/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/10/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/11/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/12/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/13/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/14/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/15/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/16/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/17/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/18/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/19/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/20/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/21/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/22/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/23/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/24/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/25/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/26/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/27/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/28/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/29/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/30/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/31/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/32/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/33/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/34/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/35/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/36/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/37/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/38/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/39/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/40/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/41/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/42/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/43/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/44/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/45/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/46/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/47/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/48/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/49/result.txt
+[CPP] [file path] /home/hnamkung/sketch_hoActual: 31080310 packets (1878441934 bytes) sent in 71.06 seconds
+Rated: 26434217.5 Bps, 211.47 Mbps, 437375.07 pps
+Flows: 1124958 flows, 15830.78 fps, 30153404 flow packets, 926906 non-flow
+Statistics for network device: eth5
+	Successful packets:        31080310
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+sudo tcpreplay -i eth5 /data/sketch_home/pcap_storage/caida/20160121/60s/ether/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap
+[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+/data/sketch_home/pcap_storage/caida/20160121/60s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap
+sketch_name(cs) mode(baseline) epoch(1) array_size(16384) pcap(equinix-chicago.dirA.20160121-130300.UTC.anon.pcap)
+me/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/50/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/51/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/52/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/53/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/54/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/55/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/56/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/57/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/58/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/59/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/60/result.txt
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[CPP] [TCP] Listening
+[CPP] [New Thread] read_start 
+baseline/read/1/16384/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap
+baseline
+read
+1
+16384
+equinix-chicago.dirA.20160121-130300.UTC.anon.pcap
+[CPP] wait for 1 sec
+[CPP] [CS] table init
+[CPP] [Connection] table_init
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/00/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/01/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/02/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/03/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/04/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/05/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/06/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/07/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/08/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/09/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/10/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/11/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/12/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/13/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/14/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/15/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/16/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/17/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/18/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/19/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/20/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/21/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/22/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/23/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/24/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/25/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/26/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/27/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/28/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/29/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/30/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/31/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/32/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/33/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/34/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/35/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/36/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/37/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/38/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/39/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/40/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/41/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/42/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/43/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/44/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/45/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/46/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/47/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/48/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/49/result.txt
+[CPP] [file path] /home/hnamkung/sketch_hoActual: 29903901 packets (1812688306 bytes) sent in 69.73 seconds
+Rated: 25993952.9 Bps, 207.95 Mbps, 428821.98 pps
+Flows: 1118900 flows, 16044.80 fps, 29002705 flow packets, 901196 non-flow
+Statistics for network device: eth5
+	Successful packets:        29903901
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+sudo tcpreplay -i eth5 /data/sketch_home/pcap_storage/caida/20160121/60s/ether/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap
+[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+/data/sketch_home/pcap_storage/caida/20160121/60s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap
+sketch_name(cs) mode(baseline) epoch(1) array_size(16384) pcap(equinix-chicago.dirA.20160121-130400.UTC.anon.pcap)
+me/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/50/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/51/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/52/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/53/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/54/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/55/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/56/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/57/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/58/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/59/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/60/result.txt
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[CPP] [TCP] Listening
+[CPP] [New Thread] read_start 
+baseline/read/1/16384/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap
+baseline
+read
+1
+16384
+equinix-chicago.dirA.20160121-130400.UTC.anon.pcap
+[CPP] wait for 1 sec
+[CPP] [CS] table init
+[CPP] [Connection] table_init
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/00/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/01/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/02/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/03/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/04/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/05/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/06/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/07/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/08/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/09/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/10/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/11/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/12/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/13/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/14/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/15/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/16/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/17/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/18/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/19/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/20/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/21/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/22/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/23/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/24/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/25/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/26/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/27/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/28/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/29/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/30/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/31/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/32/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/33/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/34/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/35/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/36/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/37/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/38/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/39/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/40/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/41/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/42/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/43/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/44/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/45/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/46/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/47/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/48/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/49/result.txt
+[CPP] [file path] /home/hnamkung/sketch_hoActual: 29842202 packets (1814494026 bytes) sent in 67.75 seconds
+Rated: 26779828.0 Bps, 214.23 Mbps, 440436.30 pps
+Flows: 1102881 flows, 16277.23 fps, 28876470 flow packets, 965732 non-flow
+Statistics for network device: eth5
+	Successful packets:        29842202
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+sudo tcpreplay -i eth5 /data/sketch_home/pcap_storage/caida/20160121/60s/ether/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap
+ate_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+(1, 205243)
+(2, 510230)
+(3, 523109)
+(4, 520796)
+(5, 517985)
+(6, 370032)
+(7, 478935)
+(8, 483544)
+(9, 475634)
+(10, 458487)
+(11, 370679)
+(12, 481763)
+(13, 491559)
+(14, 479855)
+(15, 475664)
+(16, 390453)
+(17, 466906)
+(18, 474694)
+(19, 462059)
+(20, 466053)
+(21, 470172)
+(22, 461545)
+(23, 468115)
+(24, 370112)
+(26, 244213)
+(27, 356843)
+(28, 466314)
+(29, 461346)
+(30, 460381)
+(31, 455402)
+(32, 423974)
+(33, 444469)
+(34, 446871)
+(35, 445679)
+(36, 444590)
+(37, 336619)
+(38, 433521)
+(39, 430959)
+(40, 429092)
+(41, 442488)
+(42, 418318)
+(43, 397108)
+(44, 429302)
+(45, 389774)
+(46, 379443)
+(47, 426804)
+(48, 425622)
+(49, 430236)
+(50, 390515)
+(51, 410947)
+(52, 429730)
+(53, 427601)
+(54, 395401)
+(55, 420008)
+(56, 421820)
+(57, 404274)
+(58, 425204)
+(59, 418054)
+(60, 408801)
+(61, 414913)
+(62, 3668396)
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130200.UTC.anon.pcap/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.update_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+(1, 183062)
+(2, 510358)
+(3, 535124)
+(4, 540475)
+(5, 458968)
+(6, 440697)
+(7, 470104)
+(8, 482130)
+(9, 490073)
+(10, 457574)
+(11, 366858)
+(12, 483035)
+(13, 488959)
+(14, 459219)
+(15, 470140)
+(16, 451190)
+(17, 419234)
+(18, 474351)
+(19, 287275)
+(21, 306420)
+(22, 466260)
+(23, 449888)
+(24, 469334)
+(25, 447412)
+(26, 435318)
+(27, 304450)
+(28, 445968)
+(29, 459583)
+(30, 465460)
+(31, 446760)
+(32, 403141)
+(33, 446496)
+(34, 451734)
+(35, 420206)
+(36, 432163)
+(37, 431217)
+(38, 430112)
+(39, 432040)
+(40, 437626)
+(41, 438452)
+(42, 418187)
+(43, 444167)
+(44, 434899)
+(45, 416724)
+(46, 423010)
+(47, 424264)
+(48, 425739)
+(49, 420231)
+(50, 422562)
+(51, 412474)
+(52, 422203)
+(53, 149157)
+(54, 106184)
+(55, 420822)
+(56, 404344)
+(57, 383054)
+(58, 358240)
+(59, 417961)
+(60, 409978)
+(61, 411225)
+(62, 3661846)
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130300.UTC.anon.pcap/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.update_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] baseline/clear/1/16384/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/cpp
+[PYTHON] [CS] clear
+[PYTHON] table clear!
+(1, 195089)
+(2, 514167)
+(3, 517887)
+(4, 520525)
+(5, 525492)
+(6, 470255)
+(7, 351049)
+(8, 428264)
+(9, 487087)
+(10, 418043)
+(11, 469631)
+(12, 462023)
+(13, 473200)
+(14, 475566)
+(15, 359095)
+(16, 470676)
+(17, 490564)
+(18, 489416)
+(19, 494827)
+(20, 485419)
+(21, 488126)
+(22, 507055)
+(23, 478263)
+(24, 477493)
+(25, 476489)
+(26, 474665)
+(27, 475160)
+(28, 473145)
+(29, 485558)
+(30, 493804)
+(31, 443692)
+(32, 445901)
+(33, 453893)
+(34, 437804)
+(35, 426279)
+(36, 443166)
+(37, 449033)
+(38, 445906)
+(39, 434926)
+(40, 423536)
+(41, 419555)
+(42, 436826)
+(43, 420590)
+(44, 435135)
+(45, 391770)
+(46, 319118)
+(49, 76238)
+(50, 448320)
+(51, 445984)
+(52, 450667)
+(53, 429396)
+(54, 438489)
+(55, 440316)
+(56, 394561)
+(57, 353902)
+(58, 434861)
+(59, 425484)
+(60, 412755)
+(61, 401646)
+(62, 2968688)
+saved to [/home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/pcounter.txt]
+[PYTHON] table clear!
+[PYTHON] [Register Table Init] [reg_table_1(16384)] [SwitchIngress.update_16384_1.cs_table]
+[PYTHON] [Register Table Init] [reg_table_2(16384)] [SwitchIngress.update_16384_2.cs_table]
+[PYTHON] [Register Table Init] [reg_table_3(16384)] [SwitchIngress.update_16384_3.cs_table]
+[PYTHON] [Register Table Init] [reg_table_4(16384)] [SwitchIngress.update_16384_4.cs_table]
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] table clear!
+[PYTHON] [TCP] Server started
+[PYTHON] [TCP] Waiting for client request..
+[PYTHON] [TCP] [data received] exit
+[cmd - ssh tofino2 '$sketch_home/tofino_control_plane/python/ssh.sh cs baseline']
+
+me/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/50/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/51/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/52/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/53/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/54/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/55/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/56/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/57/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/58/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/59/result.txt
+[CPP] [file path] /home/hnamkung/sketch_home/result_tofino_dp/sketchAug/cs/baseline/cpp/16384/01s/equinix-chicago.dirA.20160121-130400.UTC.anon.pcap/60/result.txt
+[CPP] [TCP] Connection successful
+[CPP] [TCP] Closing thread and conn
+[cmd - ssh tofino2 '$sketch_home/tofino_control_plane/cpp/ssh.sh cs baseline']
+
+[clear] timer - [1/5]
+[clear] timer - [2/5]
+[clear] timer - [3/5]
+[clear] timer - [4/5]
+[clear] timer - [5/5]
+[turn_off_python] timer - [1/3]
+[turn_off_python] timer - [2/3]
+[turn_off_python] timer - [3/3]
+[turn_off_switch] timer - [1/3]
+[turn_off_switch] timer - [2/3]
+[turn_off_switch] timer - [3/3]
