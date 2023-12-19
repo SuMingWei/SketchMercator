@@ -1,7 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 1, 'width': 32768}
-Errors [0.08]
-Value of optimization function on errors 0.08
-Time taken 0.0006699562072753906

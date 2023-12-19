@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
-('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 8192}
-('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 32768}
-Errors [0.04, 0.13, 0.05]
-Value of optimization function on errors 0.07333333333333335
-Time taken 0.0050334930419921875

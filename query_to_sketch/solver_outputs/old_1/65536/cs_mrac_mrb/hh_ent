@@ -1,8 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 65536}
-('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 65536}
-Errors [0.03, 0.13]
-Value of optimization function on errors 0.08
-Time taken 0.004105567932128906

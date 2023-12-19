@@ -1,1 +1,0 @@
-python3 simulate_on_caida_traces.py --sql_input "SELECT hh GROUP BY dstIP,dstPort" --dataplane dpdk --sram 65536 --output_dir my_test --flowkey "dstIP,dstPort"

@@ -1,8 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 4096}
-('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
-Errors [0.01, 0.0]
-Value of optimization function on errors 0.005
-Time taken 0.005965232849121094

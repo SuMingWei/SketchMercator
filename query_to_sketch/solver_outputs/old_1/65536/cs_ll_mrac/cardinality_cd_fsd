@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('cardinality', '5tuple') 	 ll 	 {'level': 1, 'row': 1, 'width': 16384}
-('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 16384}
-('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
-Errors [0.61, 0.12, 0.75]
-Value of optimization function on errors 0.49333333333333335
-Time taken 0.028629779815673828

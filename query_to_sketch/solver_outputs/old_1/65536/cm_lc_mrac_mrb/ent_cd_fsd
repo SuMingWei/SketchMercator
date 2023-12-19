@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
-('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 16384}
-('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 4096}
-Errors [0.17, 0.08, 0.75]
-Value of optimization function on errors 0.3333333333333333
-Time taken 0.003539562225341797

@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 3, 'width': 32768}
-('cardinality', '5tuple') 	 ll 	 {'level': 1, 'row': 1, 'width': 16384}
-('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 3, 'width': 32768}
-Errors [0.03, 0.61, 0.04]
-Value of optimization function on errors 0.22666666666666668
-Time taken 0.005328655242919922

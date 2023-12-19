@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
-('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 512}
-('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 8192}
-Errors [0.24, 0.02, 0.2]
-Value of optimization function on errors 0.15333333333333335
-Time taken 0.005977153778076172

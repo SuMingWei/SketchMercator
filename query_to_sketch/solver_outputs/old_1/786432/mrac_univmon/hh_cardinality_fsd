@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 4, 'width': 4096}
-('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 4, 'width': 4096}
-('fsd', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 65536}
-Errors [0.03, 0.14, 0.4]
-Value of optimization function on errors 0.19000000000000003
-Time taken 0.004464626312255859

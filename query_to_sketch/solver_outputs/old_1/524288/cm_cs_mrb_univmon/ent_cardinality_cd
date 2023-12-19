@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 4096}
-('cardinality', '5tuple') 	 mrb 	 {'level': 8, 'row': 1, 'width': 8192}
-('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
-Errors [0.01, 0.01, 0.03]
-Value of optimization function on errors 0.016666666666666666
-Time taken 1.2258131504058838

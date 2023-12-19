@@ -1,9 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 3, 'width': 131072}
-('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 5, 'width': 4096}
-('cardinality', '5tuple') 	 hll 	 {'level': 1, 'row': 1, 'width': 32768}
-Errors [0.0, 0.01, 0.01]
-Value of optimization function on errors 0.006666666666666667
-Time taken 0.36411356925964355

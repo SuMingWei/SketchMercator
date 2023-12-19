@@ -1,7 +1,0 @@
-
-<class 'optimizers.BruteForce'>
-Solution
-('cardinality', '5tuple') 	 lc 	 {'level': 1, 'row': 1, 'width': 65536}
-Errors [0.0]
-Value of optimization function on errors 0.0
-Time taken 0.0008838176727294922
