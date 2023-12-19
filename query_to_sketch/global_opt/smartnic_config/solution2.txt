@@ -1,0 +1,77 @@
+
+<class 'optimizers.BruteForce'> None None
+{('cs', '5tuple'): {'level': 1, 'row': 1, 'width': 524288}, ('univmon', '5tuple'): {'level': 16, 'row': 4, 'width': 8192}}
+('hh', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+Solution
+('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 524288}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 524288}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 4, 'width': 8192}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 4, 'width': 8192}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 1, 'width': 524288}
+Error [0.01, 0.07, 0.03, 0.29, 0.75]
+Value of optimization function on errors 0.22999999999999998
+Time taken 9.900746822357178
+
+<class 'strawmen.RandomStrawman'> equal 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}, ('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 131072}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.00037598609924316406
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}, ('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('hh', '5tuple') ('cm', '5tuple')
+('cd', '5tuple') ('cs', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 131072}
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('fsd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.0004401206970214844
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.00011706352233886719
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}, ('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}, ('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('hh', '5tuple') ('univmon', '5tuple')
+('ent', '5tuple') ('univmon', '5tuple')
+('cardinality', '5tuple') ('univmon', '5tuple')
+('fsd', '5tuple') ('cs', '5tuple')
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
+('cardinality', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
+('fsd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001862049102783203
