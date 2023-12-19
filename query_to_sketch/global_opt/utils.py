@@ -7,7 +7,6 @@ import importlib
 import numpy as np
 from collections import defaultdict
 
-import classes
 import constants
 import aggregation_functions
 
@@ -19,19 +18,13 @@ def parse_csv_arg(arg):
     return arg.strip().split(',')
 
 def parse_query_arg(arg):
-    tokens = arg.strip().split(';')
-    tokens = [eval(t) for t in tokens]
-    #tokens = arg.strip().split('),(')
-    #tokens = [t.replace('(', '').replace(')', '') for t in tokens]
-    #tokens = [tuple(t.strip().split(',')) for t in tokens]
-    #tokens = [{'metric': t[0], 'flowkey': tuple(t[1:])} for t in tokens]
-    queries = [classes.Query(t[0], tuple(t[1:])) for t in tokens]
-    return queries
+    tokens = arg.strip().split('),(')
+    tokens = [t.replace('(', '').replace(')', '') for t in tokens]
+    tokens = [tuple(t.strip().split(',')) for t in tokens]
+    return tokens
 
 def parse_constraint_arg(arg):
-    tokens = arg.strip().split(';')
-    tokens = [token.replace('(', '').replace(')', '').split(',') for token in tokens]
-    tokens = [(token[0].strip(), token[1].strip()) for token in tokens]
+    tokens = parse_query_arg(arg)
     return {token[0]:float(token[1]) for token in tokens}
 
 def get_coverage_data(pickle_file):
@@ -56,9 +49,10 @@ def get_resource_modeler(name):
 def read_profiles(profiles_path):
     profiles = {}
     files = os.listdir(profiles_path)
-    files = [f for f in files if '.json' in f and 'level' in f]
+    files = [f for f in files if '.json' in f]
     
     for f in files:
+        print(f)
         sketch_name = f.split('_')[0]
         level = int(f.split('_')[2])
 
@@ -90,30 +84,16 @@ def parse_profile_json(profile_json, store, level):
             for width in row_val.keys():
                 store[metric][level][int(row)][int(width)] = row_val[width]
 
-def normalize_profile_errors(profiles, metric_max_json_file, func):
-    #metric_max_map = defaultdict(int)
-    #for sketch, sketch_val in profiles.items():
-    #    for metric, metric_val in sketch_val.items():
-    #        for level, level_val in metric_val.items():
-    #            values = []
-    #            for row, row_val in level_val.items():
-    #                for width in row_val.keys():
-    #                    values.extend(row_val[width])
-    #            metric_max_map[metric] = max(metric_max_map[metric], max(values))
-    metric_max_map = json.load(open(metric_max_json_file))
-    metrics = list(metric_max_map.keys())
-    for metric in metrics:
-        new_metric = None
-        if metric == 'entropy':
-            new_metric = 'ent'
-        elif metric == 'card':
-            new_metric = 'cardinality'
-        elif metric == 'change_det':
-            new_metric = 'cd'
-
-        if new_metric:
-            metric_max_map[new_metric] = metric_max_map[metric]
-            del metric_max_map[metric]
+def normalize_profile_errors(profiles, func):
+    metric_max_map = defaultdict(int)
+    for sketch, sketch_val in profiles.items():
+        for metric, metric_val in sketch_val.items():
+            for level, level_val in metric_val.items():
+                values = []
+                for row, row_val in level_val.items():
+                    for width in row_val.keys():
+                        values.extend(row_val[width])
+                metric_max_map[metric] = max(metric_max_map[metric], max(values))
 
     for sketch, sketch_val in profiles.items():
         for metric, metric_val in sketch_val.items():
@@ -124,61 +104,35 @@ def normalize_profile_errors(profiles, metric_max_json_file, func):
                         values = [v/metric_max_map[metric] for v in values]
                         row_val[width] = func(values, break_ties=False)
 
-def read_and_process_profiles(profiles_path, metric_max_json_file, agg_traces):
+def read_and_process_profiles(profiles_path, agg_traces):
     agg_traces_func = get_agg_function(agg_traces)
     profiles = read_profiles(profiles_path)
-    normalize_profile_errors(profiles, metric_max_json_file, agg_traces_func)
+    normalize_profile_errors(profiles, agg_traces_func)
     return profiles
 
 def resource_allocation_sort_lambda(r):
     alloc_map = r.get_resource_allocation()
     return alloc_map['level'] * alloc_map['row'] * alloc_map['width']
 
-def convert_flowkey_to_number(flowkey):
-    universal_flowkey = ['srcIP', 'srcPort', 'dstIP', 'dstPort', 'proto']
-    if flowkey[0] == 'five_tuple':
-        flowkey = universal_flowkey
-    flowkey_binary_array = [str(1) if key in flowkey else str(0) for key in universal_flowkey]
-    flowkey_binary = ''.join(flowkey_binary_array)
-    print(flowkey, flowkey_binary)
-    return int(flowkey_binary)
-
-def get_deployment_output(solution, solver_class, sketch_selection, resource_allocation, run, numbered_output):
+def get_deployment_output(solution, solver_class, sketch_selection, resource_allocation, run):
     output = {}
     
     output['name'] = str(solver_class).split("'")[1]
     output['name'] += ':' + str(sketch_selection)
     output['name'] += ':' + str(resource_allocation)
     output['name'] += ':' + str(run)
-
-    if solution is None:
-        output['comment'] = 'Sketches don\'t cover metrics!'
-        return output
     
     sketches = [s[0] for s in solution['query_to_sketch_map'].values()]
-    if numbered_output:
-        #output['solutions'] = {s:{'algo': constants.sketch_idx_map[s], 'metric': []} for s in sketches}
-        output['solutions'] = {s:{'algo': constants.sketch_idx_map[s], 'query': []} for s in sketches}
-    else:
-        #output['solutions'] = {s:{'algo': s, 'metric': []} for s in sketches}
-        output['solutions'] = {s:{'algo': s, 'query': []} for s in sketches}
+    output['solutions'] = {s:{'algo': constants.sketch_idx_map[s], 'metric': []} for s in sketches}
 
+    print(solution['resource_allocation_map'])
     for key, val in solution['query_to_sketch_map'].items():
         sketch = val[0]
-        #metric = key[0]
-        metric = key.metric
-        flowkey = key.flowkey
+        metric = key[0]
 
-        if numbered_output:
-            #output['solutions'][sketch]['metric'].append(constants.metric_idx_map[metric])
-            query_repr = {'metric': constants.metric_idx_map[metric], 'flowkey': convert_flowkey_to_number(flowkey)}
-            #output['solutions'][sketch]['query'].append((constants.metric_idx_map[metric], convert_flowkey_to_number(flowkey)))
-            output['solutions'][sketch]['query'].append(query_repr)
-        else:
-            #output['solutions'][sketch]['metric'].append(metric)
-            #output['solutions'][sketch]['query'].append((metric, flowkey))
-            query_repr = {'metric': metric, 'flowkey': flowkey}
-            output['solutions'][sketch]['query'].append(query_repr)
+        print(key, val)
+
+        output['solutions'][sketch]['metric'].append(constants.metric_idx_map[metric])
         
         if 'level' not in output['solutions'][sketch]:
             alloc = solution['resource_allocation_map'][val].get_resource_allocation()

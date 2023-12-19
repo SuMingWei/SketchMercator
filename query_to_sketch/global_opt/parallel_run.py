@@ -1,6 +1,5 @@
-import os
-import itertools
 from multiprocessing import Process, current_process
+import os
 
 class ParallelRunHelper:
 
@@ -43,19 +42,31 @@ def run_cmd_list(cmd_list, max_pcount):
 
 # test the impact of different memory size on solver
 def run_impact_memory_size(run_helper, iteration_num = 3):
-    memory_list = [32768, 65536, 131072, 262144, 524288, 1048576]
+    memory_list = [4096, 8192, 16384, 32768, 65536]
+
+    metric_str_list = ['(hh,5tuple)']
+    directory_name_list = ['hh']
+    sketches = 'cm,lc,cs,hll,mrb,mrac,univmon,ll'
 
     cnt = 0
     for mem in memory_list:
-        # \"(hh,5tuple),(cd,5tuple),(ent,5tuple),(cardinality,5tuple),(fsd,5tuple)\"
-        cmd = 'python3 run.py --queries \"(hh,5tuple)\" '\
-            '--sketches cm,lc,cs,hll,mrb,mrac,univmon,ll --resources level,row,width --resource_modeler LinearModeler '\
-            f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
-            f'--total_sram {mem} --deployment_output --output_dir impact_of_mem '\
-            f'--output_file mem_{mem}_run_{iteration_num}.json > impact_of_mem/mem_{mem}_run_{iteration_num}.txt'
-        print(cmd)
-        cnt += 1
-        run_helper.call(run_cmd_func, (cmd, ))
+        for metric_str, directory_name in zip(metric_str_list, directory_name_list):
+            output_dir = f'output/impact_of_mem/{directory_name}'
+            
+            # create directory if it doesn't exist
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+                
+                
+            # \"(hh,5tuple),(cd,5tuple),(ent,5tuple),(cardinality,5tuple),(fsd,5tuple)\"
+            cmd = f'python3 run.py --queries \"{metric_str}\" '\
+                f'--sketches {sketches} --resources level,row,width --resource_modeler LinearModeler '\
+                f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
+                f'--total_sram {mem} --deployment_output --output_dir {output_dir} '\
+                f'--output_file mem_{mem}_run_{iteration_num}.json > {output_dir}/mem_{mem}_run_{iteration_num}.txt'
+            print(cmd)
+            cnt += 1
+            run_helper.call(run_cmd_func, (cmd, ))
     print("count:", cnt)
 
 # test the impact of number of metrics in an ensemble on solver
@@ -89,7 +100,7 @@ def run_number_of_metrics(run_helper, iteration_num = 3):
 
 # use how many pcaps to get the profiling results, and as the input for the solver
 def run_number_of_pcaps(run_helper, iteration_num = 3):
-    pcap_nums = [1, 3, 5, 7, 9]
+    pcap_nums = [1, 3, 5, 7, 9] # original = 9 
 
     cnt = 0
     for pcap_num in pcap_nums: 
@@ -159,6 +170,7 @@ def run_diff_ensemble(run_helper, iteration_num = 3):
 
     print("count:", cnt)
 
+# TODO: Important (objective function diffs)
 # use different objective functions on the solver
 def run_objective_functions(run_helper, iteration_num):
     agg_queries = ['avg', 'max', 'avg']
@@ -231,6 +243,7 @@ def run_diff_error_constraint(run_helper, iteration_num):
 # WARNING: 
 # The solver will output 2 results of bruteforce in a single output json file
 # So, we need to run `split_effective_module.py` to split 2 results of 1 json file into 2 json files
+# naive: sketch (sketchmercator) / naive metric (sketchmercator)
 def run_effectiveness_of_module(run_helper, iteration_num):
     modules = ['', 'naive_sketch_selection', 'naive_resource_allocation']
     profiles_path = os.path.join(os.path.expandvars('$sketch_home'), 'query_to_sketch', \
@@ -255,6 +268,7 @@ def run_effectiveness_of_module(run_helper, iteration_num):
         run_helper.call(run_cmd_func, (cmd, ))
     print("count:", cnt)
 
+# re-configuration time (看 config 的部署時機的差異，需不需要重新部署)
 def run_profile_frequency(run_helper, iteration_num):
     date_list = ['20180621', '20180816'] #'20180517', 
     epochs = 6
@@ -276,7 +290,7 @@ def run_profile_frequency(run_helper, iteration_num):
             run_helper.call(run_cmd_func, (cmd, ))
     print("count:", cnt)
 
-
+# motivation (theory bad -> profile good)
 def run_theory_vs_profile(run_helper, iteration_num = 3):
     memory_list = [4096, 8192, 16384, 32768, 65536]
     profile_name_list = ['actual_profiles_lower_memory']
@@ -311,64 +325,8 @@ def run_theory_vs_profile(run_helper, iteration_num = 3):
                 run_helper.call(run_cmd_func, (cmd, ))
     print("count:", cnt)
 
-def run_accuracy_resource_tradeoff(run_helper, iteration_num):
-    memory_list = [16384, 32768, 65536, 131072, 262144, 524288, 1048576]
-
-    metrics = ['hh', 'cd', 'ent', 'cardinality', 'fsd']
-    flowkey = ('dstip', 'dstport')
-
-    queries = [(m, *flowkey) for m in metrics]
-    print_queries = [str(q) for q in queries]
-    final_query_string = ';'.join(print_queries)
-
-    cnt = 0
-    for mem in memory_list:
-        # \"('hh',5tuple),(cd,5tuple),(ent,5tuple),(cardinality,5tuple),(fsd,5tuple)\"
-        # cmd = 'python3 run.py --queries \"(hh,5tuple)\" '\
-        cmd = f'python3 run.py --queries \"{final_query_string}\" '\
-            '--sketches cm,lc,cs,hll,mrb,mrac,univmon,ll --resources level,row,width --resource_modeler LinearModeler '\
-            f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
-            f'--total_sram {mem} --deployment_output --output_dir acc_res_tradeoff '\
-            f'--output_file mem_{mem}_run_{iteration_num}.json > acc_res_tradeoff/mem_{mem}_run_{iteration_num}.txt'
-        print(cmd)
-        cnt += 1
-        run_helper.call(run_cmd_func, (cmd, ))
-    print("count:", cnt)
-
-def run_impact_of_sketch_library_size(run_helper, iteration_num):
-    def powerset(iterable, length):
-        return list(itertools.combinations(iterable, length))
-
-    memory_bound = 131072
-    output_dir = 'impact_of_num_sketches'
-
-    metrics = ['hh', 'cd', 'ent', 'cardinality', 'fsd']
-    flowkey = ('dstip', 'dstport')
-
-    queries = [(m, *flowkey) for m in metrics]
-    print_queries = [str(q) for q in queries]
-    final_query_string = ';'.join(print_queries)
-
-    all_sketches = ['cm', 'lc', 'cs', 'hll', 'mrb', 'mrac', 'univmon', 'll']
-    sketches_lists = []
-    for l in range(len(all_sketches) - 3, len(all_sketches) + 1):
-        sketches_lists.extend(powerset(all_sketches, l))
-
-    cnt = 0
-    for sketches_list in sketches_lists:
-        sketches_list_arg = ','.join(sketches_list)
-        sketches_list_repr = '_'.join(sketches_list)
-        cmd = f'python3 run.py --queries \"{final_query_string}\" '\
-            f'--sketches {sketches_list_arg} --resources level,row,width --resource_modeler LinearModeler '\
-            f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
-            f'--total_sram {memory_bound} --deployment_output --output_dir {output_dir} '\
-            f'--output_file sketches_{sketches_list_repr}_run_{iteration_num}.json > {output_dir}/sketches_{sketches_list_repr}_run_{iteration_num}.txt'
-        print(cmd)
-        cnt += 1
-        run_helper.call(run_cmd_func, (cmd, ))
-    print("count:", cnt)
-
 if __name__ == '__main__':
+    
     run_helper = ParallelRunHelper(30) # 30 processes
     iteration_num = 5 # --num_strawman_runs argument for solver, represent how many runs for strawmen in solver
 
@@ -384,7 +342,7 @@ if __name__ == '__main__':
     # (plotting scripts is in `$sketch_home/result_plots/QuerySketch/`)
     # then we can get the result figures of experiments (figures on the paper)
 
-    # run_impact_memory_size(run_helper, iteration_num)
+    run_impact_memory_size(run_helper, iteration_num)
     # run_number_of_metrics(run_helper, iteration_num)
     # run_number_of_pcaps(run_helper, iteration_num)
     # run_diff_ensemble(run_helper, iteration_num)
@@ -393,6 +351,4 @@ if __name__ == '__main__':
     # run_effectiveness_of_module(run_helper, iteration_num)
     # run_profile_frequency(run_helper, iteration_num)
     # run_theory_vs_profile(run_helper, iteration_num)
-    run_accuracy_resource_tradeoff(run_helper, iteration_num)
-    # run_impact_of_sketch_library_size(run_helper, iteration_num)
     pass

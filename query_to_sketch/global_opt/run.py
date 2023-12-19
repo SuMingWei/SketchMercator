@@ -3,7 +3,6 @@ import sys
 import json
 import time
 import argparse
-import numpy as np
 
 import utils
 from optimizers import *
@@ -14,17 +13,16 @@ import main_utils
 import main_constants
 from classes import *
 
-def print_solution(solution, opt_function, errors, resource_usage, time_taken, print_errors):
+def print_solution(solution, opt_function, errors, time_taken, print_errors):
     if solution is None:
         print('Sketches don\'t cover metrics!')
         return
     print('Solution')
     for key, val in solution['query_to_sketch_map'].items():
         print(key, '\t', val[0], '\t', solution['resource_allocation_map'][val])
-    print('Final resource usage:', resource_usage)
     if print_errors:
         errors = [round(e, 2) for e in errors]
-        print('Error', errors)
+        print('Error bounds', errors)
         print('Value of optimization function on errors', opt_function(errors))
     print('Time taken', time_taken)
 
@@ -39,9 +37,7 @@ def main(args):
     else:
         bruteforce_selections = [None]
 
-    if args.naive_resource_allocation == 'semi-naive':
-        bruteforce_allocations = ['semi-naive']
-    elif args.naive_resource_allocation:
+    if args.naive_resource_allocation:
         bruteforce_allocations = ['equal', 'query_proportional']
     else:
         bruteforce_allocations = [None]
@@ -68,21 +64,17 @@ def main(args):
     profiler_classes = utils.get_profiler_classes()
     resource_modeler = utils.get_resource_modeler(args.resource_modeler)
 
-    deployment_output = []
     if args.deployment_output:
         if not args.output_dir:
             print('Need --output_dir with --deployment_output!')
             assert(False)
         os.makedirs(args.output_dir, exist_ok=True)
+    deployment_output = []
 
-    profiles_path = None
-    metric_max_json_file = None
-    if not args.profiles_path:
-        args.profiles_path = main_constants.PROFILES_PATH
-    if not args.metric_max_json_file:
-        args.metric_max_json_file = main_constants.METRIC_MAX_JSON_FILE
-
-    profiles = utils.read_and_process_profiles(args.profiles_path, args.metric_max_json_file, args.agg_traces)
+    if args.profiles_path:
+        profiles = utils.read_and_process_profiles(args.profiles_path, args.agg_traces)
+    else:
+        profiles = utils.read_and_process_profiles(main_constants.PROFILES_PATH, args.agg_traces)
 
     for solver_class in [BruteForce]:
     #for solver_class in []:
@@ -93,14 +85,14 @@ def main(args):
                 solver = solver_class(queries, sketches, resources, coverage_data, profiler_config, profiler_classes, resource_modeler, opt_config, args.output_dir, args.use_sketchovsky, sketch_selection=bruteforce_selection, allocation_strategy=bruteforce_allocation)
                 solver.populate_profile_specific_resource_allocations(profiles)
                 start = time.time()
-                solution, errors, resource_usage = solver.get_solution(opt_function, query_error_constraints, args.use_sketchovsky)
+                solution, errors = solver.get_solution(opt_function, query_error_constraints)
                 end = time.time()
                 if args.deployment_output:
-                    deployment_output.append(utils.get_deployment_output(solution, solver_class, bruteforce_selection, bruteforce_allocation, 0, args.numbered_deployment_output))
+                    deployment_output.append(utils.get_deployment_output(solution, solver_class, bruteforce_selection, bruteforce_allocation, 0))
                 if bruteforce_allocation is None:
-                    print_solution(solution, opt_function, errors, resource_usage, end-start, print_errors=True)
+                    print_solution(solution, opt_function, errors, end-start, print_errors=True)
                 else:
-                    print_solution(solution, opt_function, errors, resource_usage, end-start, print_errors=False)
+                    print_solution(solution, opt_function, errors, end-start, print_errors=False)
 
     for solver_class in Strawmen:
         for strawman_allocation in strawmen_allocations:
@@ -110,21 +102,18 @@ def main(args):
                 solver = solver_class(queries, sketches, resources, coverage_data, profiler_config, profiler_classes, resource_modeler, opt_config, args.output_dir, args.use_sketchovsky, sketch_selection=None, allocation_strategy=strawman_allocation, error_bound_config=error_bound_config)
                 solver.profiles = profiles
                 start = time.time()
-                solution, error_bounds, resource_usage = solver.get_solution(seed=run)
+                solution, error_bounds = solver.get_solution(seed=run)
                 end = time.time()
                 if args.use_sketchovsky:
                     post_opt_resource_usage = solver.get_post_optimization_total_resource_usage(solution, strawman_allocation)
                     print(post_opt_resource_usage)
                 if args.deployment_output:
-                    deployment_output.append(utils.get_deployment_output(solution, solver_class, None, strawman_allocation, run, args.numbered_deployment_output))
-                print_solution(solution, opt_function, error_bounds, resource_usage, end-start, print_errors=False)
+                    deployment_output.append(utils.get_deployment_output(solution, solver_class, None, strawman_allocation, run))
+                print_solution(solution, opt_function, error_bounds, end-start, print_errors=False)
 
     if args.deployment_output:        
         with open(os.path.join(args.output_dir, args.output_file), 'w') as fout:
             print(json.dumps(deployment_output, indent=4), file=fout)
-
-    with open(os.path.join(args.output_dir, args.output_file_for_arguments), 'w') as fout:
-        print(json.dumps(vars(args), indent=4), file=fout)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -145,14 +134,11 @@ if __name__ == '__main__':
     parser.add_argument('--profiles_path', default=None, required=False)
     parser.add_argument('--profiler_config_file', default='general.ini')
     parser.add_argument('--error_bound_config_file', default='error_bound.ini')
-    parser.add_argument('--metric_max_json_file', default=None, required=False)
 
     # output format and location
     parser.add_argument('--output_dir', required=True)
-    parser.add_argument('--output_file_for_arguments', default='args.json')
     parser.add_argument('--output_file', default='output.json')
     parser.add_argument('--deployment_output', default=False, action='store_true')
-    parser.add_argument('--numbered_deployment_output', default=False, action='store_true')
 
     # control which modules are used
     parser.add_argument('--naive_sketch_selection', default=False, action='store_true')

@@ -6,7 +6,7 @@ import numpy as np
 from collections import defaultdict
 
 import utils
-import sketchovsky_utils
+# import sketchovsky_utils
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main_classes import *
 
