@@ -187,12 +187,61 @@ void pcap_parse(char* pcap_file_name, map<Flowkey_t, int> &flow_stream, string f
     pcap_close(descr);
 }
 
+/* for quantization */
+void quantization(map<int, vector<Flowkey_t>> size_key_mapping, vector<int> &bins, map<int, vector<Flowkey_t>> &quantized_mapping){
+    // calculate cdf
+    cout << "[quantization]\n";
+    map<int, double> cdf;
+    int total_flows = 0;
+    double culmulative_prob = 0.0;
+
+    for(auto item : size_key_mapping){
+        total_flows += item.second.size();
+    }
+
+    for(auto item : size_key_mapping){
+        culmulative_prob += (double)(item.second.size()) / (double)total_flows;
+        cdf[item.first] = culmulative_prob;
+    }
+
+    // get bins
+    int idx = 0;
+    for(auto item : cdf){
+        while(idx < round(item.second*100)){
+            bins[idx] = item.first;
+            // cout << idx+1 << " " << bins[idx] << endl;
+            idx++;
+        }
+    }
+
+    // get quantizaed mapping
+    idx = 0;
+    for(auto flow : size_key_mapping){
+        while(flow.first > bins[idx]){
+            if(idx < bins.size()-1) idx++;
+            else break;
+        }
+        // cout << bins[idx] << endl;
+        quantized_mapping[bins[idx]].insert(quantized_mapping[bins[idx]].end(), flow.second.begin(), flow.second.end());
+    }
+
+    // verify the quantized mapping result
+    // int tmp = 0;
+    // for(auto item : quantized_mapping){
+    //     cout << item.first << " " << item.second.size() << endl;
+    //     tmp += item.second.size();
+    // }
+
+}
+
+/* for flow selection */
 void select_flow(map<int, int> fs_dist, map<int, vector<Flowkey_t>> size_key_mapping, map<Flowkey_t, int> &selected_flow){
     int size, freq, idx, candidate_size;
     int unhandle_flow = 0;
     int unhandle_packets = 0;
     int total_flows = 0;
     cout << "[select flow]\n";
+    
     for(auto item : fs_dist){
         size = item.first;
         freq = item.second;
@@ -237,6 +286,7 @@ void select_flow(map<int, int> fs_dist, map<int, vector<Flowkey_t>> size_key_map
     return;
 }
 
+/* generate pcap file */
 void pcap_generate(char* pcap_file_name, char* output_file_name, string flowkey, map<Flowkey_t, int> &selected_flow, int &handle_packets, int time_offset){
     uint64_t initial_timestamp = 0;
 
@@ -326,74 +376,6 @@ bool cmp(Packet_info a, Packet_info b){
     return a.time < b.time;
 }
 
-void read_pcap(char* pcap_file_name, vector<Packet_info> &packets){
-    pcap_t *descr;
-    char errbuf[PCAP_ERRBUF_SIZE];
-    descr = pcap_open_offline(pcap_file_name, errbuf);
-    cout << "[read pcap] " << pcap_file_name << endl;
-
-    struct pcap_pkthdr header;
-    const u_char *packet;
-
-    int global_count = 0;
-    while(true) {
-        packet = pcap_next(descr, &header);
-        if(packet == NULL)
-            break;
-
-        packet_header hdr;
-        header_parser(hdr, packet, 0); // for no ehter type
-        // header_parser(hdr, packet, 1); // for ether existing type
-
-        if(hdr.ip_hdr->ip_v == 4) {
-            packet_summary p;
-            header_mapping(&header, hdr, p);
-            if ((p.ip_proto == IP_PROTO_UDP || p.ip_proto == IP_PROTO_TCP) && header.caplen > 20) {
-                
-                packets.push_back({header, packet});
-
-                global_count++;
-                if (global_count % 10000 == 0) {
-                    cout << "[read packets] " << global_count << endl;
-                }
-            }
-        }
-
-
-    }
-
-    pcap_close(descr);
-}
-
-void write_pcap(char* output_file_name, vector<Packet_info> &packets){
-    /* dump the ordered packets to the new file */
-    cout << "[write pcap] " << output_file_name << endl;
-
-    pcap_t * finalPcap = pcap_open_dead(DLT_EN10MB, 262144); // dumper will use it
-    pcap_dumper_t* pcap_out = pcap_dump_open(finalPcap, output_file_name);
-
-    int global_count = 0;
-    for(const auto& pkt : packets){
-        // Write the packet to the output file
-        pcap_dump((u_char*)pcap_out, &pkt.header, pkt.packet);
-
-        global_count++;
-        if (global_count % 10000 == 0) {
-            cout << "[write packets] " << global_count << endl;
-        }
-    }
-
-    pcap_dump_close(pcap_out);
-    pcap_close(finalPcap);
-}
-
-void sort_pcap_file(char* pcap_file_name, char* output_file_name, vector<Packet_info> &packets){
-    read_pcap(pcap_file_name, packets);
-    sort(packets.begin(), packets.end(), cmp);
-    write_pcap(output_file_name, packets);
-    cout << "[sorting done]\n";
-}
-
 void sort_pcap(char* pcap_file_name, char* output_file_name){
     pcap_t *descr;
     char errbuf[PCAP_ERRBUF_SIZE];
@@ -473,35 +455,10 @@ int main(int argc, char* argv[]){
     }
 
     /* get quantized flow size and flowkey mapping */
-    /* prepare quantization bins */ 
-    int total_flow_num = 0;
-    int ceil_flow_size = pow(10, ceil(log10(size_key_mapping.rbegin()->first)));
-    int rec = ceil(log10(ceil_flow_size));
-    vector<int> bins;
-    for(int i=1;i<1001;i++) bins.push_back(i);
-    for(int i=11;i<101;i++) bins.push_back(i*100);
-    while(rec > 4){
-        for(int i=2;i<11;i++) bins.push_back(i*(pow(10, rec-1)));
-        rec--;
-    }
-    sort(bins.begin(), bins.end());
-    // cout << "ceil_flow_size = " << ceil_flow_size << endl;
-    /* get mapping */
+    cout << "[flow size and key quantized mapping]\n";
+    vector<int> bins(100,0);
     map<int, vector<Flowkey_t>> quantized_mapping;
-    int idx = 0;
-    for(auto flow : size_key_mapping){
-        total_flow_num += flow.second.size();
-        while(flow.first > bins[idx]){
-            if(idx < bins.size()-1) idx++;
-            else break;
-        }
-        quantized_mapping[bins[idx]].insert(quantized_mapping[bins[idx]].end(), flow.second.begin(), flow.second.end());
-    }
-
-    // /* verify the quantized mapping result equal to the plot.ipynb */
-    // for(auto item : quantized_mapping){
-    //     cout << item.first << " " << item.second.size() << endl;
-    // }
+    quantization(size_key_mapping, bins, quantized_mapping);
 
     /* read file to get inputFile's flow size distribution */
     cout << "[get input flow size distribution]\n";
@@ -510,7 +467,7 @@ int main(int argc, char* argv[]){
     int flow_size, frequency;
     map<int, int> target_fs_dist;
 
-    idx = 0;
+    int idx = 0;
     while(getline(inputFile, line)){
         istringstream iss(line);
         iss >> flow_size >> frequency;
@@ -522,10 +479,9 @@ int main(int argc, char* argv[]){
     }
     inputFile.close();
 
-    // for(auto item : target_fs_dist){
-    //     if(item.second > 0 )
-    //         cout << item.first << " " << item.second << endl;
-    // }
+    for(auto item : target_fs_dist){
+        cout << item.first << " " << item.second << endl;
+    }
 
     /* sample flow and generate another pcap file*/
     map<Flowkey_t, int> selected_flow;
@@ -542,11 +498,9 @@ int main(int argc, char* argv[]){
 
     
 
-    /* sort the pcap file by the timestamp*/
-    char* new_synthetic_data_file_name = (char*)"/home/ming/SketchMercator/traffic_sampler/sorted_syn.pcap";
-    // vector<Packet_info> packets;
-    // sort_pcap_file(synthetic_data_file_name, new_synthetic_data_file_name, packets);
-    sort_pcap(synthetic_data_file_name, new_synthetic_data_file_name);
+    // /* sort the pcap file by the timestamp*/
+    // char* new_synthetic_data_file_name = (char*)"/home/ming/SketchMercator/traffic_sampler/sorted_syn.pcap";
+    // sort_pcap(synthetic_data_file_name, new_synthetic_data_file_name);
 
     return 0;
 
