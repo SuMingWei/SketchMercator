@@ -42,19 +42,32 @@ def run_cmd_list(cmd_list, max_pcount):
 
 # test the impact of different memory size on solver
 def run_impact_memory_size(run_helper, iteration_num = 3):
-    memory_list = [32768, 65536, 131072, 262144, 524288, 1048576]
+    memory_list = [32768, 65536, 131072, 262144, 524288]
+    # memory_list = [4096, 8192, 16384, 32768, 65536]
+
+    metric_str_list = ['(hh,5tuple)']
+    directory_name_list = ['hh']
+    sketches = 'cm,lc,cs,hll,mrb,mrac,univmon,ll'
 
     cnt = 0
     for mem in memory_list:
-        # \"(hh,5tuple),(cd,5tuple),(ent,5tuple),(cardinality,5tuple),(fsd,5tuple)\"
-        cmd = 'python3 run.py --queries \"(hh,5tuple)\" '\
-            '--sketches cm,lc,cs,hll,mrb,mrac,univmon,ll --resources level,row,width --resource_modeler LinearModeler '\
-            f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
-            f'--total_sram {mem} --deployment_output --output_dir impact_of_mem '\
-            f'--output_file mem_{mem}_run_{iteration_num}.json > impact_of_mem/mem_{mem}_run_{iteration_num}.txt'
-        print(cmd)
-        cnt += 1
-        run_helper.call(run_cmd_func, (cmd, ))
+        for metric_str, directory_name in zip(metric_str_list, directory_name_list):
+            output_dir = f'output/impact_of_mem/{directory_name}'
+            
+            # create directory if it doesn't exist
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+                
+                
+            # \"(hh,5tuple),(cd,5tuple),(ent,5tuple),(cardinality,5tuple),(fsd,5tuple)\"
+            cmd = f'python3 run.py --queries \"{metric_str}\" '\
+                f'--sketches {sketches} --resources level,row,width --resource_modeler LinearModeler '\
+                f'--profiler_config only_actual.ini --coverage_pickle_file actual.pkl --num_strawman_runs {iteration_num} '\
+                f'--total_sram {mem} --deployment_output --output_dir {output_dir} '\
+                f'--output_file mem_{mem}_run_{iteration_num}.json > {output_dir}/mem_{mem}_run_{iteration_num}.txt'
+            print(cmd)
+            cnt += 1
+            run_helper.call(run_cmd_func, (cmd, ))
     print("count:", cnt)
 
 # test the impact of number of metrics in an ensemble on solver
@@ -327,7 +340,7 @@ if __name__ == '__main__':
     # (plotting scripts is in `$sketch_home/result_plots/QuerySketch/`)
     # then we can get the result figures of experiments (figures on the paper)
 
-    # run_impact_memory_size(run_helper, iteration_num)
+    run_impact_memory_size(run_helper, iteration_num)
     # run_number_of_metrics(run_helper, iteration_num)
     # run_number_of_pcaps(run_helper, iteration_num)
     # run_diff_ensemble(run_helper, iteration_num)
@@ -335,5 +348,5 @@ if __name__ == '__main__':
     # run_diff_error_constraint(run_helper, iteration_num)
     # run_effectiveness_of_module(run_helper, iteration_num)
     # run_profile_frequency(run_helper, iteration_num)
-    run_theory_vs_profile(run_helper, iteration_num)
+    # run_theory_vs_profile(run_helper, iteration_num)
     pass

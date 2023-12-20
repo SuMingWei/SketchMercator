@@ -1,6 +1,7 @@
 import os
 
-ROOT_DIR = os.path.join(os.path.expanduser('~'), 'Desktop', 'cmu', 'research', 'sketch-home', 'code', 'query_to_sketch')
+SKETCH_HOME = os.path.expandvars('$sketch_home')
+ROOT_DIR = os.path.join(SKETCH_HOME, 'query_to_sketch')
 PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles')
 
 pretty_sketch_map = {
