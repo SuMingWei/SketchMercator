@@ -188,19 +188,32 @@ void pcap_parse(char* pcap_file_name, map<Flowkey_t, int> &flow_stream, string f
 }
 
 /* for quantization */
-void quantization(map<int, vector<Flowkey_t>> size_key_mapping, vector<int> &bins, map<int, vector<Flowkey_t>> &quantized_mapping){
-    // calculate cdf
+void target_dist_quantization(string filename, vector<int> &bins, map<int, int> &target_fs_dist){
     cout << "[quantization]\n";
+    // read file to get inputFile's flow size distribution
+    ifstream inputFile(filename);
+    string line;
+    int flow_size, frequency;
+
+    map<int, int> fs_dist;
+    while(getline(inputFile, line)){
+        istringstream iss(line);
+        iss >> flow_size >> frequency;
+        fs_dist[flow_size] = frequency;
+    }
+    inputFile.close();
+
+    // calculate cdf
     map<int, double> cdf;
     int total_flows = 0;
     double culmulative_prob = 0.0;
 
-    for(auto item : size_key_mapping){
-        total_flows += item.second.size();
+    for(auto item : fs_dist){
+        total_flows += item.second;
     }
 
-    for(auto item : size_key_mapping){
-        culmulative_prob += (double)(item.second.size()) / (double)total_flows;
+    for(auto item : fs_dist){
+        culmulative_prob += (double)(item.second) / (double)total_flows;
         cdf[item.first] = culmulative_prob;
     }
 
@@ -216,6 +229,23 @@ void quantization(map<int, vector<Flowkey_t>> size_key_mapping, vector<int> &bin
 
     // get quantizaed mapping
     idx = 0;
+    for(auto flow : fs_dist){
+        while(flow.first > bins[idx]){
+            if(idx < bins.size()-1) idx++;
+            else break;
+        }
+        target_fs_dist[bins[idx]] += flow.second;
+    }
+
+    // // verify the quantized mapping result
+    // for(auto item : target_fs_dist){
+    //     cout << item.first << " " << item.second << endl;
+    // }
+
+}
+
+void origin_dist_quantization(vector<int> bins, map<int, vector<Flowkey_t>> size_key_mapping, map<int, vector<Flowkey_t>> &quantized_mapping){
+    int idx = 0;
     for(auto flow : size_key_mapping){
         while(flow.first > bins[idx]){
             if(idx < bins.size()-1) idx++;
@@ -224,14 +254,6 @@ void quantization(map<int, vector<Flowkey_t>> size_key_mapping, vector<int> &bin
         // cout << bins[idx] << endl;
         quantized_mapping[bins[idx]].insert(quantized_mapping[bins[idx]].end(), flow.second.begin(), flow.second.end());
     }
-
-    // verify the quantized mapping result
-    // int tmp = 0;
-    // for(auto item : quantized_mapping){
-    //     cout << item.first << " " << item.second.size() << endl;
-    //     tmp += item.second.size();
-    // }
-
 }
 
 /* for flow selection */
@@ -286,6 +308,108 @@ void select_flow(map<int, int> fs_dist, map<int, vector<Flowkey_t>> size_key_map
     return;
 }
 
+void sample_flow(map<int, int> target_fs_dist, map<int, vector<Flowkey_t>> &quantized_mapping, map<Flowkey_t, int> &selected_flow){
+    int size, freq, idx, candidate_size;
+    map<int,int> unhandle_flow;
+    int total_flows = 0;
+    int handle_flows = 0;
+    cout << "[start sampling flow]\n";
+
+    for(auto item : target_fs_dist){
+        size = item.first;
+        freq = item.second;
+        total_flows += freq;
+
+        cout << "[sample flow] size = " << size << " freq = " << freq << endl;
+        // sample the flow with same flow size
+        candidate_size = quantized_mapping[size].size(); 
+        if(freq < candidate_size){
+            // random select
+            while(freq > 0){
+                idx = rand() % quantized_mapping[size].size(); // a random idx
+                selected_flow[quantized_mapping[size][idx]] = 0; // add to selected flow, 0 means select all packet
+                quantized_mapping[size].erase(quantized_mapping[size].begin() + idx); // remove from the dataset
+                freq--;
+            }
+            handle_flows += freq;
+        }else if(freq == candidate_size){
+            // select all
+            for(int i=0;i<candidate_size;i++){
+                selected_flow[quantized_mapping[size][i]] = 0;
+            }
+            quantized_mapping.erase(size);
+            handle_flows += freq;
+        }else{
+            // target number > the dataset
+            // todo
+            cout << "target number > the dataset\n";
+            cout << "flow size = " << size << " freq = " << freq << " candidate size = " << candidate_size << "\n";
+            for(int i=0;i<candidate_size;i++){
+                selected_flow[quantized_mapping[size][i]] = 0;
+            }
+            quantized_mapping.erase(size);
+            unhandle_flow[size] = freq - candidate_size;
+            handle_flows += candidate_size;
+        }
+    }
+
+    cout << "---------------------\n";
+    cout << "[target total flows] " << total_flows << endl;
+    cout << "[handle flows] " << handle_flows << endl;
+    cout << "[handle flows2] " << selected_flow.size() << endl;
+    for(auto item : unhandle_flow){
+        cout << "[unhandle flows] " << item.first << " " << item.second << endl;
+    }
+    cout << "---------------------\n";
+
+    // handle the situation of "target number > the dataset number"
+    // select a part of packets by the key with bigger flow size
+    cout << "[start handle the situation of target number > the dataset number]\n";
+    int another_size;
+    // int tmp = 0;
+    for(auto item : unhandle_flow){
+        size = item.first;
+        freq = item.second;
+
+        while(freq > 0){
+            cout << "[sample unhandle flow] size = " << size << " freq = " << freq << endl;
+            another_size = quantized_mapping.rbegin()->first;
+            cout << "[another size] " << another_size << " " << quantized_mapping[another_size].size() << endl;
+            // tmp = 0;
+
+            if(freq < quantized_mapping[another_size].size()){
+                while(freq > 0){
+                    idx = rand() % quantized_mapping[another_size].size(); // a random idx
+                    selected_flow[quantized_mapping[another_size][idx]] = size; // add to selected flow, others means specific size
+                    quantized_mapping[another_size].erase(quantized_mapping[another_size].begin() + idx); // remove from the dataset
+                    freq--;
+                }
+            }else if(freq == quantized_mapping[another_size].size()){
+                // select all
+                for(int i=0;i<freq;i++){
+                    selected_flow[quantized_mapping[another_size][i]] = size;
+                }
+                quantized_mapping.erase(another_size);
+                freq = 0;
+            }else{
+                for(int i=0;i<quantized_mapping[another_size].size();i++){
+                    selected_flow[quantized_mapping[another_size][i]] = size;
+                }
+                freq -= quantized_mapping[another_size].size();
+                quantized_mapping.erase(another_size);
+                // cout << "[tmp] " << tmp << endl;
+            }
+
+            cout << "[handle flows] " << selected_flow.size() << endl;
+            cout << "[unhandle flows] " << size << " " << freq << endl;
+        }
+    }
+
+    cout << "[finish unhandle flows]\n";
+
+    return;
+}
+
 /* generate pcap file */
 void pcap_generate(char* pcap_file_name, char* output_file_name, string flowkey, map<Flowkey_t, int> &selected_flow, int &handle_packets, int time_offset){
     uint64_t initial_timestamp = 0;
@@ -306,17 +430,8 @@ void pcap_generate(char* pcap_file_name, char* output_file_name, string flowkey,
     const u_char *packet;
 
     int global_count = 0;
-    // int handle_packets = 0;
-
-    // int debug_count = 0;
 
     while(true) {
-
-        if(selected_flow.size() == 0){
-            cout << "[finish generating]\n" << "total generate packets: " << handle_packets << endl;
-            break;
-        }
-
         packet = pcap_next(descr, &header);
         header.ts.tv_sec -= time_offset;
         if(packet == NULL)
@@ -343,14 +458,14 @@ void pcap_generate(char* pcap_file_name, char* output_file_name, string flowkey,
 
                 // sample packet
                 if(selected_flow.find(key) != selected_flow.end()){
+                    if(selected_flow[key] > 0){ // has specific flow size
+                        selected_flow[key]--;
+                        if(selected_flow[key] == 0) selected_flow.erase(key);
+                    }
                     // Write the packet to the output file
                     pcap_dump((u_char*)pcap_out, &header, packet);
 
                     handle_packets++;
-
-                    if(--selected_flow[key] <= 0){
-                        selected_flow.erase(key);
-                    }
                 }
 
                 // print progress bar
@@ -454,49 +569,38 @@ int main(int argc, char* argv[]){
         size_key_mapping[flow.second].push_back(flow.first);
     }
 
-    /* get quantized flow size and flowkey mapping */
-    cout << "[flow size and key quantized mapping]\n";
-    vector<int> bins(100,0);
-    map<int, vector<Flowkey_t>> quantized_mapping;
-    quantization(size_key_mapping, bins, quantized_mapping);
 
     /* read file to get inputFile's flow size distribution */
     cout << "[get input flow size distribution]\n";
-    ifstream inputFile(fs_dist_file);
-    string line;
-    int flow_size, frequency;
+    vector<int> bins(100,0);
     map<int, int> target_fs_dist;
+    target_dist_quantization(fs_dist_file, bins, target_fs_dist);
 
-    int idx = 0;
-    while(getline(inputFile, line)){
-        istringstream iss(line);
-        iss >> flow_size >> frequency;
-        while(flow_size > bins[idx]){
-            if(idx < bins.size()-1) idx++;
-            else break;
-        }
-        target_fs_dist[bins[idx]] += frequency;
-    }
-    inputFile.close();
-
+    /* get quantized flow size and flowkey mapping */
+    cout << "[flow size and key quantized mapping]\n";
+    map<int, vector<Flowkey_t>> quantized_mapping;
+    origin_dist_quantization(bins, size_key_mapping, quantized_mapping);
+    
     for(auto item : target_fs_dist){
-        cout << item.first << " " << item.second << endl;
+        cout << item.first << " " << quantized_mapping[item.first].size() << " " << item.second << endl;
     }
 
     /* sample flow and generate another pcap file*/
     map<Flowkey_t, int> selected_flow;
-    select_flow(target_fs_dist, quantized_mapping, selected_flow);
-    char* synthetic_data_file_name = (char*)"/home/ming/SketchMercator/traffic_sampler/syn.pcap";
-    vector<int> time_offset = {0, 4*60, 9*60, 29*60, 59*60}; // need to remove the offset of different pcap file
-    int gen_num = 0;
-    for(int i=0;i<pcap_num;i++){
-        char *pcap_path = argv[3+i];
-        pcap_generate(pcap_path, synthetic_data_file_name, flowkey, selected_flow, gen_num, time_offset[i]);
-        if(selected_flow.size() == 0) break;
-    }
-    cout << "[packet sampling is completed] total sample packets: " << gen_num << "\n";
+    // select_flow(target_fs_dist, quantized_mapping, selected_flow);
+    sample_flow(target_fs_dist, quantized_mapping, selected_flow);
 
-    
+    cout << selected_flow.size() << endl;
+
+    // char* synthetic_data_file_name = (char*)"/home/ming/SketchMercator/traffic_sampler/syn.pcap";
+    // vector<int> time_offset = {0, 4*60, 9*60, 29*60, 59*60}; // 20180816 need to remove the offset of different pcap file
+    // int gen_num = 0;
+    // for(int i=0;i<pcap_num;i++){
+    //     char *pcap_path = argv[3+i];
+    //     pcap_generate(pcap_path, synthetic_data_file_name, flowkey, selected_flow, gen_num, time_offset[i]);
+    //     if(selected_flow.size() == 0) break;
+    // }
+    // cout << "[packet sampling is completed] total sample packets: " << gen_num << "\n";
 
     // /* sort the pcap file by the timestamp*/
     // char* new_synthetic_data_file_name = (char*)"/home/ming/SketchMercator/traffic_sampler/sorted_syn.pcap";
