@@ -28,8 +28,8 @@ def get_parse():
     return parser.parse_args()
 
 # sketch_list = ["gt", "hll"]
-# sketch_list = ["univmon"]
-sketch_list = ["cm"]
+sketch_list = ["univmon"]
+# sketch_list = ["cm", "cs"]
 width_list = [32768, 65536, 131072, 262144, 524288]
 # width_list = [4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
 # width_list = [512]
@@ -41,7 +41,8 @@ width_list = [32768, 65536, 131072, 262144, 524288]
 # sketch_list = ["univmon"]
 # sketch_list = ["mrac"]
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536]
-level = 1
+# level = 1
+level = 16
 row = 3
 
 ### Common parameters

@@ -47,7 +47,8 @@ def run_impact_memory_size(run_helper, iteration_num = 3):
 
     metric_str_list = ['(hh,5tuple)']
     directory_name_list = ['hh']
-    sketches = 'cm,lc,cs,hll,mrb,mrac,univmon,ll'
+    # sketches = 'cm,lc,cs,hll,mrb,mrac,univmon,ll'
+    sketches = 'cm,cs,univmon'
 
     cnt = 0
     for mem in memory_list:

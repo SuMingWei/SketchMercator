@@ -42,7 +42,8 @@ def get_online_traffic_pcap_list(date, pcap_duration, pcap_count, category = "on
 
 # sketch_list = ["cm", "hll", "univmon"]
 # sketch_list = ["cm"]
-sketch_list = ["cm"]
+# sketch_list = ["cm", "cs"]
+sketch_list = ["univmon"]
 width_list = [32768, 65536, 131072, 262144, 524288]
 # date_list = [20180517, 20180621, 20180816, 20181018, 20181115, 20181220]
 date_list = [20180816]
@@ -58,7 +59,8 @@ epoch_list = [30]
 flowkey_list = ["srcIP", ]
 
 
-level = 1
+level = 16
+# level = 1
 row = 3
 # how many rows I really measure on sketch (calculate in control plane)
 # It only works on Count-Min/Count sketch
