@@ -1,149 +1,150 @@
 
 <class 'optimizers.BruteForce'> None None
+solution {'sketch_instances': [('cm', '5tuple')], 'resource_allocation_map': {('cm', '5tuple'): {'level': 1, 'row': 3, 'width': 131072}}, 'query_to_sketch_map': {('hh', '5tuple'): ('cm', '5tuple')}}
 {('cm', '5tuple'): {'level': 1, 'row': 3, 'width': 131072}}
 ('hh', '5tuple') ('cm', '5tuple')
 Solution
 ('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 3, 'width': 131072}
 Error bounds [0.39]
 Value of optimization function on errors 0.39
-Time taken 0.0003123283386230469
+Time taken 0.0003476142883300781
 
 <class 'strawmen.RandomStrawman'> equal 0
 {('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cm', '5tuple')
 Solution
 ('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 0.00015020370483398438
+Time taken 0.00014448165893554688
 
 <class 'strawmen.RandomStrawman'> equal 1
 {('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cs', '5tuple')
 Solution
 ('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 6.389617919921875e-05
+Time taken 6.175041198730469e-05
 
 <class 'strawmen.RandomStrawman'> equal 2
 {('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cm', '5tuple')
 Solution
 ('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 5.7220458984375e-05
+Time taken 5.5789947509765625e-05
 
 <class 'strawmen.RandomStrawman'> equal 3
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 5.602836608886719e-05
+Time taken 5.269050598144531e-05
 
 <class 'strawmen.RandomStrawman'> equal 4
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 5.364418029785156e-05
+Time taken 5.1975250244140625e-05
 
 <class 'strawmen.RandomStrawman'> query_proportional 0
 {('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cm', '5tuple')
 Solution
 ('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 6.29425048828125e-05
+Time taken 8.7738037109375e-05
 
 <class 'strawmen.RandomStrawman'> query_proportional 1
 {('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cs', '5tuple')
 Solution
 ('hh', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 5.745887756347656e-05
+Time taken 7.343292236328125e-05
 
 <class 'strawmen.RandomStrawman'> query_proportional 2
 {('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 262144}}
 ('hh', '5tuple') ('cm', '5tuple')
 Solution
 ('hh', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 262144}
-Time taken 5.507469177246094e-05
+Time taken 5.14984130859375e-05
 
 <class 'strawmen.RandomStrawman'> query_proportional 3
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 5.555152893066406e-05
+Time taken 4.935264587402344e-05
 
 <class 'strawmen.RandomStrawman'> query_proportional 4
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 5.412101745605469e-05
+Time taken 4.9114227294921875e-05
 
 <class 'strawmen.GeneralityStrawman'> equal 0
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.8371810913085938e-05
+Time taken 2.6702880859375e-05
 
 <class 'strawmen.GeneralityStrawman'> equal 1
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.5987625122070312e-05
+Time taken 2.3365020751953125e-05
 
 <class 'strawmen.GeneralityStrawman'> equal 2
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.4318695068359375e-05
+Time taken 2.288818359375e-05
 
 <class 'strawmen.GeneralityStrawman'> equal 3
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.384185791015625e-05
+Time taken 2.2411346435546875e-05
 
 <class 'strawmen.GeneralityStrawman'> equal 4
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.4080276489257812e-05
+Time taken 2.47955322265625e-05
 
 <class 'strawmen.GeneralityStrawman'> query_proportional 0
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 3.0279159545898438e-05
+Time taken 2.6702880859375e-05
 
 <class 'strawmen.GeneralityStrawman'> query_proportional 1
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.6941299438476562e-05
+Time taken 2.574920654296875e-05
 
 <class 'strawmen.GeneralityStrawman'> query_proportional 2
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.7894973754882812e-05
+Time taken 2.8371810913085938e-05
 
 <class 'strawmen.GeneralityStrawman'> query_proportional 3
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.5987625122070312e-05
+Time taken 2.86102294921875e-05
 
 <class 'strawmen.GeneralityStrawman'> query_proportional 4
 {('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 16384}}
 ('hh', '5tuple') ('univmon', '5tuple')
 Solution
 ('hh', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 16384}
-Time taken 2.5987625122070312e-05
+Time taken 2.6226043701171875e-05

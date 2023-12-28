@@ -39,16 +39,17 @@ def get_online_traffic_pcap_list(date, pcap_duration, pcap_count, category = "on
     return ret_list
 
 # sketch_list = ["gt", "hll"]
-# sketch_list = ["mrb"]
-sketch_list = ["univmon"]
-# sketch_list = ["mrac"]
+# sketch_list = ["univmon"]
+# sketch_list = ["mrac","mrb"]
+sketch_list = ["lc","hll", "ll"]
 # sketch_list = ["cm", "cs"]
 width_list = [32768, 65536, 131072, 262144, 524288]
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536]
 # row = 5
-level = 16
-# level = 1
-row = 3
+# level = 16
+# level = 8
+level = 1
+row = 1
 
 ### Common parameters
 # date_list = [20180517, 20180621, 20180816, 20181018, 20181115, 20181220]

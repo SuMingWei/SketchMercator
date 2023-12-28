@@ -27,9 +27,10 @@ def get_parse():
     return parser.parse_args()
 
 
-# sketch_list = ["cm"]
-sketch_list = ["univmon"]
+# sketch_list = ["mrac", "mrb"]
+# sketch_list = ["univmon"]
 # sketch_list = ["cm", "cs"]
+sketch_list = ["lc", "hll", "ll"]
 width_list = [32768, 65536, 131072, 262144, 524288]
 # width_list = [2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144]
 # width_list = [256, 512, 1024, 2048, 4096, 8192]
@@ -50,8 +51,9 @@ flowkey_list = ["srcIP", ]
 
 
 # level = 1
-level = 16
-row = 3
+level = 8
+# level = 16
+row = 1
 # how many rows I really measure on sketch (calculate in control plane)
 # It only works on Count-Min/Count sketch
 actual_row = row

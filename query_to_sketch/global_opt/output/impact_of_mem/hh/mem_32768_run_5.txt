@@ -1,2 +1,3 @@
 
 <class 'optimizers.BruteForce'> None None
+solution None
