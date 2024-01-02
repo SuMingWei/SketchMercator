@@ -1,0 +1,149 @@
+
+<class 'optimizers.BruteForce'> None None
+{('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 32768}}
+('ent', '5tuple') ('mrac', '5tuple')
+Solution
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 32768}
+Error bounds [0.07]
+Value of optimization function on errors 0.07
+Time taken 0.001409769058227539
+
+<class 'strawmen.RandomStrawman'> equal 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}}
+('ent', '5tuple') ('cs', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.0003097057342529297
+
+<class 'strawmen.RandomStrawman'> equal 1
+{('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 32768}}
+('ent', '5tuple') ('mrac', '5tuple')
+Solution
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 32768}
+Time taken 0.000125885009765625
+
+<class 'strawmen.RandomStrawman'> equal 2
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}}
+('ent', '5tuple') ('cs', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.00011730194091796875
+
+<class 'strawmen.RandomStrawman'> equal 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 0.00011372566223144531
+
+<class 'strawmen.RandomStrawman'> equal 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 0.00011324882507324219
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}}
+('ent', '5tuple') ('cs', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.00013947486877441406
+
+<class 'strawmen.RandomStrawman'> query_proportional 1
+{('mrac', '5tuple'): {'level': 8, 'row': 1, 'width': 32768}}
+('ent', '5tuple') ('mrac', '5tuple')
+Solution
+('ent', '5tuple') 	 mrac 	 {'level': 8, 'row': 1, 'width': 32768}
+Time taken 0.00011777877807617188
+
+<class 'strawmen.RandomStrawman'> query_proportional 2
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 131072}}
+('ent', '5tuple') ('cs', '5tuple')
+Solution
+('ent', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 131072}
+Time taken 0.00011420249938964844
+
+<class 'strawmen.RandomStrawman'> query_proportional 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 0.00011706352233886719
+
+<class 'strawmen.RandomStrawman'> query_proportional 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 0.00011610984802246094
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 6.29425048828125e-05
+
+<class 'strawmen.GeneralityStrawman'> equal 1
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.817413330078125e-05
+
+<class 'strawmen.GeneralityStrawman'> equal 2
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.507469177246094e-05
+
+<class 'strawmen.GeneralityStrawman'> equal 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.555152893066406e-05
+
+<class 'strawmen.GeneralityStrawman'> equal 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.5789947509765625e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 6.0558319091796875e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 1
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 6.127357482910156e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 2
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 6.127357482910156e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 3
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.984306335449219e-05
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 4
+{('univmon', '5tuple'): {'level': 16, 'row': 2, 'width': 8192}}
+('ent', '5tuple') ('univmon', '5tuple')
+Solution
+('ent', '5tuple') 	 univmon 	 {'level': 16, 'row': 2, 'width': 8192}
+Time taken 5.888938903808594e-05

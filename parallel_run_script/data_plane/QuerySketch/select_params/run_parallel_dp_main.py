@@ -27,25 +27,23 @@ def get_parse():
     parser.add_argument('--seed', help='seed', default=None, required=False)
     return parser.parse_args()
 
-# sketch_list = ["gt", "hll"]
-# sketch_list = ["univmon"]
-sketch_list = ["lc", "ll", "hll"]
-# sketch_list = ["mrac", "mrb"]
-# sketch_list = ["cm", "cs"]
-width_list = [32768, 65536, 131072, 262144, 524288]
-# width_list = [4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-# width_list = [512]
-# width_list = [524288]
-# level = 16
-# row = 5
+# width_list = [32768, 65536, 131072, 262144, 524288]
+width_list = [1024, 2048, 4096, 8192, 16384]
 
-# sketch_list = ["mrb"]
+# sketch_list = ["cm", "cs"]
+# level = 1
+# row = 3
+
 # sketch_list = ["univmon"]
-# sketch_list = ["mrac"]
-# width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536]
-level = 1
-# level = 8
 # level = 16
+# row = 3
+
+# sketch_list = ["lc", "ll", "hll"]
+# level = 1
+# row = 1
+
+sketch_list = ["mrac", "mrb"]
+level = 8
 row = 1
 
 ### Common parameters
