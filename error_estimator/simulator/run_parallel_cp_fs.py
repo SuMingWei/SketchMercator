@@ -65,9 +65,9 @@ def run_caida_traffic(dataset_category_list=['caida_specify_time/', ], date_list
                                     print(output_dir)
 
                                     str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                                    output_pkl_dir = os.path.join(os.getenv('error_estimator'), "SketchQuery", sketch_name, pcap_file_name, flowkey, str)
+                                    output_pkl_dir = os.path.join(os.getenv('error_estimator'), "SketchFlowSizeQuery", sketch_name, pcap_file_name, flowkey, str)
                                     print(output_pkl_dir)
-                                    from sketch_control_plane.QuerySketch.select_params.sketch_cp_main import sketch_cp
+                                    from error_estimator.control_plane.sketch_cp_main import sketch_cp
                                     helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
 
                                     print()
@@ -93,9 +93,9 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
                                 print(output_dir)
 
                                 str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                                output_pkl_dir = os.path.join(os.getenv('error_estimator'), "SketchQuery", sketch_name, pcap_file_name, flowkey, str)
+                                output_pkl_dir = os.path.join(os.getenv('error_estimator'), "SketchFlowSizeQuery", sketch_name, pcap_file_name, flowkey, str)
                                 print(output_pkl_dir)
-                                from sketch_control_plane.QuerySketch.select_params.sketch_cp_main import sketch_cp
+                                from error_estimator.control_plane.sketch_cp_main import sketch_cp
                                 helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
 
                                 print()
@@ -106,10 +106,11 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
 
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+# width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
+width_list = [4096]
 
-sketch_list = ["cm", "cs"]
+sketch_list = ["cm"]
 level = 1
 row = 3
 
@@ -134,7 +135,8 @@ row = 3
 # row = 1
 
 ### Common parameters
-date_list = [20180517, 20180621, 20180816]
+# date_list = [20180517, 20180621, 20180816]
+date_list = [20180517]
 epoch_list = [30]
 flowkey_list = ["srcIP", ]
 
