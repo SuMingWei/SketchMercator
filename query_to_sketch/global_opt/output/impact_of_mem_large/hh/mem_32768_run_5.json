@@ -1,0 +1,296 @@
+[
+    {
+        "name": "optimizers.BruteForce:None:None:0",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 3,
+                "width": 8192
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:1",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:2",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:3",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:equal:4",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:1",
+        "solutions": [
+            {
+                "algo": 1,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:2",
+        "solutions": [
+            {
+                "algo": 0,
+                "metric": [
+                    0
+                ],
+                "level": 1,
+                "row": 2,
+                "width": 16384
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:3",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.RandomStrawman:None:query_proportional:4",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:0",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:1",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:2",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:3",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:equal:4",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:0",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:1",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:2",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:3",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    },
+    {
+        "name": "strawmen.GeneralityStrawman:None:query_proportional:4",
+        "solutions": [
+            {
+                "algo": 7,
+                "metric": [
+                    0
+                ],
+                "level": 16,
+                "row": 2,
+                "width": 1024
+            }
+        ]
+    }
+]

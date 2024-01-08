@@ -1,0 +1,149 @@
+
+<class 'optimizers.BruteForce'> None None
+{('cm', '5tuple'): {'level': 1, 'row': 3, 'width': 32768}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 3, 'width': 32768}
+Error bounds [0.08]
+Value of optimization function on errors 0.08
+Time taken 0.0011169910430908203
+
+<class 'strawmen.RandomStrawman'> equal 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00033164024353027344
+
+<class 'strawmen.RandomStrawman'> equal 1
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.000156402587890625
+
+<class 'strawmen.RandomStrawman'> equal 2
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012159347534179688
+
+<class 'strawmen.RandomStrawman'> equal 3
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00011515617370605469
+
+<class 'strawmen.RandomStrawman'> equal 4
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001461505889892578
+
+<class 'strawmen.RandomStrawman'> query_proportional 0
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001251697540283203
+
+<class 'strawmen.RandomStrawman'> query_proportional 1
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001201629638671875
+
+<class 'strawmen.RandomStrawman'> query_proportional 2
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012087821960449219
+
+<class 'strawmen.RandomStrawman'> query_proportional 3
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00011754035949707031
+
+<class 'strawmen.RandomStrawman'> query_proportional 4
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00011897087097167969
+
+<class 'strawmen.GeneralityStrawman'> equal 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00013446807861328125
+
+<class 'strawmen.GeneralityStrawman'> equal 1
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012445449829101562
+
+<class 'strawmen.GeneralityStrawman'> equal 2
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001232624053955078
+
+<class 'strawmen.GeneralityStrawman'> equal 3
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00011801719665527344
+
+<class 'strawmen.GeneralityStrawman'> equal 4
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00011873245239257812
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 0
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012493133544921875
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 1
+{('cm', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cm', '5tuple')
+Solution
+('cd', '5tuple') 	 cm 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012540817260742188
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 2
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012564659118652344
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 3
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.0001239776611328125
+
+<class 'strawmen.GeneralityStrawman'> query_proportional 4
+{('cs', '5tuple'): {'level': 1, 'row': 2, 'width': 65536}}
+('cd', '5tuple') ('cs', '5tuple')
+Solution
+('cd', '5tuple') 	 cs 	 {'level': 1, 'row': 2, 'width': 65536}
+Time taken 0.00012135505676269531

@@ -42,7 +42,7 @@ def run_cmd_list(cmd_list, max_pcount):
 
 # test the impact of different memory size on solver
 def run_impact_memory_size(run_helper, iteration_num = 3):
-    memory_list = [32768, 65536, 131072, 262144, 524288]
+    memory_list = [16384, 32768, 65536, 131072, 262144, 524288]
     # memory_list = [4096, 8192, 16384, 32768, 65536]
 
     metric_str_list = ['(hh,5tuple)','(cd,5tuple)','(ent,5tuple)','(cardinality,5tuple)','(fsd,5tuple)']
@@ -54,8 +54,9 @@ def run_impact_memory_size(run_helper, iteration_num = 3):
     for mem in memory_list:
         for metric_str, directory_name in zip(metric_str_list, directory_name_list):
             # output_dir = f'output/impact_of_mem/{directory_name}'
-            output_dir = f'output/impact_of_mem_online/{directory_name}'
             # output_dir = f'output/impact_of_mem_origin/{directory_name}'
+            # output_dir = f'output/impact_of_mem_online/{directory_name}'
+            output_dir = f'output/impact_of_mem_large/{directory_name}'
             
             # create directory if it doesn't exist
             if not os.path.exists(output_dir):

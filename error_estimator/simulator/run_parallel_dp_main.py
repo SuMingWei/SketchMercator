@@ -148,8 +148,9 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
 
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-# width_list = [8192, 16384, 32768, 65536, 131072] # cm cs
-width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
+# width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+# width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
+width_list = [4096]
 
 sketch_list = ["cm", "cs"]
 level = 1
@@ -186,13 +187,13 @@ pcap_count = 5
 
 cmd_list = []
 
-# run_caida_traffic(dataset_category_list=dataset_category_list, date_list=date_list, pcap_count=pcap_count,
-#                   flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
-#                   sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
+run_caida_traffic(dataset_category_list=dataset_category_list, date_list=date_list, pcap_count=pcap_count,
+                  flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
+                  sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
 
-run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_count=pcap_count,
-                   flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
-                   sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
+# run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_count=pcap_count,
+#                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
+#                    sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
 
 
 print(cmd_list[0])
