@@ -124,7 +124,7 @@ row = 1
 
 ### Common parameters
 # date_list = [20180517, 20180621, 20180816]
-date_list = [20180517]
+date_list = [20180621, 20180816]
 epoch_list = [30]
 flowkey_list = ["srcIP", ]
 
