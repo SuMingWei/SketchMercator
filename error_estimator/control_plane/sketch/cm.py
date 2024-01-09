@@ -55,7 +55,7 @@ def get_flow_size_distribution(result, row, width):
     
     # print(f'WMRD: {WMRD}')
     
-    return true_distribution, est_distribution, WMRD
+    return dict(sorted(true_distribution.items())), dict(sorted(est_distribution.items())), WMRD
 
 
 def cm_main(sketch_name, dist_dir, output_dir, row, width, level, arow):

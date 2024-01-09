@@ -1,7 +1,8 @@
 from sw_dp_simulator.file_io.py.read_mrac import load_mrac
 from sw_dp_simulator.hash_module.py.hash import compute_hash
+from error_estimator.control_plane.sketch.common import write_file_fsd
 
-import math
+import os
 
 def relative_error(true, estimate):
     if true == 0:
@@ -242,55 +243,42 @@ def get_mrac_error(data, gt_data, width, level):
     WMRD = WMRD_nom/WMRD_denom
 
     print("[EM] %d th epoch...with cardinality : %8.2f WMRD (%3.5f)\n" % (em_epoch, MRAC_inst.n_sum, WMRD))
-
-    return WMRD
-
-def get_entropy(result, cArray, d, w, l):
-
-    # width needs to multiply number of level
-    w *= l
-    total = 0
-    # add total from all levels
-    for val in result["count_list"]:
-        total += val
-    entropy = result["entropy"]
-    from sketch_control_plane.SketchAug.lib.gsum_lib import ground_truth_entropy
-    # print(total, entropy)
     
-    import math
-    import statistics
+    # get real and estimated flow size distribution
+    true_distribution = {}
+    est_distribution = {}
+    for i in range(1, len(true_dist)):
+        if true_dist[i] > 0:
+            # print(i, true_dist[i])
+            true_distribution[i] = true_dist[i]
+            
+    # print(true_distribution)
+            
+    for i in range(1, len(dist_est)):
+        if dist_est[i] > 0:
+            est_distribution[i] = dist_est[i] * (2**(base+1))
 
-    a = []
-    for i in range(0, d):
-        entropy_est = 0
-        for j in range(0, w):
-            cij = abs(cArray[i*w + j])
-            p = (cij/total)
-            if p != 0:
-                entropy_est += p * math.log2(p)
-        entropy_est *= -1
-        a.append(entropy_est)
-        # break
-    entropy_est = statistics.median(a)
-
-    return [entropy, entropy_est, relative_error(entropy, entropy_est)]
+    return dict(sorted(true_distribution.items())), dict(sorted(est_distribution.items())), WMRD
 
 ############################
 
-def mrac_main(sketch_name, output_dir, row, width, level):
+def mrac_main(sketch_name, dist_dir, output_dir, row, width, level):
     result = load_mrac(output_dir, width, 1, level)
 
     # convert multi-level array to single array
     cArray = []
     for arr in result['sketch_array_list']:
         cArray += arr
-    ret = []
-    WMRD = get_mrac_error(cArray, result["gt"], width, level)
-    ret.append(WMRD)
-
-    # from sketch_control_plane.QuerySketch.select_params.sketch.cs import get_entropy
-    # entropy_error = get_entropy(result, cArray, 1, width * level)
-    entropy_error = get_entropy(result, cArray, 1, width, level)
-    ret += entropy_error
-
-    return ret
+        
+    true_d, est_d, WMRD = get_mrac_error(cArray, result["gt"], width, level)
+    
+    os.makedirs(dist_dir, exist_ok=True)
+    
+    real_fsd_file = os.path.join(dist_dir, "real_dist.txt")
+    esti_fsd_file = os.path.join(dist_dir, "esti_dist.txt")
+    error_file = os.path.join(dist_dir, "error.txt")
+    write_file_fsd(list(true_d.keys()), list(true_d.values()), real_fsd_file)
+    write_file_fsd(list(est_d.keys()), list(est_d.values()), esti_fsd_file)
+    with open(error_file, 'w') as file:
+        file.write(str(WMRD))
+    print(WMRD)

@@ -23,5 +23,3 @@ def sketch_cp(sketch_name, output_dir, output_pkl_dir, row, width, level, arow):
         elif sketch_name == "mrac":
             mrac_main(sketch_name, dist_dir, full_dir, row, width, level)
 
-    # saver = PklSaver(output_pkl_dir, "data.pkl")
-    # saver.save(result_list)

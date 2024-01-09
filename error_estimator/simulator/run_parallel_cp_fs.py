@@ -107,32 +107,20 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
 # width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
-# width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
-width_list = [4096]
+width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
+# width_list = [4096]
 
-sketch_list = ["cm"]
-level = 1
-row = 3
+# sketch_list = ["cm", "cs"]
+# level = 1
+# row = 3
 
 # sketch_list = ["cs"]
 # level = 1
 # row = 3
 
-# sketch_list = ["univmon"]
-# level = 16
-# row = 3
-
-# sketch_list = ["mrac"]
-# level = 8
-# row = 1
-
-# sketch_list = ["mrb"]
-# level = 8
-# row = 1
-
-# sketch_list = ["lc", "ll", "hll"]
-# level = 1
-# row = 1
+sketch_list = ["mrac"]
+level = 8
+row = 1
 
 ### Common parameters
 # date_list = [20180517, 20180621, 20180816]
