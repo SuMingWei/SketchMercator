@@ -237,3 +237,21 @@ void sketchTemplate::sketch_info_file_print(parameters &params, HashSeedSet samp
     }
     fclose(fp);
 }
+
+void sketchTemplate::counter_info_file_print(parameters &params, string idx)
+{
+    string dir_name = string(params.output_dir);
+    // cout << "mkdir " << dir_name << endl;
+    sys_mkdir(dir_name);
+
+    string file_name;
+    FILE* fp;
+
+    file_name = dir_name + idx + ".txt";
+    fp = fopen(file_name.c_str(), "w");
+    for(int i = 0; i < depth * width; i++) {
+        fprintf(fp, "%d\n", sketchArray[i]);
+
+    }
+    fclose(fp);
+}

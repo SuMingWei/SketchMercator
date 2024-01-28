@@ -6,6 +6,9 @@ void main_loop(parameters &params, vector<packet_summary> &packet_stream, sketch
 
     uint64_t original_time = 0;
     uint64_t timer = 0;
+    uint64_t window_timer = 0;
+    int window_num = 0;
+
     int pcount = 1;
     int total_count = 0;
     int epoch_pcount = 0;
@@ -21,10 +24,22 @@ void main_loop(parameters &params, vector<packet_summary> &packet_stream, sketch
         current_time = p->timestamp;
         if (timer == 0) {
             timer = current_time;
+            window_timer = current_time;
             original_time = current_time;
         }
 
-        if (current_time - timer >= uint64_t(params.epoch * 1000000)) {
+        if(current_time - window_timer >= uint64_t(0.5 * 1000000)) { // for each window
+            window_timer = current_time;
+            sketch_iteration_instance->counter_file_print(params, window_num);
+            window_num++;
+            // sprintf(content, "\t\t%s %s (%d/%lu)-(%.2f%%) %.4f (s) duration(%.4f)", params.run_info, params.hash_seed_name, pcount, packet_stream.size(), (float)pcount*100 / (float)packet_stream.size(), ((double)current_time - (double)original_time)/1000000, ((double)current_time - (double)timer)/1000000);
+            // cout << content << endl;
+        }
+
+        if (current_time - timer >= uint64_t(params.epoch * 1000000)) { // for each epoch
+            window_timer = current_time;
+            window_num = 0;
+
             timer = current_time;
             sketch_iteration_instance->file_print(params);
             sketch_iteration_instance->clear(params);

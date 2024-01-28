@@ -113,7 +113,7 @@ struct Packet_info {
 };
 
 /* combine pcap file */
-void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, int> &flow_stream, string flowkey, map<Flowkey_t, int> &sum_stream, int length, int &flow_num, int & pkt_num){
+void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, int> &flow_stream, string flowkey, map<Flowkey_t, int> &sum_stream, int length, int &flow_num, int & pkt_num, int time_offset){
     uint64_t initial_timestamp = 0;
 
     pcap_t *descr;
@@ -137,6 +137,7 @@ void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, i
     int global_count = 0;
     while(true) {
         packet = pcap_next(descr, &header);
+        header.ts.tv_sec += time_offset;
 
         // packet end
         if(packet == NULL)
@@ -274,9 +275,10 @@ int main(int argc, char* argv[]){
     map<Flowkey_t, int> flow_stream2;
     map<Flowkey_t, int> sum_stream;
     char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/tmp.pcap";
+    int time_offset = len1;
     // cout << flow_stream1.size() <<endl;
-    pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1);
-    pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2);
+    pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1, 0);
+    pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2, time_offset);
 
     /* sort the file with stimestamp */
     string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/" + to_string(len1) + "_" + to_string(len2) + ".pcap";

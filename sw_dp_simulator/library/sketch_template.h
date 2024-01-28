@@ -39,6 +39,7 @@ public:
     void mrb_sketch(flowkey_t flowkey, parameters &params);
 
     void sketch_info_file_print(parameters &params, HashSeedSet sampling_hash);
+    void counter_info_file_print(parameters &params, string idx);
     void clear();
 };
 

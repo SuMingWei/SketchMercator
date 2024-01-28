@@ -12,6 +12,7 @@ public:
     virtual void iteration(packet_summary &p, parameters &params) {}
     virtual void file_print(parameters &params) {}
     virtual void clear(parameters &params) {}
+    virtual void counter_file_print(parameters &params, int idx) {}
 };
 
 int get_last_level(uint32_t sampling_hash, int level);
