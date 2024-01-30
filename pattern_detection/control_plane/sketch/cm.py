@@ -1,0 +1,105 @@
+import os
+from sw_dp_simulator.file_io.py.read_cm import load_cm
+from sw_dp_simulator.hash_module.py.hash import compute_hash
+from pattern_detection.control_plane.sketch.common import write_variation_file
+
+def counter_estimate(key, sketch_array, index_hash_sub_list, d, w, hash, level):
+    a = []
+
+    for i in range(0, d):
+        index = compute_hash(key, hash, index_hash_sub_list[i], w)
+        estimate = sketch_array[i * w + index]
+        a.append(estimate)
+
+    return min(a)
+
+def get_counter_value(full_dir, row, width, level):
+    counter_list = []
+    
+    # load counter value
+    for l in range(0, 1):
+        window_dir = '%s/level_%02d/window/' % (full_dir, l)
+        print(window_dir)
+        
+        level_list = []
+        for file in sorted(os.listdir(window_dir)):
+            window_list = []
+            path = os.path.join(window_dir, file)
+            
+            f = open(path)
+            for i in range(0, row * width):
+                pline = f.readline().strip()
+                window_list.append(int(pline))
+            f.close()
+            
+            level_list.append(window_list)
+            
+        final_counter_path = '%s/level_%02d/sketch_counter.txt' % (full_dir, l)
+        f = open(final_counter_path)
+        for i in range(0, row * width):
+            pline = f.readline().strip()
+            window_list.append(int(pline))
+        f.close()
+        
+        level_list.append(window_list)
+        
+        print(f'There are {len(level_list)} windows')
+        
+        counter_list.append(level_list)
+    
+    return counter_list
+
+def cm_main(full_dir, dist_dir, row, width, level):
+    result = load_cm(full_dir, width, row)
+    
+    flowkey_list = result["flowkey"]
+    index_hash_list = result["index_hash_list"]
+    counter_list = get_counter_value(full_dir, row, width, level)
+        
+    # sample and get changes
+    change_list = {}
+    topk = 100
+    for i in range(0, min(topk, len(flowkey_list))):
+        flowkey = flowkey_list[i][2]
+        
+        val = []
+        for cArray in counter_list[0]:
+            est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+            val.append(est)
+        
+        change_list[flowkey_list[i][0]] = val
+        
+    # accumulate
+    write_variation_file(dist_dir, change_list, "accumulate.txt")
+    
+    # calculate variation
+    var_dict = {}
+    for key in change_list:
+        print(key, change_list[key])
+        var = [change_list[key][0]]
+        for i in range(1, len(change_list[key])):
+            var.append(change_list[key][i] - change_list[key][i-1])
+        
+        var_dict[key] = var
+        print(key, var_dict[key])
+    
+    write_variation_file(dist_dir, var_dict, "variation.txt")
+    
+    # # calculate second derivative
+    # second_var_dict = {}
+    # for key in var_dict:
+    #     print(key, var_dict[key])
+    #     var = [var_dict[key][0]]
+    #     for i in range(1, len(var_dict[key])):
+    #         var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
+        
+    #     second_var_dict[key] = var
+    #     print(key, second_var_dict[key])
+    
+    # write_variation_file(dist_dir, second_var_dict, "second_variation.txt")
+    
+    
+    
+            
+    
+    

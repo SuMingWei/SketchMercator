@@ -1,2 +1,5 @@
 # Ignore pcap file
 *.pcap
+
+SketchPadding/
+SketchPatternQuery/

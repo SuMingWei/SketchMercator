@@ -153,8 +153,9 @@ void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, i
             if ((p.ip_proto == IP_PROTO_UDP || p.ip_proto == IP_PROTO_TCP) && header.caplen > 20) {
                 
                 // end
+                if(length == 0) break;
                 if(initial_timestamp != 0){
-                    if((p.timestamp-initial_timestamp)/1000000 >= length){
+                    if((p.timestamp-initial_timestamp) >= uint64_t(length * 1000000)){
                         break;
                     } 
                 }

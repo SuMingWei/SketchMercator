@@ -33,8 +33,8 @@ if __name__ == "__main__":
     
     file1 = "/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180816/60s/equinix-nyc.dirA.20180816-130100.UTC.anon.pcap"
     file2 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/333709_2515088.pcap"    
-    len1 = "4"
-    len2 = "6"
+    len1 = "3"
+    len2 = "7"
     flowkey = "srcIP"
     
     generate_dataset(file1, file2, len1, len2, flowkey)
