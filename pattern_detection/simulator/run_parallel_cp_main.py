@@ -121,6 +121,7 @@ is_count_packet = 1
 dataset_category_list = ['caida_specify_time/', ]
 pcap_count = 5
 pcap_file = ["5_5.pcap", "10_0.pcap", "4_6.pcap", "3_7.pcap"]
+# pcap_file = ["5_5-2.pcap"]
 
 # number of processes in parallel
 helper = ParallelRunHelper(30)

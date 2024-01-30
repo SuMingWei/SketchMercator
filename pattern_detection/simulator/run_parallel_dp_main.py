@@ -135,7 +135,7 @@ is_count_packet = 1
 # ### expiration of pcaps
 pcap_count = 5
 # pcap_file=["5_5.pcap", "10_0.pcap", "4_6.pcap"]
-pcap_file=["3_7.pcap"]
+pcap_file=["5_5-2.pcap"]
 
 cmd_list = []
 

@@ -34,14 +34,14 @@ def get_counter_value(full_dir, row, width, level):
             
             level_list.append(window_list)
             
-        final_counter_path = '%s/level_%02d/sketch_counter.txt' % (full_dir, l)
-        f = open(final_counter_path)
-        for i in range(0, row * width):
-            pline = f.readline().strip()
-            window_list.append(int(pline))
-        f.close()
+        # final_counter_path = '%s/level_%02d/sketch_counter.txt' % (full_dir, l)
+        # f = open(final_counter_path)
+        # for i in range(0, row * width):
+        #     pline = f.readline().strip()
+        #     window_list.append(int(pline))
+        # f.close()
         
-        level_list.append(window_list)
+        # level_list.append(window_list)
         
         print(f'There are {len(level_list)} windows')
         
@@ -62,7 +62,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     for i in range(0, min(topk, len(flowkey_list))):
         flowkey = flowkey_list[i][2]
         
-        val = []
+        val = [0]
         for cArray in counter_list[0]:
             est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
             val.append(est)
@@ -85,18 +85,18 @@ def cm_main(full_dir, dist_dir, row, width, level):
     
     write_variation_file(dist_dir, var_dict, "variation.txt")
     
-    # # calculate second derivative
-    # second_var_dict = {}
-    # for key in var_dict:
-    #     print(key, var_dict[key])
-    #     var = [var_dict[key][0]]
-    #     for i in range(1, len(var_dict[key])):
-    #         var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
+    # calculate second derivative
+    second_var_dict = {}
+    for key in var_dict:
+        print(key, var_dict[key])
+        var = [var_dict[key][0]]
+        for i in range(1, len(var_dict[key])):
+            var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
         
-    #     second_var_dict[key] = var
-    #     print(key, second_var_dict[key])
+        second_var_dict[key] = var
+        print(key, second_var_dict[key])
     
-    # write_variation_file(dist_dir, second_var_dict, "second_variation.txt")
+    write_variation_file(dist_dir, second_var_dict, "second_variation.txt")
     
     
     
