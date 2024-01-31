@@ -34,14 +34,15 @@ def get_counter_value(full_dir, row, width, level):
             
             level_list.append(window_list)
             
-        # final_counter_path = '%s/level_%02d/sketch_counter.txt' % (full_dir, l)
-        # f = open(final_counter_path)
-        # for i in range(0, row * width):
-        #     pline = f.readline().strip()
-        #     window_list.append(int(pline))
-        # f.close()
+        final_counter_path = '%s/level_%02d/sketch_counter.txt' % (full_dir, l)
+        window_list = []
+        f = open(final_counter_path)
+        for i in range(0, row * width):
+            pline = f.readline().strip()
+            window_list.append(int(pline))
+        f.close()
         
-        # level_list.append(window_list)
+        level_list.append(window_list)
         
         print(f'There are {len(level_list)} windows')
         
@@ -49,12 +50,28 @@ def get_counter_value(full_dir, row, width, level):
     
     return counter_list
 
+def get_total_flow_size(counter_list, width, row, dist_dir):
+    flow_size = [0]
+    for cArray in counter_list[0]:
+        val = sum(cArray[:width])
+        flow_size.append(val)
+    
+    os.makedirs(dist_dir, exist_ok=True)
+    
+    fileName = os.path.join(dist_dir, "total_flow_size.txt")
+    print("write variation to ", fileName)
+    with open(fileName, 'w') as file:
+        for val in flow_size:
+            file.write(f'{val}\n')
+
 def cm_main(full_dir, dist_dir, row, width, level):
     result = load_cm(full_dir, width, row)
     
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = get_counter_value(full_dir, row, width, level)
+    
+    get_total_flow_size(counter_list, width, row, dist_dir)
         
     # sample and get changes
     change_list = {}
