@@ -68,11 +68,11 @@ void cmIteration::clear(parameters &params)
     flowkey_tracking.clear();
 }
 
-void cmIteration::counter_file_print(parameters &params, int idx)
+void cmIteration::counter_file_print(parameters &params, int idx, int window_size)
 {
     int level=0;
     parameters level_params = params;
-    sprintf(level_params.output_dir, "%s%02d/level_%02d/window/", params.output_dir, params.current_epoch_count, level);
+    sprintf(level_params.output_dir, "%s%02d/level_%02d/window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
     string file_name = to_string(idx);
     if(idx < 10) file_name = "0" + file_name;
     cout << "[counter file print] " << file_name << endl;

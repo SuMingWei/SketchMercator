@@ -13,12 +13,12 @@ def counter_estimate(key, sketch_array, index_hash_sub_list, d, w, hash, level):
 
     return min(a)
 
-def get_counter_value(full_dir, row, width, level):
+def get_counter_value(full_dir, row, width, level, window_size):
     counter_list = []
     
     # load counter value
     for l in range(0, 1):
-        window_dir = '%s/level_%02d/window/' % (full_dir, l)
+        window_dir = '%s/level_%02d/window_%d/' % (full_dir, l, window_size)
         print(window_dir)
         
         level_list = []
@@ -50,7 +50,7 @@ def get_counter_value(full_dir, row, width, level):
     
     return counter_list
 
-def get_total_flow_size(counter_list, width, row, dist_dir):
+def get_total_flow_size(counter_list, width, row, dist_dir, window_size):
     flow_size = [0]
     for cArray in counter_list[0]:
         val = sum(cArray[:width])
@@ -59,7 +59,7 @@ def get_total_flow_size(counter_list, width, row, dist_dir):
     os.makedirs(dist_dir, exist_ok=True)
     
     fileName = os.path.join(dist_dir, "total_flow_size.txt")
-    print("write variation to ", fileName)
+    print("write total flow size variation to ", fileName)
     with open(fileName, 'w') as file:
         for val in flow_size:
             file.write(f'{val}\n')
@@ -69,51 +69,56 @@ def cm_main(full_dir, dist_dir, row, width, level):
     
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
-    counter_list = get_counter_value(full_dir, row, width, level)
     
-    get_total_flow_size(counter_list, width, row, dist_dir)
+    window_size = [100, 200, 500]
+    for ws in window_size:
+        counter_list = get_counter_value(full_dir, row, width, level, ws)
         
-    # sample and get changes
-    change_list = {}
-    topk = 100
-    for i in range(0, min(topk, len(flowkey_list))):
-        flowkey = flowkey_list[i][2]
-        
-        val = [0]
-        for cArray in counter_list[0]:
-            est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
-            val.append(est)
-        
-        change_list[flowkey_list[i][0]] = val
-        
-    # accumulate
-    write_variation_file(dist_dir, change_list, "accumulate.txt")
+        window_name = "window_" + str(ws)
+        final_dir = os.path.join(dist_dir, window_name)
     
-    # calculate variation
-    var_dict = {}
-    for key in change_list:
-        print(key, change_list[key])
-        var = [change_list[key][0]]
-        for i in range(1, len(change_list[key])):
-            var.append(change_list[key][i] - change_list[key][i-1])
+        get_total_flow_size(counter_list, width, row, final_dir, ws)
         
-        var_dict[key] = var
-        print(key, var_dict[key])
-    
-    write_variation_file(dist_dir, var_dict, "variation.txt")
-    
-    # calculate second derivative
-    second_var_dict = {}
-    for key in var_dict:
-        print(key, var_dict[key])
-        var = [var_dict[key][0]]
-        for i in range(1, len(var_dict[key])):
-            var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
+        # calculate accumulate
+        change_list = {}
+        topk = 100
+        for i in range(0, min(topk, len(flowkey_list))):
+            flowkey = flowkey_list[i][2]
+            
+            val = [0]
+            for cArray in counter_list[0]:
+                est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+                val.append(est)
+            
+            change_list[flowkey_list[i][0]] = val
+            
+        write_variation_file(final_dir, change_list, "accumulate.txt")
         
-        second_var_dict[key] = var
-        print(key, second_var_dict[key])
-    
-    write_variation_file(dist_dir, second_var_dict, "second_variation.txt")
+        # calculate variation
+        var_dict = {}
+        for key in change_list:
+            print(key, change_list[key])
+            var = [change_list[key][0]]
+            for i in range(1, len(change_list[key])):
+                var.append(change_list[key][i] - change_list[key][i-1])
+            
+            var_dict[key] = var
+            print(key, var_dict[key])
+        
+        write_variation_file(final_dir, var_dict, "variation.txt")
+        
+        # calculate second derivative
+        second_var_dict = {}
+        for key in var_dict:
+            print(key, var_dict[key])
+            var = [var_dict[key][0]]
+            for i in range(1, len(var_dict[key])):
+                var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
+            
+            second_var_dict[key] = var
+            print(key, second_var_dict[key])
+        
+        write_variation_file(final_dir, second_var_dict, "second_variation.txt")
     
     
     
