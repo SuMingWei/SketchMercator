@@ -31,8 +31,8 @@ def generate_dataset(file1, file2, len1, len2, flowkey):
 if __name__ == "__main__":
     # combine two dataset
     
-    file2 = "/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180816/60s/equinix-nyc.dirA.20180816-130100.UTC.anon.pcap"
-    file1 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/333709_2515088.pcap"    
+    file1 = "/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180816/60s/equinix-nyc.dirA.20180816-130100.UTC.anon.pcap"
+    file2 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/333709_2515088.pcap"    
     len1 = "5"
     len2 = "5"
     flowkey = "srcIP"
