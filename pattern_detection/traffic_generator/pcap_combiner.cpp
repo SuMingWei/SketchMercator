@@ -113,7 +113,7 @@ struct Packet_info {
 };
 
 /* combine pcap file */
-void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, int> &flow_stream, string flowkey, map<Flowkey_t, int> &sum_stream, int length, int &flow_num, int & pkt_num, int time_offset){
+void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, int> &flow_stream, string flowkey, map<Flowkey_t, int> &sum_stream, int length, int &flow_num, int & pkt_num, int time_offset, int date_offset){
     uint64_t initial_timestamp = 0;
 
     pcap_t *descr;
@@ -138,6 +138,7 @@ void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, i
     while(true) {
         packet = pcap_next(descr, &header);
         header.ts.tv_sec += time_offset;
+        header.ts.tv_sec += date_offset;
 
         // packet end
         if(packet == NULL)
@@ -269,20 +270,26 @@ int main(int argc, char* argv[]){
 
     string flowkey = argv[5];
 
+    string d1 = argv[6];
+    string d2 = argv[7];
+
+    int date_offset = stoi(argv[8]);
+
     int fn1 = 0, fn2 = 0, pn1 = 0, pn2 = 0; 
 
     /* combine two file with specific length */
     map<Flowkey_t, int> flow_stream1;
     map<Flowkey_t, int> flow_stream2;
     map<Flowkey_t, int> sum_stream;
-    char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/tmp.pcap";
+    char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/tmp.pcap";
     int time_offset = len1;
     // cout << flow_stream1.size() <<endl;
-    pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1, 0);
-    pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2, time_offset);
+    pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1, 0, 0);
+    pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2, time_offset, date_offset);
 
     /* sort the file with stimestamp */
-    string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/" + to_string(len1) + "_" + to_string(len2) + ".pcap";
+    string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/" 
+                        + d1 + "_" + to_string(len1) + "_" + d2 + "_" + to_string(len2)+ ".pcap";
     char* result_file = new char[tmp_name.length() + 1];
     strcpy(result_file, tmp_name.c_str());
     sort_pcap(tmp_file, result_file);

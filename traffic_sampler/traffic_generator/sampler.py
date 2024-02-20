@@ -59,7 +59,7 @@ if __name__ == "__main__":
     fs_dist_file = os.getenv("traffic_sampler") + "/traffic_generator/dist.txt"
     
     # total_flows, total_packets = generate_distribution(size=1000000, alpha=2, output_file=fs_dist_file)
-    total_flows, total_packets = generate_distribution(size=333709, alpha=2, output_file=fs_dist_file)
+    total_flows, total_packets = generate_distribution(size=1000000, alpha=4, output_file=fs_dist_file)
 
     generate_dataset(date_list, dataset_category_list, flowkey, pcap_count, fs_dist_file, total_flows, total_packets)
     

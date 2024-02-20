@@ -37,7 +37,7 @@ def handle_dataset(data_list, dataset_category_list, flowkey, pcap_count):
 
 if __name__ == "__main__":
 
-    date_list = [20180816]
+    date_list = [20180517]
     dataset_category_list = ["caida_specify_time/", ]
     flowkey = ["srcIP"]
     pcap_count = 1

@@ -70,7 +70,8 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     
-    window_size = [100, 200, 500]
+    # window_size = [100, 200, 500]
+    window_size = [500]
     for ws in window_size:
         counter_list = get_counter_value(full_dir, row, width, level, ws)
         
@@ -81,7 +82,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
         
         # calculate accumulate
         change_list = {}
-        topk = 100
+        topk = 10
         for i in range(0, min(topk, len(flowkey_list))):
             flowkey = flowkey_list[i][2]
             
