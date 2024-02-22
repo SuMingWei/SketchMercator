@@ -56,13 +56,20 @@ if __name__ == "__main__":
     flowkey = "srcIP"
     date_offset = [0, 91*24*60*60]
     
-    for i in range(len(file1s)):
-        for l in lens:
-            generate_dataset(file2s[0], file1s[i], l[0], l[1], flowkey, name2[0], name1[i], date_offset[0])
-            # generate_dataset(file2s[1], file2s[i], l[0], l[1], flowkey, name2[1], name1[i], date_offset[1])
+    # for i in range(len(file1s)):
+    #     for l in lens:
+    #         generate_dataset(file2s[0], file1s[i], l[0], l[1], flowkey, name2[0], name1[i], date_offset[0])
+    #         # generate_dataset(file2s[1], file2s[i], l[0], l[1], flowkey, name2[1], name1[i], date_offset[1])
     
     # for l in lens:
     #     for ignore in ignores:
             
     # generate_dataset(file1s[0], file2s[1], lens[0][0], lens[0][1], flowkey, name1[0], name2[1], date_offset[1])
     
+    # for l in lens:
+    #     generate_dataset(file2s[0], file2s[1], l[0], l[1], flowkey, name2[0], name2[1], date_offset[1])
+    
+    for i in range(len(file1s)):
+        generate_dataset(file1s[i], file2s[0], "10", "0", flowkey, name1[i], name2[0], date_offset[0])
+    for i in range(len(file2s)):
+        generate_dataset(file2s[i], file2s[0], "10", "0", flowkey, name2[i], name2[0], date_offset[0])

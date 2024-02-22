@@ -47,50 +47,49 @@ def get_online_traffic_pcap_list(date, pcap_duration, pcap_count, category = "on
 def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_file=["5_5.pcap"],
                        flowkey_list=["srcIP",], width_list=[8192, 16384, 32768, 65536, 131072], epoch_list=[30], seed_list=[1, 2, 3],
                        sketch_list=["cm", "cs"], level=1, row=3, is_count_packet=1, lcount=0, cmd_list=[]):
-    for date in date_list:  # 5
-        folder_path = os.path.join(pcap_storage_path, dataset_category, str(date), "10s")
-        for pcap_file_name in pcap_file:
-            pcap_full_path = os.path.join(folder_path, pcap_file_name)
-            for flowkey in flowkey_list:
-                for width in width_list:
-                    for epoch in epoch_list:
-                        for seed in seed_list:
-                            for sketch_name in sketch_list:
-                                # print(pcap_full_path, width, flowkey, epoch, sketch_name)
-                                lcount += 1
+    folder_path="/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
+    for pcap_file_name in pcap_file:
+        pcap_full_path = os.path.join(folder_path, pcap_file_name)
+        for flowkey in flowkey_list:
+            for width in width_list:
+                for epoch in epoch_list:
+                    for seed in seed_list:
+                        for sketch_name in sketch_list:
+                            # print(pcap_full_path, width, flowkey, epoch, sketch_name)
+                            lcount += 1
 
-                                stri = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                                # print(str)
-                                output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
-                                # print("===output===: " + output_dir)
+                            stri = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
+                            # print(str)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
+                            # print("===output===: " + output_dir)
 
-                                log_template = "[%d] [%s] [%s] [%s]" % (lcount, sketch_name, flowkey, stri)
+                            log_template = "[%d] [%s] [%s] [%s]" % (lcount, sketch_name, flowkey, stri)
 
-                                cmd = general_cmd(pcap_full_path,
-                                pcap_file_name,
+                            cmd = general_cmd(pcap_full_path,
+                            pcap_file_name,
 
-                                sketch_name,
+                            sketch_name,
 
-                                flowkey,
+                            flowkey,
 
-                                width,
-                                row,
-                                level,
+                            width,
+                            row,
+                            level,
 
-                                True,
-                                True,
-                                True,
-                                True,
+                            True,
+                            True,
+                            True,
+                            True,
 
-                                epoch,
-                                output_dir,
-                                None,
-                                10000,
-                                seed,
+                            epoch,
+                            output_dir,
+                            None,
+                            5000,
+                            seed,
 
-                                log_template,
-                                is_count_packet)
-                                cmd_list.append(cmd)
+                            log_template,
+                            is_count_packet)
+                            cmd_list.append(cmd)
                                 
     print(lcount)
 
@@ -135,11 +134,11 @@ is_count_packet = 1
 # ### expiration of pcaps
 pcap_count = 5
 # pcap_file=["5_5.pcap", "10_0.pcap", "4_6.pcap", "3_7.pcap"]
-pcap_file=["5_5_ignore_5.pcap"]
+pcap_file=["caida20180816_3_caida20180517_7.pcap", "caida20180816_4_caida20180517_6.pcap", "caida20180816_5_caida20180517_5.pcap"]
 
 cmd_list = []
 
-run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_file=pcap_file,
+run_online_traffic(pcap_file=pcap_file,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
                    sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
 

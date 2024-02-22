@@ -8,7 +8,7 @@ void main_loop(parameters &params, vector<packet_summary> &packet_stream, sketch
     uint64_t timer = 0;
     uint64_t window_timer = 0;
     int window_num = 0;
-    double window_size = 0.5;
+    double window_size = 0.2;
 
     int pcount = 1;
     int total_count = 0;

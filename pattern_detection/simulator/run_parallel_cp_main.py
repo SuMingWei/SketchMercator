@@ -45,31 +45,30 @@ def get_online_traffic_pcap_list(date, pcap_duration, pcap_count, category = "on
                 break
     return ret_list
  
-def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_file=["5_5.pcap"], actual_row = 3,
+def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
                        flowkey_list=["srcIP",], width_list=[8192, 16384, 32768, 65536, 131072], epoch_list=[30], seed_list=[1, 2, 3],
                        sketch_list=["cm", "cs"], level=1, row=3, is_count_packet=1, lcount=0, helper=ParallelRunHelper(30)):
-    for date in date_list:  # 5
-        for pcap_file_name in pcap_file:
-            for flowkey in flowkey_list:
-                for width in width_list:
-                    for epoch in epoch_list:
-                        for seed in seed_list:
-                            for sketch_name in sketch_list:
-                                # print(pcap_full_path, width, flowkey, epoch, sketch_name)
-                                str = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                                # print(str)
-                                output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, str)
-                                print(output_dir)
+    for pcap_file_name in pcap_file:
+        for flowkey in flowkey_list:
+            for width in width_list:
+                for epoch in epoch_list:
+                    for seed in seed_list:
+                        for sketch_name in sketch_list:
+                            # print(pcap_full_path, width, flowkey, epoch, sketch_name)
+                            str = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
+                            # print(str)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, str)
+                            print(output_dir)
 
-                                str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                                output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQuery", sketch_name, pcap_file_name, flowkey, str)
-                                print(output_pkl_dir)
-                                from pattern_detection.control_plane.sketch_cp_main import sketch_cp
-                                helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
+                            str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
+                            output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQuery", sketch_name, pcap_file_name, flowkey, str)
+                            print(output_pkl_dir)
+                            from pattern_detection.control_plane.sketch_cp_main import sketch_cp
+                            helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
 
-                                print()
+                            print()
 
-                                lcount += 1
+                            lcount += 1
     print(lcount)
     
 
@@ -121,13 +120,13 @@ is_count_packet = 1
 dataset_category_list = ['caida_specify_time/', ]
 pcap_count = 5
 # pcap_file = ["5_5.pcap", "10_0.pcap", "4_6.pcap", "3_7.pcap"]
-pcap_file=["5_5_ignore_5.pcap"]
+pcap_file=["caida20180816_3_caida20180517_7.pcap", "caida20180816_4_caida20180517_6.pcap", "caida20180816_5_caida20180517_5.pcap"]
 # pcap_file = ["5_5-2.pcap"]
 
 # number of processes in parallel
 helper = ParallelRunHelper(30)
 
-run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_file=pcap_file, actual_row=actual_row,
+run_online_traffic(pcap_file=pcap_file, actual_row=actual_row,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
                    sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, helper=helper)
 

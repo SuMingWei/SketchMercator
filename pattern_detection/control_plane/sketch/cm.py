@@ -71,7 +71,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     index_hash_list = result["index_hash_list"]
     
     # window_size = [100, 200, 500]
-    window_size = [500]
+    window_size = [200]
     for ws in window_size:
         counter_list = get_counter_value(full_dir, row, width, level, ws)
         
