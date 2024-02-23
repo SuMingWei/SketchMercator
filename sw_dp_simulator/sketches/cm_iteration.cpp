@@ -70,6 +70,7 @@ void cmIteration::clear(parameters &params)
 
 void cmIteration::counter_file_print(parameters &params, int idx, int window_size)
 {
+    // print each window counter value
     int level=0;
     parameters level_params = params;
     sprintf(level_params.output_dir, "%s%02d/level_%02d/window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
@@ -77,4 +78,14 @@ void cmIteration::counter_file_print(parameters &params, int idx, int window_siz
     if(idx < 10) file_name = "0" + file_name;
     cout << "[counter file print] " << file_name << endl;
     cm_level[level].counter_info_file_print(level_params, file_name);
+
+    // print each window topk flowkey
+    int k = 10; // print k lines 
+    KeyValueVector kv_vec_2(flowkey_tracking, params);
+    kv_vec_2.sort_vector();
+    parameters new_params_2 = params;
+    sprintf(new_params_2.output_dir, "%s%02d/level_%02d/key_window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
+    string key_file_name = file_name + ".txt";
+    cout << "[topK key file print] " << key_file_name << endl;
+    kv_vec_2.file_print(new_params_2, key_file_name, k);
 }

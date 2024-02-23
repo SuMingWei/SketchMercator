@@ -13,3 +13,14 @@ def write_variation_file(dist_dir, var_dict, file_name):
             line += '\n'
             file.write(line)
             
+def write_summation_file(dist_dir, var_list, file_name):
+    os.makedirs(dist_dir, exist_ok=True)
+    
+    fileName = os.path.join(dist_dir, file_name)
+    print("write varation in summation to ", fileName)
+    with open(fileName, 'w') as file:
+        line = ""
+        for val in var_list:
+            line += str(val) + " "
+        line += '\n'
+        file.write(line)

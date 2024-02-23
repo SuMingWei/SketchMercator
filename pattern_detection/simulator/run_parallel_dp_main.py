@@ -84,7 +84,7 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
                             epoch,
                             output_dir,
                             None,
-                            5000,
+                            0,
                             seed,
 
                             log_template,
@@ -134,7 +134,9 @@ is_count_packet = 1
 # ### expiration of pcaps
 pcap_count = 5
 # pcap_file=["5_5.pcap", "10_0.pcap", "4_6.pcap", "3_7.pcap"]
-pcap_file=["caida20180816_3_caida20180517_7.pcap", "caida20180816_4_caida20180517_6.pcap", "caida20180816_5_caida20180517_5.pcap"]
+# pcap_file=["caida20180816_3_caida20180517_7.pcap", "caida20180816_4_caida20180517_6.pcap", "caida20180816_5_caida20180517_5.pcap"]
+# pcap_file=["caida20180816_3_caida20180517_7.pcap"]
+pcap_file=["zipf2a_3_caida20180517_7.pcap"]
 
 cmd_list = []
 

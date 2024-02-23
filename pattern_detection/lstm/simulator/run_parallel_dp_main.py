@@ -84,7 +84,7 @@ def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/
                             epoch,
                             output_dir,
                             None,
-                            5000,
+                            0,
                             seed,
 
                             log_template,
