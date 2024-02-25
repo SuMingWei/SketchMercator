@@ -97,6 +97,52 @@ def get_topk_flowkey(full_dir, row, width, level, window_size, k):
     
     return key_list
 
+def get_topk_gt(full_dir, row, width, level, window_size, k):
+    gt_list = []
+    
+    # load counter value
+    for l in range(0, 1):
+        gt_window_dir = '%s/level_%02d/gt_window_%d/' % (full_dir, l, window_size)
+        print(gt_window_dir)
+        
+        level_list = [0]
+        for file in sorted(os.listdir(gt_window_dir)):
+            gt_total = 0
+            path = os.path.join(gt_window_dir, file)
+            
+            f = open(path)
+            key = f.readline().strip()
+            # print(key)
+            for line in f:
+                string_key, estimate, flowkey = parse_line(key, line.strip())
+                gt_total += estimate
+            f.close()
+            
+            level_list.append(gt_total)
+            
+        final_counter_path = '%s/ground_truth.txt' % (full_dir)
+        cnt = 0
+        gt_total = 0
+        f = open(final_counter_path)
+        key = f.readline().strip()
+        # print(key)
+        for line in f:
+            string_key, estimate, flowkey = parse_line(key, line.strip())
+            gt_total += estimate
+            cnt += 1
+            if cnt >= k:
+                break
+        f.close()
+        
+        level_list.append(gt_total)
+        
+        print(f'There are {len(level_list)} windows')
+        
+        gt_list.append(level_list)
+    
+    return gt_list
+
+
 def get_total_flow_size(counter_list, width, row, dist_dir, window_size):
     flow_size = [0]
     for cArray in counter_list[0]:
@@ -172,7 +218,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
         write_variation_file(final_dir, second_var_dict, "second_variation.txt")
         
         
-    # Summation
+    # Dynamic / Final / GT TopK Summation
     for ws in window_size:
         topk_flowkey_list = get_topk_flowkey(full_dir, row, width, level, ws, topk)
         
@@ -182,6 +228,9 @@ def cm_main(full_dir, dist_dir, row, width, level):
         # calculate accumulate
         dynamic_change_list = [0]
         final_change_list = [0]
+        gt_change_list = get_topk_gt(full_dir, row, width, level, ws, topk)[0]
+        # print(gt_change_list)
+ 
         for i in range(len(counter_list[0])):
             dynamic_total = 0
             final_total = 0
@@ -201,6 +250,9 @@ def cm_main(full_dir, dist_dir, row, width, level):
             
         write_summation_file(final_dir, dynamic_change_list, "dynamic_topk_summation.txt")
         write_summation_file(final_dir, final_change_list, "final_topk_summation.txt")
+        write_summation_file(final_dir, gt_change_list, "gt_topk_summation.txt")
+        
+    
         
     
     

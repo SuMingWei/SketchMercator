@@ -96,7 +96,7 @@ def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/
 
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-width_list = [2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
 # width_list = [4096]
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 
