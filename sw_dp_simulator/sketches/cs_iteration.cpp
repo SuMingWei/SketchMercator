@@ -67,3 +67,8 @@ void csIteration::clear(parameters &params)
     cs_level[0].clear();
     packetMap.clear();
 }
+
+void csIteration::counter_file_print(parameters &params, int idx, int window_size){
+    cout << "skip file print\n";
+    return;
+}

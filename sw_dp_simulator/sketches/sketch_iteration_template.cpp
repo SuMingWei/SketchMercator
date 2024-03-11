@@ -17,4 +17,6 @@ int get_last_level(uint32_t sampling_hash, int level)
     return last_level;
 }
 
-// void counter_file_print(parameters &params, int idx, int window_size) {}
+// void sketchIterationTemplate::counter_file_print(parameters &params, int idx, int window_size) {
+//     return;
+// }

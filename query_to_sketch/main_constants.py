@@ -3,8 +3,9 @@ import os
 SKETCH_HOME = os.path.expandvars('$sketch_home')
 ROOT_DIR = os.path.join(SKETCH_HOME, 'query_to_sketch')
 # PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles')
-PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles_origin')
+# PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles_origin')
 # PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles_online')
+PROFILES_PATH = os.path.join(ROOT_DIR, 'profiler', 'actual_profiles_10s')
 
 pretty_sketch_map = {
     'cm': 'Count-min Sketch',

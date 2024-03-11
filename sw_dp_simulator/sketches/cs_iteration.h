@@ -38,6 +38,7 @@ public:
     void iteration(packet_summary &p, parameters &params);
     void file_print(parameters &params);
     void clear(parameters &params);
+    void counter_file_print(parameters &params, int idx, int window_size);
 
 };
 
