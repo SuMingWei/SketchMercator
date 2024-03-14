@@ -44,12 +44,12 @@ def get_online_traffic_pcap_list(date, pcap_duration, pcap_count, category = "on
                 break
     return ret_list
                                    
-def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816], pcap_file=["5_5.pcap"],
+def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/", pcap_file=["5_5.pcap"],
                        flowkey_list=["srcIP",], width_list=[8192, 16384, 32768, 65536, 131072], epoch_list=[30], seed_list=[1, 2, 3],
                        sketch_list=["cm", "cs"], level=1, row=3, is_count_packet=1, lcount=0, cmd_list=[]):
-    folder_path="/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
     for pcap_file_name in pcap_file:
         pcap_full_path = os.path.join(folder_path, pcap_file_name)
+        # print(pcap_full_path)
         for flowkey in flowkey_list:
             for width in width_list:
                 for epoch in epoch_list:
@@ -60,7 +60,7 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
 
                             stri = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
                             # print(str)
-                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "lstm", "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
                             # print("===output===: " + output_dir)
 
                             log_template = "[%d] [%s] [%s] [%s]" % (lcount, sketch_name, flowkey, stri)
@@ -90,14 +90,14 @@ def run_online_traffic(dataset_category='online_traffic/', date_list=[20180816],
                             log_template,
                             is_count_packet)
                             cmd_list.append(cmd)
-                                
+                            
     print(lcount)
 
 
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-# width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
-width_list = [4096]
+width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+# width_list = [4096]
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 
 # sketch_list = ["cm", "cs"]
@@ -134,13 +134,17 @@ is_count_packet = 1
 # ### expiration of pcaps
 pcap_count = 5
 # pcap_file=["5_5.pcap", "10_0.pcap", "4_6.pcap", "3_7.pcap"]
-# pcap_file=["caida20180816_3_caida20180517_7.pcap", "caida20180816_4_caida20180517_6.pcap", "caida20180816_5_caida20180517_5.pcap"]
-# pcap_file=["caida20180816_3_caida20180517_7.pcap"]
-pcap_file=["zipf2a_3_caida20180517_7.pcap"]
 
 cmd_list = []
 
-run_online_traffic(pcap_file=pcap_file,
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/testing_pcap_file/"
+pcap_file = []
+for file_name in sorted(os.listdir(pcap_folder)):
+    pcap_file.append(file_name)
+# pcap_file=["zipf2a_3_caida20180517_7.pcap"]
+    
+run_online_traffic(folder_path=pcap_folder, pcap_file=pcap_file,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
                    sketch_list=sketch_list, level=level, row=row, is_count_packet=is_count_packet, lcount=0, cmd_list=cmd_list)
 

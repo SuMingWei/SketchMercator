@@ -26,7 +26,7 @@ def generate_dataset(file1, file2, len1, len2, flowkey, name1, name2, date_offse
     print("[Run Pcap Combiner] ", cmd)
     
     # remove old file
-    old_sorted_pcap_path = os.getenv("pattern_detection") + "/traffic_generator/testing_pcap_file/tmp.pcap"
+    old_sorted_pcap_path = os.getenv("pattern_detection") + "/traffic_generator/scaled_pcap_file/tmp.pcap"
     if os.path.isfile(old_sorted_pcap_path):
         print("[Remove Exists File] ", old_sorted_pcap_path)
         os.remove(old_sorted_pcap_path)
@@ -47,9 +47,7 @@ if __name__ == "__main__":
     name1 = ["zipf2a", "zipf4", "zipf2b"]
     name2 = ["caida20180816", "caida20180517", "caida20180621"]
     
-    lens = [["3", "7"],
-            ["4", "6"],
-            ["5", "5"],
+    lens = [["5", "5"],
             ["6", "4"],
             ["7", "3"],
             ["8", "2"],]

@@ -177,80 +177,80 @@ def cm_main(full_dir, dist_dir, row, width, level):
     
         get_total_flow_size(counter_list, width, row, final_dir, ws)
         
-        # calculate accumulate
-        change_list = {}
-        for i in range(0, min(topk, len(flowkey_list))):
-            flowkey = flowkey_list[i][2]
+        # # calculate accumulate
+        # change_list = {}
+        # for i in range(0, min(topk, len(flowkey_list))):
+        #     flowkey = flowkey_list[i][2]
             
-            val = [0]
-            for cArray in counter_list[0]:
-                est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
-                val.append(est)
+        #     val = [0]
+        #     for cArray in counter_list[0]:
+        #         est = counter_estimate(flowkey, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+        #         val.append(est)
             
-            change_list[flowkey_list[i][0]] = val
+        #     change_list[flowkey_list[i][0]] = val
             
-        write_variation_file(final_dir, change_list, "accumulate.txt")
+        # write_variation_file(final_dir, change_list, "accumulate.txt")
         
-        # calculate variation
-        var_dict = {}
-        for key in change_list:
-            print(key, change_list[key])
-            var = [change_list[key][0]]
-            for i in range(1, len(change_list[key])):
-                var.append(change_list[key][i] - change_list[key][i-1])
+        # # calculate variation
+        # var_dict = {}
+        # for key in change_list:
+        #     print(key, change_list[key])
+        #     var = [change_list[key][0]]
+        #     for i in range(1, len(change_list[key])):
+        #         var.append(change_list[key][i] - change_list[key][i-1])
             
-            var_dict[key] = var
-            print(key, var_dict[key])
+        #     var_dict[key] = var
+        #     print(key, var_dict[key])
         
-        write_variation_file(final_dir, var_dict, "variation.txt")
+        # write_variation_file(final_dir, var_dict, "variation.txt")
         
-        # calculate second derivative
-        second_var_dict = {}
-        for key in var_dict:
-            print(key, var_dict[key])
-            var = [var_dict[key][0]]
-            for i in range(1, len(var_dict[key])):
-                var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
+        # # calculate second derivative
+        # second_var_dict = {}
+        # for key in var_dict:
+        #     print(key, var_dict[key])
+        #     var = [var_dict[key][0]]
+        #     for i in range(1, len(var_dict[key])):
+        #         var.append(abs(var_dict[key][i] - var_dict[key][i-1]))
             
-            second_var_dict[key] = var
-            print(key, second_var_dict[key])
+        #     second_var_dict[key] = var
+        #     print(key, second_var_dict[key])
         
-        write_variation_file(final_dir, second_var_dict, "second_variation.txt")
+        # write_variation_file(final_dir, second_var_dict, "second_variation.txt")
         
         
-    # Dynamic / Final / GT TopK Summation
-    for ws in window_size:
-        topk_flowkey_list = get_topk_flowkey(full_dir, row, width, level, ws, topk)
+    # # Dynamic / Final / GT TopK Summation
+    # for ws in window_size:
+    #     topk_flowkey_list = get_topk_flowkey(full_dir, row, width, level, ws, topk)
         
-        key_window_name = "summation_" + str(ws)
-        final_dir = os.path.join(dist_dir, key_window_name)
+    #     key_window_name = "summation_" + str(ws)
+    #     final_dir = os.path.join(dist_dir, key_window_name)
         
-        # calculate accumulate
-        dynamic_change_list = [0]
-        final_change_list = [0]
-        gt_change_list = get_topk_gt(full_dir, row, width, level, ws, topk)[0]
-        # print(gt_change_list)
+    #     # calculate accumulate
+    #     dynamic_change_list = [0]
+    #     final_change_list = [0]
+    #     gt_change_list = get_topk_gt(full_dir, row, width, level, ws, topk)[0]
+    #     # print(gt_change_list)
  
-        for i in range(len(counter_list[0])):
-            dynamic_total = 0
-            final_total = 0
-            cArray = counter_list[0][i]
+    #     for i in range(len(counter_list[0])):
+    #         dynamic_total = 0
+    #         final_total = 0
+    #         cArray = counter_list[0][i]
                     
-            for key in topk_flowkey_list[0][i]:
-                est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
-                dynamic_total += est
+    #         for key in topk_flowkey_list[0][i]:
+    #             est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+    #             dynamic_total += est
                 
-            for i in range(topk):
-                key = flowkey_list[i][2]
-                est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
-                final_total += est
+    #         for i in range(topk):
+    #             key = flowkey_list[i][2]
+    #             est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+    #             final_total += est
                 
-            dynamic_change_list.append(dynamic_total)
-            final_change_list.append(final_total)
+    #         dynamic_change_list.append(dynamic_total)
+    #         final_change_list.append(final_total)
             
-        write_summation_file(final_dir, dynamic_change_list, "dynamic_topk_summation.txt")
-        write_summation_file(final_dir, final_change_list, "final_topk_summation.txt")
-        write_summation_file(final_dir, gt_change_list, "gt_topk_summation.txt")
+    #     write_summation_file(final_dir, dynamic_change_list, "dynamic_topk_summation.txt")
+    #     write_summation_file(final_dir, final_change_list, "final_topk_summation.txt")
+    #     write_summation_file(final_dir, gt_change_list, "gt_topk_summation.txt")
         
     
         

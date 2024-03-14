@@ -23,7 +23,6 @@
 #include <ctime>
 #include <cstdlib>
 #include <filesystem>
-#include <string>
 
 #define IP_PROTO_ICMP  0x01
 #define IP_PROTO_IGMP  0x02
@@ -32,6 +31,7 @@
 
 using namespace std;
 
+int total_flows = 0, total_packets = 0;
 
 /* packet summary format
 struct packet_summary {
@@ -112,35 +112,24 @@ struct Packet_info {
     long time;
 };
 
-/* combine pcap file */
-void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, int> &flow_stream, string flowkey, map<Flowkey_t, int> &sum_stream, int length, int &flow_num, int & pkt_num, int time_offset, int date_offset){
+void pcap_parse(char* pcap_file_name, map<Flowkey_t, int> &flow_stream, string flowkey){
     uint64_t initial_timestamp = 0;
 
     pcap_t *descr;
     char errbuf[PCAP_ERRBUF_SIZE];
     descr = pcap_open_offline(pcap_file_name, errbuf);
-    cout << "[pcap_combine] " << pcap_file_name << endl;
-
-    pcap_t * finalPcap = pcap_open_dead(DLT_EN10MB, 262144); // dumper will use it
-    pcap_dumper_t* pcap_out;
-    if(access(output_file_name, F_OK) != -1){ // output pcap file exist
-        pcap_out = pcap_dump_open_append(finalPcap, output_file_name);
-        cout << "exist\n";
-    }else{
-        pcap_out = pcap_dump_open(finalPcap, output_file_name);
-        cout << "not exist\n";
-    }
-
+    cout << "[pcap_parse] " << pcap_file_name << endl;
     struct pcap_pkthdr header;
     const u_char *packet;
 
     int global_count = 0;
+    int non_ipv4 = 0;
+    int non_tcpudp = 0;
+
+    // int debug_count = 0;
+
     while(true) {
         packet = pcap_next(descr, &header);
-        header.ts.tv_sec += time_offset;
-        header.ts.tv_sec += date_offset;
-
-        // packet end
         if(packet == NULL)
             break;
 
@@ -152,17 +141,8 @@ void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, i
             packet_summary p;
             header_mapping(&header, hdr, p);
             if ((p.ip_proto == IP_PROTO_UDP || p.ip_proto == IP_PROTO_TCP) && header.caplen > 20) {
-                
-                // end
-                if(length == 0) break;
-                if(initial_timestamp != 0){
-                    if((p.timestamp-initial_timestamp) >= uint64_t(length * 1000000)){
-                        break;
-                    } 
-                }
-                
                 global_count++;
-                pkt_num++;
+                total_packets++; // new packet
 
                 // summary
                 Flowkey_t key;
@@ -173,28 +153,132 @@ void pcap_combine(char* pcap_file_name, char* output_file_name, map<Flowkey_t, i
                     key.src_addr = p.src_ip;
                 }
                 flow_stream[key]++;
-                sum_stream[key]++;
-                if(flow_stream[key] == 1) flow_num++; // new flow key
-
-                // Write the packet to the output file
-                pcap_dump((u_char*)pcap_out, &header, packet);
+                if(flow_stream[key] == 1) total_flows++; // new flow key
 
                 // print progress bar
                 if(initial_timestamp == 0) {
                     initial_timestamp = p.timestamp;
                 }
 
-                if (global_count % 100000 == 0) {
+                if (global_count % 1000000 == 0) {
                     printf("[%10d] %.2fs (%.2f) %s\n", global_count, (double)(p.timestamp-initial_timestamp)/1000000, (double)p.timestamp/1000000, pcap_file_name);
+
+                    if(flowkey == "dstIP"){
+                        // Convert to human-readable string
+                        char dst_addr_str[INET_ADDRSTRLEN];
+                        if (inet_ntop(AF_INET, &key.dst_addr, dst_addr_str, INET_ADDRSTRLEN) == nullptr) {
+                            perror("Error converting address to string");
+                        }
+                        cout << "dst_addr: " << dst_addr_str << endl;
+                    }else if(flowkey == "srcIP"){
+                        // Convert to human-readable string
+                        char src_addr_str[INET_ADDRSTRLEN];
+                        if (inet_ntop(AF_INET, &key.src_addr, src_addr_str, INET_ADDRSTRLEN) == nullptr) {
+                            perror("Error converting address to string");
+                        }
+                        cout << "src_addr: " << src_addr_str << endl;
+                    }
+                    cout << "flow size: " << flow_stream[key] << endl;
+                }
+            }
+            else {
+                non_tcpudp++;
+            }
+        }
+        else {
+            non_ipv4++;
+        }
+    }
+    pcap_close(descr);
+}
+
+/* generate pcap file */
+void pcap_generate(char* pcap_file_name, char* output_file_name, string flowkey, map<Flowkey_t, int> &selected_flow, int &handle_packets, int scale){
+    uint64_t initial_timestamp = 0;
+
+    int cur_idx = 1;
+    map<Flowkey_t, int> non_selected_flow;
+
+    pcap_t *descr;
+    char errbuf[PCAP_ERRBUF_SIZE];
+    descr = pcap_open_offline(pcap_file_name, errbuf);
+    cout << "[pcap_generate] " << pcap_file_name << endl;
+
+    pcap_dumper_t* pcap_out;
+    if(access(output_file_name, F_OK) != -1){ // output pcap file exist
+        pcap_out = pcap_dump_open_append(descr, output_file_name);
+    }else{
+        pcap_out = pcap_dump_open(descr, output_file_name);
+    }
+
+    struct pcap_pkthdr header;
+    const u_char *packet;
+
+    int global_count = 0;
+
+    while(true) {
+        packet = pcap_next(descr, &header);
+        if(packet == NULL)
+            break;
+
+        packet_header hdr;
+        header_parser(hdr, packet, 0); // for no ehter type
+        // header_parser(hdr, packet, 1); // for ether existing type
+
+        if(hdr.ip_hdr->ip_v == 4) {
+            packet_summary p;
+            header_mapping(&header, hdr, p);
+            if ((p.ip_proto == IP_PROTO_UDP || p.ip_proto == IP_PROTO_TCP) && header.caplen > 20) {
+                global_count++;
+
+                // summary
+                Flowkey_t key;
+
+                if(flowkey == "dstIP"){
+                    key.dst_addr = p.dst_ip;
+                }else if(flowkey == "srcIP"){
+                    key.src_addr = p.src_ip;
+                }
+
+                // sample packet (reserve 1/scale flows)
+                if(selected_flow.find(key) != selected_flow.end()){
+                    // Write the selected packet to the output file
+                    pcap_dump((u_char*)pcap_out, &header, packet);
+
+                    handle_packets++;
+                }else { // new flow 
+                    if(non_selected_flow.find(key) == non_selected_flow.end()){
+                        if(cur_idx == scale){
+                            selected_flow[key] = 1;
+                            cur_idx = 1;
+                            // Write the packet to the output file
+                            pcap_dump((u_char*)pcap_out, &header, packet);  
+                            handle_packets++;
+                        }else{
+                            non_selected_flow[key] = 1;
+                            cur_idx++;
+                        }
+                    }
+
+                }
+
+                // print progress bar
+                if(initial_timestamp == 0) {
+                    initial_timestamp = p.timestamp;
+                }
+
+                if (global_count % 1000000 == 0) {
+                    printf("[%10d] %.2fs (%.2f) %s\n", global_count, (double)(p.timestamp-initial_timestamp)/1000000, (double)p.timestamp/1000000, pcap_file_name);
+
+                    cout << "[sampled packets] " << handle_packets << endl;
+                    cout << "[non selected flows] " << non_selected_flow.size() << endl;
                 }
             }
         }
     }
 
     pcap_dump_close(pcap_out);
-    pcap_close(finalPcap);
     pcap_close(descr);
-    return;
 }
 
 /* for pcap sorting */
@@ -261,57 +345,37 @@ void sort_pcap(char* pcap_file_name, char* output_file_name){
 
 int main(int argc, char* argv[]){
     srand(time(NULL));
+    string flowkey = argv[1];
 
-    char *file1 = argv[1];
-    char *file2 = argv[2];
+    /* generate a scaled pcap file */
+    char* synthetic_data_file_name = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/tmp.pcap";
+    vector<int> time_offset = {0, 4*60, 9*60, 29*60, 59*60}; // 20180816 need to remove the offset of different pcap file
+    map<Flowkey_t, int> selected_flow;
+    int gen_num = 0;
+    int scale = 2;
+    char *pcap_path = argv[2];
+    pcap_generate(pcap_path, synthetic_data_file_name, flowkey, selected_flow, gen_num, scale);
+    cout << "[packet sampling is completed] total sample packets: " << gen_num << "\n";
 
-    int len1 = stoi(argv[3]);
-    int len2 = stoi(argv[4]);
+    /* sort the pcap file by the timestamp*/
+    string str_pcap_file = pcap_path;
+    string tmp_file_name = str_pcap_file.substr(0,str_pcap_file.length()-5) + "_" + to_string(scale) + "x.pcap";
+    char* new_synthetic_data_file_name = new char[tmp_file_name.length() + 1];
+    strcpy(new_synthetic_data_file_name, tmp_file_name.c_str());
 
-    string flowkey = argv[5];
-
-    string d1 = argv[6];
-    string d2 = argv[7];
-
-    int date_offset = stoi(argv[8]);
-
-    int fn1 = 0, fn2 = 0, pn1 = 0, pn2 = 0; 
-
-    /* combine two file with specific length */
-    map<Flowkey_t, int> flow_stream1;
-    map<Flowkey_t, int> flow_stream2;
-    map<Flowkey_t, int> sum_stream;
-    char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/tmp.pcap";
-    int time_offset = len1;
-    // cout << flow_stream1.size() <<endl;
-    pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1, 0, 0);
-    pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2, time_offset, date_offset);
-
-    /* sort the file with stimestamp */
-    string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/" 
-                        + d1 + "_" + to_string(len1) + "_" + d2 + "_" + to_string(len2)+ ".pcap";
-    char* result_file = new char[tmp_name.length() + 1];
-    strcpy(result_file, tmp_name.c_str());
-    sort_pcap(tmp_file, result_file);
+    sort_pcap(synthetic_data_file_name, new_synthetic_data_file_name);
 
     /* remove tmp pcap file*/
     ifstream tmpFile;
-    tmpFile.open(tmp_file);
+    tmpFile.open(synthetic_data_file_name);
     if(tmpFile){
         cout << "remove tmp pcap file\n";
-        remove(tmp_file);
+        remove(synthetic_data_file_name);
     }
     tmpFile.close();
 
-    cout << "file1: \n";
-    cout << "\tflows   = " << fn1 << endl;
-    cout << "\tpackets = " << pn1 << endl;
-    cout << "file2: \n";
-    cout << "\tflows   = " << fn2 << endl;
-    cout << "\tpackets = " << pn2 << endl;
-    cout << "summary: \n";
-    cout << "\tflows   = " << sum_stream.size() << endl;
-    cout << "\tpackets = " << (pn1+pn2) << endl;
+    cout << "total_flows   = " << selected_flow.size() << endl;
+    cout << "total_packets = " << gen_num << endl;
 
     return 0;
 

@@ -79,21 +79,21 @@ void cmIteration::counter_file_print(parameters &params, int idx, int window_siz
     cout << "[counter file print] " << file_name << endl;
     cm_level[level].counter_info_file_print(level_params, file_name);
 
-    // print each window topk flowkey
-    int k = 10; // print k lines 
-    KeyValueVector kv_vec_2(flowkey_tracking, params);
-    kv_vec_2.sort_vector();
-    parameters new_params_2 = params;
-    sprintf(new_params_2.output_dir, "%s%02d/level_%02d/key_window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
-    string key_file_name = file_name + ".txt";
-    cout << "[topK key file print] " << key_file_name << endl;
-    kv_vec_2.file_print(new_params_2, key_file_name, k);
+    // // print each window topk flowkey
+    // int k = 10; // print k lines 
+    // KeyValueVector kv_vec_2(flowkey_tracking, params);
+    // kv_vec_2.sort_vector();
+    // parameters new_params_2 = params;
+    // sprintf(new_params_2.output_dir, "%s%02d/level_%02d/key_window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
+    // string key_file_name = file_name + ".txt";
+    // cout << "[topK key file print] " << key_file_name << endl;
+    // kv_vec_2.file_print(new_params_2, key_file_name, k);
 
-    // print each window ground truth
-    KeyValueVector kv_vec(packetMap, params);
-    kv_vec.sort_vector();
-    parameters new_params = params;
-    sprintf(new_params.output_dir, "%s%02d/level_%02d/gt_window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
-    cout << "[topK gt file print] " << key_file_name << endl;
-    kv_vec.file_print(new_params, key_file_name, k);
+    // // print each window ground truth
+    // KeyValueVector kv_vec(packetMap, params);
+    // kv_vec.sort_vector();
+    // parameters new_params = params;
+    // sprintf(new_params.output_dir, "%s%02d/level_%02d/gt_window_%d/", params.output_dir, params.current_epoch_count, level, window_size);
+    // cout << "[topK gt file print] " << key_file_name << endl;
+    // kv_vec.file_print(new_params, key_file_name, k);
 }
