@@ -37,15 +37,22 @@ def generate_dataset(file1, file2, len1, len2, flowkey, name1, name2, date_offse
 if __name__ == "__main__":
     # combine two dataset
     
-    file1s = ["/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/333709_2515088.pcap",    
-              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/1000000_1111018.pcap",
-              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s/1000000_8769863.pcap"]
-    file2s = ["/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180816/60s/equinix-nyc.dirA.20180816-130100.UTC.anon.pcap",
-              "/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180517/60s/equinix-nyc.dirA.20180517-130100.UTC.anon.pcap",
-              "/home/ming/SketchMercator/pcap_storage/caida_specify_time/20180621/60s/equinix-nyc.dirA.20180621-130100.UTC.anon.pcap"]
+    caida = [ "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/caida0816-600w.pcap",    
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/caida0816-300w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/caida0816-150w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/caida0517-250w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/caida0517-125w.pcap"]
+    zipf = [  "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-150w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-75w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-40w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-10w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf4-60w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf4-30w.pcap",
+              "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-35w.pcap",]
     
-    name1 = ["zipf2a", "zipf4", "zipf2b"]
-    name2 = ["caida20180816", "caida20180517", "caida20180621"]
+    # print(zipf[0][67:-5])
+    # print(caida[2][67:-5])
+    
     
     lens = [["5", "5"],
             ["6", "4"],
@@ -53,29 +60,38 @@ if __name__ == "__main__":
             ["8", "2"],]
     
     flowkey = "srcIP"
-    date_offset = [0, 91*24*60*60, 56*24*60*60]
+    date_offset = [0, 91*24*60*60, 56*24*60*60] # [0816 0517 0621]
     
-    for i in range(len(file1s)):
-        for l in lens:
-            # generate_dataset(file2s[2], file1s[i], l[0], l[1], flowkey, name2[2], name1[i], -date_offset[2])
-            generate_dataset(file2s[1], file1s[i], l[0], l[1], flowkey, name2[1], name1[i], -date_offset[1])
-            generate_dataset(file1s[i], file2s[2], l[0], l[1], flowkey, name1[i], name2[2], date_offset[2])
+    # same dist, diff tfs
+    # generate_dataset(caida[0], caida[1], lens[0][0], lens[0][1], flowkey, caida[0][67:-5], caida[1][67:-5], date_offset[0])
     
-    # for l in lens:
-    #     for ignore in ignores:
-            
-    
-    # for l in lens:
-    #     generate_dataset(file2s[0], file2s[1], l[0], l[1], flowkey, name2[0], name2[1], date_offset[1])
-    
-    # for i in range(len(file1s)):
-    #     generate_dataset(file1s[i], file2s[0], "10", "0", flowkey, name1[i], name2[0], date_offset[0])
-    # for i in range(len(file2s)):
-    #     generate_dataset(file2s[i], file2s[0], "10", "0", flowkey, name2[i], name2[0], date_offset[0])
-    
-    # for l in lens:
-    #     generate_dataset(file2s[0], file2s[2],l[0], l[1], flowkey, name2[0], name2[2], date_offset[2])
+    for len in lens:
+        generate_dataset(caida[0], caida[1], len[0], len[1], flowkey, caida[0][67:-5], caida[1][67:-5], date_offset[0])
+        generate_dataset(caida[1], caida[0], len[0], len[1], flowkey, caida[1][67:-5], caida[0][67:-5], date_offset[0])
+        generate_dataset(caida[0], caida[3], len[0], len[1], flowkey, caida[0][67:-5], caida[3][67:-5], date_offset[1])
+        generate_dataset(caida[3], caida[0], len[0], len[1], flowkey, caida[3][67:-5], caida[0][67:-5], -date_offset[1])
+        generate_dataset(caida[0], caida[4], len[0], len[1], flowkey, caida[0][67:-5], caida[4][67:-5], date_offset[1])
+        generate_dataset(caida[4], caida[0], len[0], len[1], flowkey, caida[4][67:-5], caida[0][67:-5], -date_offset[1])
+        generate_dataset(zipf[0], zipf[2], len[0], len[1], flowkey, zipf[0][67:-5], zipf[2][67:-5], date_offset[0])
+        generate_dataset(zipf[2], zipf[0], len[0], len[1], flowkey, zipf[2][67:-5], zipf[0][67:-5], date_offset[0])
+        generate_dataset(zipf[1], zipf[3], len[0], len[1], flowkey, zipf[1][67:-5], zipf[3][67:-5], date_offset[0])
+        generate_dataset(zipf[3], zipf[1], len[0], len[1], flowkey, zipf[3][67:-5], zipf[1][67:-5], date_offset[0])
         
-    # generate_dataset(file2s[2], file2s[0], "10", "0", flowkey, name2[2], name2[0], date_offset[0])
+    # diff dist, same tfs
+    for len in lens:
+        generate_dataset(caida[2], zipf[0], len[0], len[1], flowkey, caida[2][67:-5], zipf[0][67:-5], date_offset[0])
+        generate_dataset(zipf[0], caida[2], len[0], len[1], flowkey, zipf[0][67:-5], caida[2][67:-5], date_offset[0])
+        generate_dataset(zipf[6], zipf[5], len[0], len[1], flowkey, zipf[6][67:-5], zipf[5][67:-5], date_offset[0])
+        generate_dataset(zipf[5], zipf[6], len[0], len[1], flowkey, zipf[5][67:-5], zipf[6][67:-5], date_offset[0])
     
+    # diff dist, diff tfs 
+    for len in lens:
+        generate_dataset(caida[0], zipf[0], len[0], len[1], flowkey, caida[0][67:-5], zipf[0][67:-5], date_offset[0])
+        generate_dataset(zipf[0], caida[0], len[0], len[1], flowkey, zipf[0][67:-5], caida[0][67:-5], date_offset[0])
+        generate_dataset(caida[0], zipf[2], len[0], len[1], flowkey, caida[0][67:-5], zipf[2][67:-5], date_offset[0])
+        generate_dataset(zipf[2], caida[0], len[0], len[1], flowkey, zipf[2][67:-5], caida[0][67:-5], date_offset[0])
+        generate_dataset(caida[0], zipf[4], len[0], len[1], flowkey, caida[0][67:-5], zipf[4][67:-5], date_offset[0])
+        generate_dataset(zipf[4], caida[0], len[0], len[1], flowkey, zipf[4][67:-5], caida[0][67:-5], date_offset[0])
+        generate_dataset(zipf[0], zipf[4], len[0], len[1], flowkey, zipf[0][67:-5], zipf[4][67:-5], date_offset[0])
+        generate_dataset(zipf[4], zipf[0], len[0], len[1], flowkey, zipf[4][67:-5], zipf[0][67:-5], date_offset[0])
     

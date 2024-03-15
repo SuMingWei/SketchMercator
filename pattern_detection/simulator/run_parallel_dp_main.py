@@ -60,7 +60,7 @@ def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/
 
                             stri = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
                             # print(str)
-                            output_dir = os.path.join(os.getenv('pattern_detection'), "lstm", "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, stri)
                             # print("===output===: " + output_dir)
 
                             log_template = "[%d] [%s] [%s] [%s]" % (lcount, sketch_name, flowkey, stri)
@@ -96,8 +96,8 @@ def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/
 
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
-width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
-# width_list = [4096]
+# width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+width_list = [4096]
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 
 # sketch_list = ["cm", "cs"]
@@ -138,11 +138,18 @@ pcap_count = 5
 cmd_list = []
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/testing_pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
 pcap_file = []
-for file_name in sorted(os.listdir(pcap_folder)):
-    pcap_file.append(file_name)
-# pcap_file=["zipf2a_3_caida20180517_7.pcap"]
+# for file_name in sorted(os.listdir(pcap_folder)):
+#     pcap_file.append(file_name)
+pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
+           "zipf2a-35w_6_zipf4-30w_4.pcap",
+           "zipf2a-35w_7_zipf4-30w_3.pcap",
+           "zipf2a-35w_8_zipf4-30w_2.pcap",
+           "zipf4-30w_5_zipf2a-35w_5.pcap",
+           "zipf4-30w_6_zipf2a-35w_4.pcap",
+           "zipf4-30w_7_zipf2a-35w_3.pcap",
+           "zipf4-30w_8_zipf2a-35w_2.pcap",]
     
 run_online_traffic(folder_path=pcap_folder, pcap_file=pcap_file,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
