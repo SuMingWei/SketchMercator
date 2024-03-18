@@ -131,16 +131,16 @@ helper = ParallelRunHelper(30)
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
 pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
 pcap_file = []
-# for file_name in sorted(os.listdir(pcap_folder)):
-#     pcap_file.append(file_name)
-pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
-           "zipf2a-35w_6_zipf4-30w_4.pcap",
-           "zipf2a-35w_7_zipf4-30w_3.pcap",
-           "zipf2a-35w_8_zipf4-30w_2.pcap",
-           "zipf4-30w_5_zipf2a-35w_5.pcap",
-           "zipf4-30w_6_zipf2a-35w_4.pcap",
-           "zipf4-30w_7_zipf2a-35w_3.pcap",
-           "zipf4-30w_8_zipf2a-35w_2.pcap",]
+for file_name in sorted(os.listdir(pcap_folder)):
+    pcap_file.append(file_name)
+# pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
+#            "zipf2a-35w_6_zipf4-30w_4.pcap",
+#            "zipf2a-35w_7_zipf4-30w_3.pcap",
+#            "zipf2a-35w_8_zipf4-30w_2.pcap",
+#            "zipf4-30w_5_zipf2a-35w_5.pcap",
+#            "zipf4-30w_6_zipf2a-35w_4.pcap",
+#            "zipf4-30w_7_zipf2a-35w_3.pcap",
+#            "zipf4-30w_8_zipf2a-35w_2.pcap",]
 
 run_online_traffic(pcap_file=pcap_file, actual_row=actual_row,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
