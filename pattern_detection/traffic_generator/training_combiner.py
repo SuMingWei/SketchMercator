@@ -46,9 +46,9 @@ if __name__ == "__main__":
     zipf2a = [ "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-150w.pcap",
                "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-75w.pcap",
                "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2a-35w.pcap"]
-    zipf2b = [ "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-40w.pcap",
-               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-20w.pcap",
-               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-10w.pcap"]
+    zipf2b = [ "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-400w.pcap",
+               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-200w.pcap",
+               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf2b-100w.pcap"]
     zipf4 = [ "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf4-60w.pcap",
               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf4-30w.pcap",
               "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s/zipf4-15w.pcap"]
