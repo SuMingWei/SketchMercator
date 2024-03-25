@@ -29,6 +29,12 @@ void KeyValueVector::sort_vector() {
     sort(vec.begin(), vec.end(), kv_cmp());
 }
 
+void KeyValueVector::shuffle_vector() {
+    random_device rd;
+    mt19937 rng(rd());
+    shuffle(vec.begin(), vec.end(), rng);
+}
+
 void KeyValueVector::file_print(parameters &params, string fn, int line_count) {
 
     string dir_name;

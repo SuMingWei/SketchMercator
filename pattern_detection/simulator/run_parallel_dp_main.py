@@ -138,7 +138,8 @@ pcap_count = 5
 cmd_list = []
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
     pcap_file.append(file_name)
@@ -150,6 +151,8 @@ for file_name in sorted(os.listdir(pcap_folder)):
 #            "zipf4-30w_6_zipf2a-35w_4.pcap",
 #            "zipf4-30w_7_zipf2a-35w_3.pcap",
 #            "zipf4-30w_8_zipf2a-35w_2.pcap",]
+
+# print(pcap_file)
     
 run_online_traffic(folder_path=pcap_folder, pcap_file=pcap_file,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,

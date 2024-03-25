@@ -4,6 +4,7 @@ from sw_dp_simulator.file_io.py.common import parse_line
 from sw_dp_simulator.hash_module.py.hash import compute_hash
 from pattern_detection.control_plane.sketch.common import write_variation_file
 from pattern_detection.control_plane.sketch.common import write_summation_file
+from pattern_detection.control_plane.sketch.common import write_fsd_file
 
 def counter_estimate(key, sketch_array, index_hash_sub_list, d, w, hash, level):
     a = []
@@ -163,7 +164,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = []
-    topk = 10
+    topk = 1000
     
     # window_size = [100, 200, 500]
     window_size = [200]
@@ -251,6 +252,27 @@ def cm_main(full_dir, dist_dir, row, width, level):
     #     write_summation_file(final_dir, dynamic_change_list, "dynamic_topk_summation.txt")
     #     write_summation_file(final_dir, final_change_list, "final_topk_summation.txt")
     #     write_summation_file(final_dir, gt_change_list, "gt_topk_summation.txt")
+    
+    # for FSD
+    # # RamdomK FSD
+    for ws in window_size:
+        randomk_flowkey_list = get_topk_flowkey(full_dir, row, width, level, ws, topk)
+        
+        # record each window fsd
+        for i in range(len(counter_list[0])):
+            cArray = counter_list[0][i]
+            fs_dist = {}
+            
+            for key in randomk_flowkey_list[0][i]:
+                est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+                if est in fs_dist.keys(): 
+                    fs_dist[est] += 1
+                else:
+                    fs_dist[est] = 1
+                    
+            fs_dist = dict(sorted(fs_dist.items()))
+
+            write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
         
     
         

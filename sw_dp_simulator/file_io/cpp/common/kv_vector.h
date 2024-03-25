@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <vector>
 #include <string>
+#include <random>
 
 #include <stdio.h>
 #include <inttypes.h>
@@ -32,6 +33,7 @@ public:
     KeyValueVector(map <flowkey_t, int> &packetMap, parameters &params);
     KeyValueVector(PriorityQueue &pq, parameters &params);
     void sort_vector();
+    void shuffle_vector();
     void file_print(parameters &params, string fn, int line_count);
 //    KeyValueTable();
 //    KeyValueTable(map <string, int> packetMap);

@@ -129,7 +129,8 @@ pcap_count = 5
 helper = ParallelRunHelper(30)
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
     pcap_file.append(file_name)
