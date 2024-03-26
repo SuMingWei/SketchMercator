@@ -39,6 +39,7 @@ void main_loop(parameters &params, vector<packet_summary> &packet_stream, sketch
 
         if (current_time - timer >= uint64_t(params.epoch * 1000000)) { // for each epoch
             window_timer = current_time;
+            // sketch_iteration_instance->counter_file_print(params, window_num, window_size*1000);
             window_num = 0;
 
             timer = current_time;
