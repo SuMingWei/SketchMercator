@@ -138,10 +138,13 @@ pcap_count = 5
 cmd_list = []
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
-# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
+    if file_name.split('_')[1] == '5':
+        # print(file_name)
+        continue
     pcap_file.append(file_name)
 # pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
 #            "zipf2a-35w_6_zipf4-30w_4.pcap",
