@@ -135,7 +135,7 @@ def get_topk_gt(full_dir, row, width, level, window_size, k):
             string_key, estimate, flowkey = parse_line(key, line.strip())
             gt_total += estimate
             cnt += 1
-            if cnt >= k:
+            if k != 0 and cnt >= k:
                 break
         f.close()
         
