@@ -86,16 +86,16 @@ def get_topk_flowkey(full_dir, row, width, level, window_size, k):
         for line in f:
             string_key, estimate, flowkey = parse_line(key, line.strip())
             key_window_list.append(flowkey)
-            # cnt += 1
-            # if cnt >= k:
-            #     break
         f.close()
         
         # random sample k flow key
-        random.shuffle(key_window_list)
-        
-        level_list.append(key_window_list[:k])
-        
+        if k != 0:
+            random.shuffle(key_window_list)
+            
+            level_list.append(key_window_list[:k])
+        else:
+            level_list.append(key_window_list)
+            
         print(f'There are {len(level_list)} windows')
         
         key_list.append(level_list)
@@ -168,7 +168,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = []
-    topk = 1000
+    topk = 10000
     
     # window_size = [100, 200, 500]
     window_size = [200]

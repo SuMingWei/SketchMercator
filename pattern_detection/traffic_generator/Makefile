@@ -9,7 +9,7 @@ INC = -I${CPP_LIB_PATH}
 cpp_lib = $(patsubst %.cpp, %.o, $(wildcard ${CPP_LIB_PATH}/*/*.cpp))
 
 
-all: $(cpp_lib) pcap_generator pcap_combiner verify pcap_parser pcap_scaler pcap_dister
+all: $(cpp_lib) pcap_generator pcap_combiner verify pcap_parser pcap_scaler pcap_dister pcap_randomk_sampler
 
 %.o: %.cpp %.h
 	$(CC) $(CFLAGS) $(INC) -c -Wall $< -o $@
@@ -33,6 +33,9 @@ pcap_scaler: pcap_scaler.cpp $(cpp_lib)
 pcap_dister: pcap_dister.cpp $(cpp_lib)
 	$(CC) $(CFLAGS) -o pcap_dister pcap_dister.cpp $(cpp_lib) $(LINK) $(INC)
 
+pcap_randomk_sampler: pcap_randomk_sampler.cpp $(cpp_lib)
+	$(CC) $(CFLAGS) -o pcap_randomk_sampler pcap_randomk_sampler.cpp $(cpp_lib) $(LINK) $(INC)
+
 verify: verify.cpp $(cpp_lib)
 	$(CC) $(CFLAGS) -o verify verify.cpp $(cpp_lib) $(LINK) $(INC)
 
@@ -42,6 +45,7 @@ clean:
 	rm -f pcap_parser
 	rm -f pcap_scaler
 	rm -f pcap_dister
+	rm -f pcap_randomk_sampler
 	rm -f verify
 	rm -f ./*.txt
 	rm -f ${sketch_home}/cpp_lib/*/*.o

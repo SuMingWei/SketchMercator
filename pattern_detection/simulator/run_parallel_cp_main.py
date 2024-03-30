@@ -133,7 +133,7 @@ pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/sca
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
-    if file_name.split('_')[1] == '5':
+    if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4":
         continue
     pcap_file.append(file_name)
 # pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
