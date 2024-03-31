@@ -80,7 +80,7 @@ void cmIteration::counter_file_print(parameters &params, int idx, int window_siz
     cm_level[level].counter_info_file_print(level_params, file_name);
 
     // print each window topk flowkey
-    int k = 10000; // print k lines 
+    int k = 5000; // print k lines 
     KeyValueVector kv_vec_2(flowkey_tracking, params);
     // kv_vec_2.sort_vector();
     kv_vec_2.shuffle_vector();
