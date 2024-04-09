@@ -316,22 +316,43 @@ def cm_main(full_dir, dist_dir, row, width, level):
         for i in range(len(counter_list[0])):
             cArray = counter_list[0][i]
             fs_dist = {}
+            single_window_fs_dist = {}
             
             for key in randomk_flowkey_list[0][i]:
+                # accumulate counter
                 est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
                 if est in fs_dist.keys(): 
                     fs_dist[est] += 1
                 else:
                     fs_dist[est] = 1
+                
+                # single window counter
+                if i == 0:
+                    if est in single_window_fs_dist.keys(): 
+                        single_window_fs_dist[est] += 1
+                    else:
+                        single_window_fs_dist[est] = 1
+                else:
+                    est_prev =  counter_estimate(key, counter_list[0][i-1], index_hash_list[0], row, width, "crc_hash", 0)
+                    var = est - est_prev
+                    if var == 0:
+                        continue
+                    if var in single_window_fs_dist.keys(): 
+                        single_window_fs_dist[var] += 1
+                    else:
+                        single_window_fs_dist[var] = 1
+                    
                     
             fs_dist = dict(sorted(fs_dist.items()))
+            single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
 
             write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
+            write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
             
             # record gt of each window fsd
-            write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
             
-            
+    # get single window fsd  
             
         
     
