@@ -97,7 +97,8 @@ def run_online_traffic(folder_path="/home/ming/SketchMercator/pattern_detection/
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
-width_list = [4096]
+# width_list = [4096]
+width_list = [524288]
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 
 # sketch_list = ["cm", "cs"]
@@ -138,11 +139,11 @@ pcap_count = 5
 cmd_list = []
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
-# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
-    if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4":
+    if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4" or file_name.split("_")[2].split("-")[0] == "zipf4":
         # print(file_name)
         continue
     pcap_file.append(file_name)
@@ -166,6 +167,6 @@ print(cmd_list[0])
 
 
 from python_lib.run_parallel_helper import run_cmd_list
-run_cmd_list(cmd_list, 30)
+run_cmd_list(cmd_list, 20)
 
 

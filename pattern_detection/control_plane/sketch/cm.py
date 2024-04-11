@@ -67,12 +67,16 @@ def get_topk_flowkey(full_dir, row, width, level, window_size, k):
             key_window_list = []
             path = os.path.join(key_window_dir, file)
             
+            cnt = 0
             f = open(path)
             key = f.readline().strip()
             # print(key)
             for line in f:
                 string_key, estimate, flowkey = parse_line(key, line.strip())
                 key_window_list.append(flowkey)
+                cnt += 1
+                if k != 0 and cnt >= k:
+                    break
             f.close()
             
             level_list.append(key_window_list)
@@ -102,6 +106,54 @@ def get_topk_flowkey(full_dir, row, width, level, window_size, k):
     
     return key_list
 
+def get_topk_str_flowkey(full_dir, row, width, level, window_size, k, last_window_key_list):
+    key_list = []
+    
+    # load counter value
+    for l in range(0, 1):
+        key_window_dir = '%s/level_%02d/key_window_%d/' % (full_dir, l, window_size)
+        print(key_window_dir)
+        
+        level_list = []
+        for file in sorted(os.listdir(key_window_dir)):
+            key_window_list = []
+            path = os.path.join(key_window_dir, file)
+            
+            cnt = 0
+            f = open(path)
+            key = f.readline().strip()
+            # print(key)
+            for line in f:
+                string_key, estimate, flowkey = parse_line(key, line.strip())
+                key_window_list.append((string_key, flowkey))
+                cnt += 1
+                if k != 0 and cnt >= k:
+                    break
+            f.close()
+            
+            level_list.append(key_window_list)
+            
+        final_counter_path = '%s/flowkey.txt' % (full_dir)
+        cnt = 0
+        key_window_list = []
+        f = open(final_counter_path)
+        key = f.readline().strip()
+        # print(key)
+        for line in f:
+            string_key, estimate, flowkey = parse_line(key, line.strip())
+            if flowkey in last_window_key_list:
+                key_window_list.append((string_key, flowkey))
+                cnt += 1
+        f.close()
+        
+        level_list.append(key_window_list)
+            
+        print(f'There are {len(level_list)} windows')
+        
+        key_list.append(level_list)
+    
+    return key_list
+
 def get_topk_gt_fsd(full_dir, row, width, level, window_size, k, last_window_key_list):
     fsd_list = []
     
@@ -115,6 +167,7 @@ def get_topk_gt_fsd(full_dir, row, width, level, window_size, k, last_window_key
             window_fsd = {}
             path = os.path.join(key_window_dir, file)
             
+            cnt = 0
             f = open(path)
             key = f.readline().strip()
             # print(key)
@@ -124,6 +177,10 @@ def get_topk_gt_fsd(full_dir, row, width, level, window_size, k, last_window_key
                     window_fsd[estimate] += 1
                 else:
                     window_fsd[estimate] = 1
+                    
+                cnt += 1
+                if k != 0 and cnt >= k:
+                    break
             f.close()
             
             level_list.append(window_fsd)
@@ -131,6 +188,7 @@ def get_topk_gt_fsd(full_dir, row, width, level, window_size, k, last_window_key
         final_counter_path = '%s/flowkey.txt' % (full_dir)
 
         window_fsd = {}
+        cnt = 0
         f = open(final_counter_path)
         key = f.readline().strip()
         # print(key)
@@ -141,6 +199,53 @@ def get_topk_gt_fsd(full_dir, row, width, level, window_size, k, last_window_key
                     window_fsd[estimate] += 1
                 else:
                     window_fsd[estimate] = 1
+                    
+                cnt += 1
+                if k != 0 and cnt >= k:
+                    break
+        f.close()
+        
+        level_list.append(window_fsd)
+            
+        print(f'There are {len(level_list)} windows')
+        
+        fsd_list.append(level_list)
+    
+    return fsd_list
+
+def get_gt_dict(full_dir, row, width, level, window_size, k):
+    fsd_list = []
+    
+    # load counter value
+    for l in range(0, 1):
+        key_window_dir = '%s/level_%02d/key_window_%d/' % (full_dir, l, window_size)
+        print(key_window_dir)
+        
+        level_list = []
+        for file in sorted(os.listdir(key_window_dir)):
+            window_fsd = {}
+            path = os.path.join(key_window_dir, file)
+
+            f = open(path)
+            key = f.readline().strip()
+            # print(key)
+            for line in f:
+                string_key, estimate, flowkey = parse_line(key, line.strip())
+                window_fsd[string_key] = estimate 
+            f.close()
+            
+            level_list.append(window_fsd)
+            
+        final_counter_path = '%s/flowkey.txt' % (full_dir)
+
+        window_fsd = {}
+        cnt = 0
+        f = open(final_counter_path)
+        key = f.readline().strip()
+        # print(key)
+        for line in f:
+            string_key, estimate, flowkey = parse_line(key, line.strip())
+            window_fsd[string_key] = estimate         
         f.close()
         
         level_list.append(window_fsd)
@@ -310,13 +415,43 @@ def cm_main(full_dir, dist_dir, row, width, level):
     # # RamdomK FSD
     for ws in window_size:
         randomk_flowkey_list = get_topk_flowkey(full_dir, row, width, level, ws, topk)
+        randomk_str_flowkey_list = get_topk_str_flowkey(full_dir, row, width, level, ws, topk, randomk_flowkey_list[0][-1])
+        
         gt_fsd_list = get_topk_gt_fsd(full_dir, row, width, level, ws, topk, randomk_flowkey_list[0][-1])
+        gt_dict = get_gt_dict(full_dir, row, width, level, ws, topk)
         
         # record each window fsd
         for i in range(len(counter_list[0])):
             cArray = counter_list[0][i]
             fs_dist = {}
             single_window_fs_dist = {}
+            single_window_gt_fs_dist = {}
+            
+            # #### test
+            # test = {}
+            # for strkey , key in randomk_str_flowkey_list[0][i]:
+            #     est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+            #     gt = gt_dict[0][i][strkey]
+                
+            #     if i == 0:
+            #         test[strkey] = (est, gt)
+            #     else:
+            #         est_prev = counter_estimate(key, counter_list[0][i-1], index_hash_list[0], row, width, "crc_hash", 0)
+            #         if strkey not in gt_dict[0][i-1].keys():
+            #             test[strkey] = (est-est_prev, gt)
+            #         else:
+            #             gt_prev = gt_dict[0][i-1][strkey]
+            #             test[strkey] = (est-est_prev, gt-gt_prev)
+
+            # os.makedirs(final_dir, exist_ok=True)
+    
+            # fileName = os.path.join(final_dir, "compare_gt_est.txt")
+            # with open(fileName, 'w') as file:
+            #     for key, vals in test.items():
+            #         line = key + " " + str(vals[0]) + " " + str(vals[1]) + "\n"
+            #         file.write(line)
+            # #### test
+            
             
             for key in randomk_flowkey_list[0][i]:
                 # accumulate counter
@@ -341,18 +476,45 @@ def cm_main(full_dir, dist_dir, row, width, level):
                         single_window_fs_dist[var] += 1
                     else:
                         single_window_fs_dist[var] = 1
+            
+            for key , _ in randomk_str_flowkey_list[0][i]:
+                # single window gt counter
+                if i == 0:
+                    gt = gt_dict[0][i][key]
+                    if gt in single_window_gt_fs_dist.keys(): 
+                        single_window_gt_fs_dist[gt] += 1
+                    else:
+                        single_window_gt_fs_dist[gt] = 1
+                else:
+                    gt = gt_dict[0][i][key]
+                    
+                    if key not in gt_dict[0][i-1].keys():
+                        if gt in single_window_gt_fs_dist.keys(): 
+                            single_window_gt_fs_dist[gt] += 1
+                        else:
+                            single_window_gt_fs_dist[gt] = 1
+                    else:
+                        gt_prev = gt_dict[0][i-1][key]
+                        var = gt - gt_prev
+                        if var == 0:
+                            continue
+                        if var in single_window_gt_fs_dist.keys(): 
+                            single_window_gt_fs_dist[var] += 1
+                        else:
+                            single_window_gt_fs_dist[var] = 1
                     
                     
             fs_dist = dict(sorted(fs_dist.items()))
             single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
+            single_window_gt_fs_dist = dict(sorted(single_window_gt_fs_dist.items()))
 
             write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
             write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
+            write_fsd_file(final_dir, single_window_gt_fs_dist, "single_window_randk_gt_summation", str(i).zfill(2))
             
             # record gt of each window fsd
-            # write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
-            
-    # get single window fsd  
+            write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
+
             
         
     
