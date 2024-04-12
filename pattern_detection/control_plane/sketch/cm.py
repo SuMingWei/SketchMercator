@@ -7,6 +7,11 @@ from pattern_detection.control_plane.sketch.common import write_variation_file
 from pattern_detection.control_plane.sketch.common import write_summation_file
 from pattern_detection.control_plane.sketch.common import write_fsd_file
 
+def relative_error(true, estimate):
+    if true == 0:
+        return 0
+    return abs(true-estimate)/true*100
+
 def counter_estimate(key, sketch_array, index_hash_sub_list, d, w, hash, level):
     a = []
 
@@ -322,7 +327,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = []
-    topk = 5000
+    topk = 1000
     
     # window_size = [100, 200, 500]
     window_size = [200]
@@ -334,7 +339,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
         window_name = "window_" + str(ws)
         final_dir = os.path.join(dist_dir, window_name)
     
-        get_total_flow_size(counter_list, width, row, final_dir, ws)
+        # get_total_flow_size(counter_list, width, row, final_dir, ws)
         
         # # calculate accumulate
         # change_list = {}
@@ -420,38 +425,14 @@ def cm_main(full_dir, dist_dir, row, width, level):
         gt_fsd_list = get_topk_gt_fsd(full_dir, row, width, level, ws, topk, randomk_flowkey_list[0][-1])
         gt_dict = get_gt_dict(full_dir, row, width, level, ws, topk)
         
+        ARE_list = []
+        
         # record each window fsd
         for i in range(len(counter_list[0])):
             cArray = counter_list[0][i]
             fs_dist = {}
-            single_window_fs_dist = {}
-            single_window_gt_fs_dist = {}
-            
-            # #### test
-            # test = {}
-            # for strkey , key in randomk_str_flowkey_list[0][i]:
-            #     est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
-            #     gt = gt_dict[0][i][strkey]
-                
-            #     if i == 0:
-            #         test[strkey] = (est, gt)
-            #     else:
-            #         est_prev = counter_estimate(key, counter_list[0][i-1], index_hash_list[0], row, width, "crc_hash", 0)
-            #         if strkey not in gt_dict[0][i-1].keys():
-            #             test[strkey] = (est-est_prev, gt)
-            #         else:
-            #             gt_prev = gt_dict[0][i-1][strkey]
-            #             test[strkey] = (est-est_prev, gt-gt_prev)
-
-            # os.makedirs(final_dir, exist_ok=True)
-    
-            # fileName = os.path.join(final_dir, "compare_gt_est.txt")
-            # with open(fileName, 'w') as file:
-            #     for key, vals in test.items():
-            #         line = key + " " + str(vals[0]) + " " + str(vals[1]) + "\n"
-            #         file.write(line)
-            # #### test
-            
+            # single_window_fs_dist = {}
+            # single_window_gt_fs_dist = {}
             
             for key in randomk_flowkey_list[0][i]:
                 # accumulate counter
@@ -461,62 +442,76 @@ def cm_main(full_dir, dist_dir, row, width, level):
                 else:
                     fs_dist[est] = 1
                 
-                # single window counter
-                if i == 0:
-                    if est in single_window_fs_dist.keys(): 
-                        single_window_fs_dist[est] += 1
-                    else:
-                        single_window_fs_dist[est] = 1
-                else:
-                    est_prev =  counter_estimate(key, counter_list[0][i-1], index_hash_list[0], row, width, "crc_hash", 0)
-                    var = est - est_prev
-                    if var == 0:
-                        continue
-                    if var in single_window_fs_dist.keys(): 
-                        single_window_fs_dist[var] += 1
-                    else:
-                        single_window_fs_dist[var] = 1
+                # # single window counter
+                # if i == 0:
+                #     if est in single_window_fs_dist.keys(): 
+                #         single_window_fs_dist[est] += 1
+                #     else:
+                #         single_window_fs_dist[est] = 1
+                # else:
+                #     est_prev =  counter_estimate(key, counter_list[0][i-1], index_hash_list[0], row, width, "crc_hash", 0)
+                #     var = est - est_prev
+                #     if var == 0:
+                #         continue
+                #     if var in single_window_fs_dist.keys(): 
+                #         single_window_fs_dist[var] += 1
+                #     else:
+                #         single_window_fs_dist[var] = 1
             
-            for key , _ in randomk_str_flowkey_list[0][i]:
-                # single window gt counter
-                if i == 0:
-                    gt = gt_dict[0][i][key]
-                    if gt in single_window_gt_fs_dist.keys(): 
-                        single_window_gt_fs_dist[gt] += 1
-                    else:
-                        single_window_gt_fs_dist[gt] = 1
-                else:
-                    gt = gt_dict[0][i][key]
+            # for key , _ in randomk_str_flowkey_list[0][i]:
+            #     # single window gt counter
+            #     if i == 0:
+            #         gt = gt_dict[0][i][key]
+            #         if gt in single_window_gt_fs_dist.keys(): 
+            #             single_window_gt_fs_dist[gt] += 1
+            #         else:
+            #             single_window_gt_fs_dist[gt] = 1
+            #     else:
+            #         gt = gt_dict[0][i][key]
                     
-                    if key not in gt_dict[0][i-1].keys():
-                        if gt in single_window_gt_fs_dist.keys(): 
-                            single_window_gt_fs_dist[gt] += 1
-                        else:
-                            single_window_gt_fs_dist[gt] = 1
-                    else:
-                        gt_prev = gt_dict[0][i-1][key]
-                        var = gt - gt_prev
-                        if var == 0:
-                            continue
-                        if var in single_window_gt_fs_dist.keys(): 
-                            single_window_gt_fs_dist[var] += 1
-                        else:
-                            single_window_gt_fs_dist[var] = 1
+            #         if key not in gt_dict[0][i-1].keys():
+            #             if gt in single_window_gt_fs_dist.keys(): 
+            #                 single_window_gt_fs_dist[gt] += 1
+            #             else:
+            #                 single_window_gt_fs_dist[gt] = 1
+            #         else:
+            #             gt_prev = gt_dict[0][i-1][key]
+            #             var = gt - gt_prev
+            #             if var == 0:
+            #                 continue
+            #             if var in single_window_gt_fs_dist.keys(): 
+            #                 single_window_gt_fs_dist[var] += 1
+            #             else:
+            #                 single_window_gt_fs_dist[var] = 1
                     
                     
             fs_dist = dict(sorted(fs_dist.items()))
-            single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
-            single_window_gt_fs_dist = dict(sorted(single_window_gt_fs_dist.items()))
+            # single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
+            # single_window_gt_fs_dist = dict(sorted(single_window_gt_fs_dist.items()))
 
             write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
-            write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
-            write_fsd_file(final_dir, single_window_gt_fs_dist, "single_window_randk_gt_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, single_window_gt_fs_dist, "single_window_randk_gt_summation", str(i).zfill(2))
             
             # record gt of each window fsd
             write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
 
             
-        
+            ## calculate relative error
+            error_sum = 0
+            for strkey , key in randomk_str_flowkey_list[0][i]:
+                gt = gt_dict[0][i][strkey]
+                est = counter_estimate(key, cArray, index_hash_list[0], row, width, "crc_hash", 0)
+                error_sum += relative_error(gt, est)
+                
+            ARE_list.append(error_sum/len(randomk_str_flowkey_list[0][i]))
+            
+        fileName = os.path.join(final_dir, "are.txt")
+        print("write are variation to ", fileName)
+        with open(fileName, 'w') as file:
+            for val in ARE_list:
+                file.write(f'{val}\n')
+            
     
         
     

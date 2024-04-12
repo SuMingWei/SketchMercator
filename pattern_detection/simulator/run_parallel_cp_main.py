@@ -78,8 +78,8 @@ def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
 # width_list = [1024, 2048, 4096] # cm cs
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
+width_list = [4096, 8192, 16384, 32768, 65536]
 # width_list = [4096] 
-width_list = [65536] 
 
 # # sketch_list = ["cm", "cs"]
 sketch_list = ["cm"]
@@ -137,14 +137,11 @@ for file_name in sorted(os.listdir(pcap_folder)):
     if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4" or file_name.split("_")[2].split("-")[0] == "zipf4":
         continue
     pcap_file.append(file_name)
-# pcap_file=["zipf2a-35w_5_zipf4-30w_5.pcap",
-#            "zipf2a-35w_6_zipf4-30w_4.pcap",
-#            "zipf2a-35w_7_zipf4-30w_3.pcap",
-#            "zipf2a-35w_8_zipf4-30w_2.pcap",
-#            "zipf4-30w_5_zipf2a-35w_5.pcap",
-#            "zipf4-30w_6_zipf2a-35w_4.pcap",
-#            "zipf4-30w_7_zipf2a-35w_3.pcap",
-#            "zipf4-30w_8_zipf2a-35w_2.pcap",]
+
+# pcap_file = ["caida0517-500w_10_.pcap",
+#              "caida0517-250w_10_.pcap",
+#              "caida0517-125w_10_.pcap"]
+# pcap_file = ["caida0517-125w_6_caida0816-150w_4.pcap"]
 
 run_online_traffic(pcap_file=pcap_file, actual_row=actual_row,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
