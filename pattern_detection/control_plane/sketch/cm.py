@@ -425,7 +425,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     for ws in window_size:
         randomk_str_flowkey_list = get_topk_str_flowkey(full_dir, row, width, level, ws, topk)
         
-        # gt_fsd_list = get_topk_gt_fsd(full_dir, row, width, level, ws, topk, randomk_flowkey_list[0][-1])
+        # gt_fsd_list = get_topk_gt_fsd(full_dir, row, width, level, ws, topk, [val[1] for val in randomk_str_flowkey_list[0][-1]])
         gt_dict = get_gt_dict(full_dir, row, width, level, ws, topk)
         
         ARE_list = []
@@ -488,15 +488,14 @@ def cm_main(full_dir, dist_dir, row, width, level):
                     
                     
             # fs_dist = dict(sorted(fs_dist.items()))
+            # write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
+            
             single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
             single_window_gt_fs_dist = dict(sorted(single_window_gt_fs_dist.items()))
-
-            # write_fsd_file(final_dir, fs_dist, "randk_summation", str(i).zfill(2))
             write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
             write_fsd_file(final_dir, single_window_gt_fs_dist, "single_window_randk_gt_summation", str(i).zfill(2))
             
-            # record gt of each window fsd
-            # write_fsd_file(final_dir, dict(sorted(gt_fsd_list[0][i].items())), "randk_gt_summation", str(i).zfill(2))
 
             
         #     ## calculate relative error
