@@ -137,7 +137,7 @@ pcap_count = 5
 
 cmd_list = []
 
-pcap_folder = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s"
+pcap_folder = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
     pcap_file.append(file_name)

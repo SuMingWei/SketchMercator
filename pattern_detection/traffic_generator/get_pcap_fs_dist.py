@@ -23,7 +23,7 @@ def handle_dataset(data_list, dataset_category_list, flowkey, pcap_count):
     # Iterate over pcap files and parse them
     for dataset_category in dataset_category_list:
         for date in date_list:
-            pcap_list = get_pcap_list_by_date_and_count(date, "10s", pcap_count, dataset_category)
+            pcap_list = get_pcap_list_by_date_and_count(date, "10s-new", pcap_count, dataset_category)
             for key in flowkey:
                 cmd += key
                 cmd += " "

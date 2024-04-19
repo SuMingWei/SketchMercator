@@ -23,7 +23,7 @@ def handle_dataset(date_list, dataset_category_list, flowkey, pcap_count):
     # Iterate over pcap files and parse them
     for dataset_category in dataset_category_list:
         for date in date_list:
-            pcap_list = get_pcap_list_by_date_and_count(date, "10s", pcap_count, dataset_category)
+            pcap_list = get_pcap_list_by_date_and_count(date, "60s-new", pcap_count, dataset_category)
             for key in flowkey:
                 cmd += key
                 cmd += " "
@@ -41,6 +41,6 @@ if __name__ == "__main__":
     date_list = [20180816]
     dataset_category_list = ["online_traffic/", ]
     flowkey = ["srcIP"]
-    pcap_count = 1
+    pcap_count = 2
 
     handle_dataset(date_list, dataset_category_list, flowkey, pcap_count)

@@ -29,10 +29,12 @@ def generate_dataset(pcap_folder_path, pcap_file, flowkey, pcap_count):
 
 if __name__ == "__main__":
     # sample sub-dataset from origin dataset
-    pcap_folder_path = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s"
+    pcap_folder_path = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new"
     flowkey = ["srcIP"]
     pcap_count = 5
 
-    pcap_file = "zipf4.pcap"
+    pcap_file = "zipf10-070w.pcap"
     generate_dataset(pcap_folder_path, pcap_file, flowkey, pcap_count)
+    # pcap_file = "zipf18-35w_10_.pcap"
+    # generate_dataset(pcap_folder_path, pcap_file, flowkey, pcap_count)
     

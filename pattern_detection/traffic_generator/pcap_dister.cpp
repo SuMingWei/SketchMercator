@@ -190,7 +190,7 @@ int main(int argc, char* argv[]){
     }
 
     string file_name = argv[3];
-    string output_file_name = "./fs_dist/" + file_name + ".txt";
+    string output_file_name = "./fs_dist_new/" + file_name + ".txt";
 
     ofstream outFile(output_file_name);
     for(auto item: flow_size_dist){

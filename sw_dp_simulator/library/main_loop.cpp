@@ -31,7 +31,7 @@ void main_loop(parameters &params, vector<packet_summary> &packet_stream, sketch
 
         if(current_time - window_timer >= uint64_t(window_size * 1000000)) { // for each window
             window_timer = current_time;
-            sketch_iteration_instance->counter_file_print(params, window_num, window_size*1000);
+            // sketch_iteration_instance->counter_file_print(params, window_num, window_size*1000);
             // sketch_iteration_instance->clear(params);
             window_num++;
             // sprintf(content, "\t\t%s %s (%d/%lu)-(%.2f%%) %.4f (s) duration(%.4f)", params.run_info, params.hash_seed_name, pcount, packet_stream.size(), (float)pcount*100 / (float)packet_stream.size(), ((double)current_time - (double)original_time)/1000000, ((double)current_time - (double)timer)/1000000);
