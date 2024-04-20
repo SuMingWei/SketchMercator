@@ -111,3 +111,8 @@ void univmonIteration::clear(parameters &params)
     packetMap.clear();
     flowkey_tracking.clear();
 }
+
+void univmonIteration::counter_file_print(parameters &params, int idx, int window_size){
+    cout << "skip file print\n";
+    return;
+}
