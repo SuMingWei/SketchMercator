@@ -281,14 +281,14 @@ int main(int argc, char* argv[]){
     map<Flowkey_t, int> flow_stream1;
     map<Flowkey_t, int> flow_stream2;
     map<Flowkey_t, int> sum_stream;
-    char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/tmp.pcap";
+    char* tmp_file = (char*)"/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/tmp.pcap";
     int time_offset = len1;
     // cout << flow_stream1.size() <<endl;
     pcap_combine(file1, tmp_file, flow_stream1, flowkey, sum_stream, len1, fn1, pn1, 0, 0);
     pcap_combine(file2, tmp_file, flow_stream2, flowkey, sum_stream, len2, fn2, pn2, time_offset, date_offset);
 
     /* sort the file with stimestamp */
-    string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/" 
+    string tmp_name = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/" 
                         + d1 + "_" + to_string(len1) + "_" + d2 + "_" + to_string(len2)+ ".pcap";
     char* result_file = new char[tmp_name.length() + 1];
     strcpy(result_file, tmp_name.c_str());

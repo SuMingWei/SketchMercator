@@ -131,17 +131,18 @@ helper = ParallelRunHelper(20)
 
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/training_pcap_file/"
 # pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file/"
+# pcap_file = []
+# for file_name in sorted(os.listdir(pcap_folder)):
+#     if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4" or file_name.split("_")[2].split("-")[0] == "zipf4":
+#         continue
+#     pcap_file.append(file_name)
+
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
-    if file_name.split('_')[1] == '5' or file_name.split("-")[0] == "zipf4" or file_name.split("_")[2].split("-")[0] == "zipf4":
-        continue
-    pcap_file.append(file_name)
-
-# pcap_file = ["caida0517-500w_10_.pcap",
-#              "caida0517-250w_10_.pcap",
-#              "caida0517-125w_10_.pcap"]
-# pcap_file = ["caida0517-125w_6_caida0816-150w_4.pcap"]
+    if file_name.split('_')[0].split("-")[0] == file_name.split('_')[2].split("-")[0]:
+        pcap_file.append(file_name)
 
 run_online_traffic(pcap_file=pcap_file, actual_row=actual_row,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
