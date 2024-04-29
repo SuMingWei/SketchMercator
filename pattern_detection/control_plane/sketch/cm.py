@@ -331,7 +331,7 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = []
-    topk = 1000
+    topk = 5000
     
     # window_size = [100, 200, 500]
     window_size = [200]
@@ -493,8 +493,10 @@ def cm_main(full_dir, dist_dir, row, width, level):
             
             single_window_fs_dist = dict(sorted(single_window_fs_dist.items()))
             single_window_gt_fs_dist = dict(sorted(single_window_gt_fs_dist.items()))
-            write_fsd_file(final_dir, single_window_fs_dist, "single_window_randk_summation", str(i).zfill(2))
-            write_fsd_file(final_dir, single_window_gt_fs_dist, "single_window_randk_gt_summation", str(i).zfill(2))
+            write_fsd_file(final_dir, single_window_fs_dist, f"single_window_randk_summation", str(i).zfill(2))
+            write_fsd_file(final_dir, single_window_gt_fs_dist, f"single_window_randk_gt_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, single_window_fs_dist, f"top{topk}/single_window_randk_summation", str(i).zfill(2))
+            # write_fsd_file(final_dir, single_window_gt_fs_dist, f"top{topk}/single_window_randk_gt_summation", str(i).zfill(2))
             
 
             

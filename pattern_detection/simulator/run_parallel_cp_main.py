@@ -57,11 +57,11 @@ def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
                             # print(pcap_full_path, width, flowkey, epoch, sketch_name)
                             str = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
                             # print(str)
-                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, str)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPaddingOfflineNew", sketch_name, pcap_file_name, flowkey, str)
                             print(output_dir)
 
                             str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                            output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQuery", sketch_name, pcap_file_name, flowkey, str)
+                            output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQueryOfflineNew", sketch_name, pcap_file_name, flowkey, str)
                             print(output_pkl_dir)
                             from pattern_detection.control_plane.sketch_cp_main import sketch_cp
                             helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
@@ -75,11 +75,11 @@ def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
 #### common variable
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
 # width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
-# width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072] # cm cs
+width_list = [1024, 2048, 4096, 8192, 16384, 32768] # cm cs
 # width_list = [1024, 2048, 4096] # cm cs
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 # width_list = [4096, 8192, 16384, 32768, 65536]
-width_list = [4096] 
+# width_list = [4096] 
 
 # # sketch_list = ["cm", "cs"]
 sketch_list = ["cm"]
@@ -138,11 +138,14 @@ helper = ParallelRunHelper(20)
 #         continue
 #     pcap_file.append(file_name)
 
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file_new/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
-    if file_name.split('_')[0].split("-")[0] == file_name.split('_')[2].split("-")[0]:
-        pcap_file.append(file_name)
+    # if file_name.split('_')[0].split("-")[0] == file_name.split('_')[2].split("-")[0]:
+    #     pcap_file.append(file_name)
+    pcap_file.append(file_name)
+# print(len(pcap_file))
 
 run_online_traffic(pcap_file=pcap_file, actual_row=actual_row,
                    flowkey_list=flowkey_list, width_list=width_list, epoch_list=epoch_list, seed_list=seed_list,
