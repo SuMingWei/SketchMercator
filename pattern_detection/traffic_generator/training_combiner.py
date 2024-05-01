@@ -169,7 +169,56 @@ def gen_pcap_new(caida0517, zipf2a, zipf10, lens, flowkey, date_offset):
                 continue
             for len in lens:
                 generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])
+   
+def gen_pcap_thesis(caida, zipf2, zipf1, lens, flowkey, date_offset):
+    # diff dist, CAIDA + zipf
+    for a in caida:
+        for b in zipf2:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], -date_offset[1])
+        for b in zipf1:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], -date_offset[1])
                 
+    # diff dist, zipf2 + zipf1 / caida
+    for a in zipf2:
+        for b in caida:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[1])
+        for b in zipf1:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])
+                
+    # diff dist, zipf2 + zipf1 / caida
+    for a in zipf1:
+        for b in caida:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[1])
+        for b in zipf2:
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])
+                
+    # same dist 
+    for a in caida:
+        for b in caida:
+            if a == b:
+                continue
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])
+                
+    for a in zipf2:
+        for b in zipf2:
+            if a == b:
+                continue
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])
+                
+    for a in zipf1:
+        for b in zipf1:
+            if a == b:
+                continue
+            for len in lens:
+                generate_dataset(a, b, len[0], len[1], flowkey, a[71:-5], b[71:-5], date_offset[0])             
                 
 if __name__ == "__main__":
     # combine two dataset
@@ -203,6 +252,19 @@ if __name__ == "__main__":
     zipf10_new = ["/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf10-070w.pcap",
                   "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf10-030w.pcap"]
     
+    caida = ["/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/caida-500w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/caida-250w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/caida-125w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/caida-50w.pcap",]
+    
+    zipf2 = ["/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf2-250w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf2-125w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf2-50w.pcap"]
+    
+    zipf1 = ["/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf1-250w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf1-125w.pcap",
+             "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new/zipf1-50w.pcap"]
+    
     # print(zipf[0][67:-5])
     # print(caida[2][67:-5])
     
@@ -220,13 +282,15 @@ if __name__ == "__main__":
     ##### old testing
     # gen_pcap(caida0517, caida0816, zipf2a, zipf2b, zipf4, lens, flowkey, date_offset)
     
+    # gen_pcap_new(caida0517_new, zipf2a_new, zipf10_new, lens, flowkey, date_offset)
     
     ##### new thesis
     # cut dataset
-    file2 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s-new/4073_3310168.pcap"  
-    # generate_dataset(file2, file2, "10", "0", flowkey, "zipf10", "b", date_offset[0])
+    file2 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s-new/1000000_10045058.pcap"  
+    # generate_dataset(file2, file2, "10", "0", flowkey, "zipf2", "b", date_offset[0])
     
-    gen_pcap_new(caida0517_new, zipf2a_new, zipf10_new, lens, flowkey, date_offset)
+    gen_pcap_thesis(caida, zipf2, zipf1, lens, flowkey, date_offset)
+    
     
     
     

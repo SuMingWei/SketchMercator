@@ -38,7 +38,8 @@ def generate_distribution(size, alpha, output_file):
     # print(zipf_values[:10])
     
     # Filter out flow sizes exceeding 1000000
-    zipf_values = zipf_values[zipf_values <= 8000]
+    # zipf_values = zipf_values[zipf_values <= 10000] # zipf1.001
+    # zipf_values = zipf_values[zipf_values <= 1000000] # zipf2
     
     flow_sizes, frequencies = np.unique(zipf_values, return_counts=True)
     
@@ -62,10 +63,12 @@ if __name__ == "__main__":
 
     fs_dist_file = os.getenv("pattern_detection") + "/traffic_generator/dist.txt"
     
+    # total_flows, total_packets = generate_distribution(size=59000, alpha=1.001, output_file=fs_dist_file) # 12000000
     # total_flows, total_packets = generate_distribution(size=1000000, alpha=2, output_file=fs_dist_file)
+    # print(total_packets)
     while 1:
-        total_flows, total_packets = generate_distribution(size=21000, alpha=1.001, output_file=fs_dist_file)
-        if abs(total_packets - 3300000) <= 50000:
+        total_flows, total_packets = generate_distribution(size=1000000, alpha=2, output_file=fs_dist_file)
+        if abs(total_packets - 10000000) <= 50000:
             print(total_packets)
             generate_dataset(date_list, dataset_category_list, flowkey, pcap_count, fs_dist_file, total_flows, total_packets)
             break

@@ -352,7 +352,7 @@ int main(int argc, char* argv[]){
     vector<int> time_offset = {0, 4*60, 9*60, 29*60, 59*60}; // 20180816 need to remove the offset of different pcap file
     map<Flowkey_t, int> selected_flow;
     int gen_num = 0;
-    int scale = 14;
+    int scale = 5;
     char *pcap_path = argv[2];
     pcap_generate(pcap_path, synthetic_data_file_name, flowkey, selected_flow, gen_num, scale);
     cout << "[packet sampling is completed] total sample packets: " << gen_num << "\n";

@@ -142,8 +142,7 @@ cmd_list = []
 pcap_folder = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/10s-new"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
-    if file_name.split("-")[0] == "caida0816":
-        pcap_file.append(file_name)
+    pcap_file.append(file_name)
 
 # pcap_file = ["caida20180621_10_caida20180816_0.pcap"]
 # pcap_file = ["caida20180517_10_caida20180816_0.pcap"]

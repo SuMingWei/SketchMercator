@@ -33,7 +33,7 @@ if __name__ == "__main__":
     flowkey = ["srcIP"]
     pcap_count = 5
 
-    pcap_file = "caida0816-500w.pcap"
+    pcap_file = "zipf2-250w.pcap"
     generate_dataset(pcap_folder_path, pcap_file, flowkey, pcap_count)
     # pcap_file = "zipf18-35w_10_.pcap"
     # generate_dataset(pcap_folder_path, pcap_file, flowkey, pcap_count)
