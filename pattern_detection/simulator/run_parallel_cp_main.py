@@ -76,10 +76,10 @@ def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288]
 # width_list = [4096, 8192, 16384, 32768, 65536, 131072] # cm cs
 # width_list = [1024, 2048, 4096, 8192, 16384, 32768] # cm cs
-width_list = [1024, 2048, 4096, 8192, 16384] # cm cs
+# width_list = [1024, 2048, 4096, 8192, 16384] # cm cs
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 # width_list = [4096, 8192, 16384, 32768, 65536]
-# width_list = [4096] 
+width_list = [4096] 
 
 # # sketch_list = ["cm", "cs"]
 sketch_list = ["cm"]
