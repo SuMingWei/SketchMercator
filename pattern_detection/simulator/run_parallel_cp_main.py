@@ -57,11 +57,11 @@ def run_online_traffic(pcap_file=["5_5.pcap"], actual_row = 3,
                             # print(pcap_full_path, width, flowkey, epoch, sketch_name)
                             str = f"row_{row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
                             # print(str)
-                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPaddingOfflineNew", sketch_name, pcap_file_name, flowkey, str)
+                            output_dir = os.path.join(os.getenv('pattern_detection'), "SketchPadding", sketch_name, pcap_file_name, flowkey, str)
                             print(output_dir)
 
                             str = f"row_{actual_row}_width_{width}_level_{level}_epoch_{epoch}_count_{is_count_packet}_seed_{seed}"
-                            output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQueryOfflineNew", sketch_name, pcap_file_name, flowkey, str)
+                            output_pkl_dir = os.path.join(os.getenv('pattern_detection'), "SketchPatternQuery", sketch_name, pcap_file_name, flowkey, str)
                             print(output_pkl_dir)
                             from pattern_detection.control_plane.sketch_cp_main import sketch_cp
                             helper.call(sketch_cp, (sketch_name, output_dir, output_pkl_dir, row, width, level, actual_row, ))
@@ -138,8 +138,8 @@ helper = ParallelRunHelper(20)
 #         continue
 #     pcap_file.append(file_name)
 
-# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/"
-pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file_new/"
+pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/scaled_pcap_file_new/"
+# pcap_folder = "/home/ming/SketchMercator/pattern_detection/traffic_generator/pcap_file_new/"
 pcap_file = []
 for file_name in sorted(os.listdir(pcap_folder)):
     # if file_name.split('_')[0].split("-")[0] == file_name.split('_')[2].split("-")[0]:
