@@ -385,8 +385,8 @@ def cm_main(full_dir, dist_dir, row, width, level):
     flowkey_list = result["flowkey"]
     index_hash_list = result["index_hash_list"]
     counter_list = []
-    topks = [1000, 8000]
-    # topks = [5000]
+    # topks = [1000, 8000]
+    topks = [5000]
     
     # window_size = [100, 200, 500]
     window_size = [200]
