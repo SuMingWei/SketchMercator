@@ -254,7 +254,7 @@ int main(int argc, char* argv[])
     vector<packet_summary> packet_stream;
     pcap_parse(params.pcap_file_path, packet_stream);
     pcap_timer.stop_and_print();
-    
+
     // * load hash *
     sketch_iteration_instance->load_hash(params);
 

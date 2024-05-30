@@ -80,6 +80,7 @@ width_list = [1024, 2048, 4096, 8192, 16384] # cm cs
 # width_list = [4096, 8192, 16384, 32768, 65536] # lc ll hll mrac mrb univmon
 # width_list = [4096, 8192, 16384, 32768, 65536]
 # width_list = [4096] 
+# width_list = [16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536]
 
 # # sketch_list = ["cm", "cs"]
 sketch_list = ["cm"]
@@ -103,6 +104,7 @@ row = 3
 # row = 1
 
 # sketch_list = ["lc", "ll", "hll"]
+# sketch_list = [ "hll"]
 # level = 1
 # row = 1
 
