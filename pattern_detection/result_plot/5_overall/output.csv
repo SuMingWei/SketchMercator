@@ -1,0 +1,4 @@
+tracking time,pattern_acc,cfg_acc,no_change,change
+0.2,50,76,54/58,22/42
+1.0,76,96,57/58,39/42
+2.0,77,97,57/58,40/42
