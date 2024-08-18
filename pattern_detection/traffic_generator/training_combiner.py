@@ -288,8 +288,9 @@ if __name__ == "__main__":
     # cut dataset
     file2 = "/home/ming/SketchMercator/pcap_storage/online_traffic/20180816/60s-new/1000000_10045058.pcap"  
     # generate_dataset(file2, file2, "10", "0", flowkey, "zipf2", "b", date_offset[0])
+    generate_dataset(file2, file2, "6", "0", flowkey, "zipf2", "b", date_offset[0])
     
-    gen_pcap_thesis(caida, zipf2, zipf1, lens, flowkey, date_offset)
+    # gen_pcap_thesis(caida, zipf2, zipf1, lens, flowkey, date_offset)
     
     
     

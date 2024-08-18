@@ -94,6 +94,12 @@ sketch_list = ["univmon"]
 level = 16
 row = 3
 
+# theoretical-based
+width_list = [2719, 5438, 6798, 10876, 13595, 27190] # cm cs
+sketch_list = ["cm"]
+level = 1
+row = 5
+
 # sketch_list = ["mrac"]
 # level = 8
 # row = 1
